@@ -1,2 +1,8 @@
+
 node_modules/
 done
+=======
+.classpath
+.project
+.settings/
+
