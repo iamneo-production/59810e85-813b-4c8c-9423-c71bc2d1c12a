@@ -1,4 +1,4 @@
-export class ReviewEntity{
+export class Review{
     id:number=0;
     movie_id:number=0;
     rating:number =0;
