@@ -1,0 +1,51 @@
+<!-- Aishwarya Ghosh -->
+
+<div class="back">
+    <button>Back To review page</button>
+
+    <div class="form">
+        <h2 id="registration">Review Form</h2>
+        <form>
+            <div ngModelGroup="personalDetails">
+                <label for="movie_id">Movie Id</label>
+                <input type="number" id="movie_d" name="movie_id" [(ngModel)]="reviewForm.movie_id">
+
+                <label for="user_id">User Id</label>
+                <input type="number" id="user_id" name="user_id" [(ngModel)]="reviewForm.user_id">
+            </div>
+
+            <div>
+                <label for="rating">Movie Rating</label>
+                <br>
+                <span class="star-cb-group">
+                    <input type="radio" id="rating-5" name="rating" value="5" [(ngModel)]="reviewForm.rating" />
+                    <label for="rating-5">5</label>
+                    <input type="radio" id="rating-4" name="rating" value="4" [(ngModel)]="reviewForm.rating"
+                        checked="checked" />
+                    <label for="rating-4">4</label>
+                    <input type="radio" id="rating-3" name="rating" value="3" [(ngModel)]="reviewForm.rating" />
+                    <label for="rating-3">3</label>
+                    <input type="radio" id="rating-2" name="rating" value="2" [(ngModel)]="reviewForm.rating" />
+                    <label for="rating-2">2</label>
+                    <input type="radio" id="rating-1" name="rating" value="1" [(ngModel)]="reviewForm.rating" />
+                    <label for="rating-1">1</label>
+                </span>
+                <br><br>
+            </div>
+
+            <div>
+
+                <label for="review">Your Review</label>
+                <input type="text" id="review" name="review" placeholder="Your Review" [(ngModel)]="reviewForm.review"
+                    required>
+
+                <label for="sources">Provide Sources</label>
+                <input type="text" id="sources" name="sources" placeholder="all sources"
+                    [(ngModel)]="reviewForm.sources" required>
+            </div>
+
+            <input type="submit" value="Submit" (click)="addNewReview()" id="btn">
+
+        </form>
+    </div>
+</div>
