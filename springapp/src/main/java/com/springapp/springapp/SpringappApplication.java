@@ -10,7 +10,7 @@ public class SpringappApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringappApplication.class, args);
 		System.out.print("Movie Review Aggregator");
-		
+		System.out.print("Movie");
 	}
 
 }
