@@ -1,7 +1,7 @@
 package com.springapp.springapp;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,27 +10,26 @@ import org.springframework.stereotype.Service;
 
 import com.springapp.springapp.ReviewDTO;
 import com.springapp.springapp.Review;
-import com.springapp.springapp.ReviewRepo;
+import com.springapp.springapp.ReviewRepository;
 
 @Service
 public class ReviewService {
 
     @Autowired
-	private ReviewRepo reviewRepo;
+	private ReviewRepository reviewRepo;
 
 
 	//POST Mpping service class**********************************************
-	public ResponseEntity<?> addNewReviewService(ReviewDTO reviewDTO) {
+	public ResponseEntity<?> addNewReviewService(Review reviewDTO) {
 		
-		int movie_id=reviewDTO.getMovie_id();
-		int user_id=reviewDTO.getUser_id();
-		String useremail="aish@1234";
-		String username="Aishwarya";
-		double rating=reviewDTO.getRating();
-		String review=reviewDTO.getReview();
-		String sources=reviewDTO.getSources();
+		Long userId = reviewDTO.getUserId();
+		String rating = reviewDTO.getRating();
+		String reviewNote = reviewDTO.getReviewNote();
+		String source = reviewDTO.getSource();
+		Date date = reviewDTO.getDate();
+		Long movieId = reviewDTO.getMovieId();
 		
-		Review reviewObj= new Review(movie_id,user_id,useremail,username,rating,review,sources);
+		Review reviewObj= new Review(userId,rating,reviewNote,source,date,movieId);
 		reviewRepo.save(reviewObj);
 		return new ResponseEntity<Review>(reviewObj, HttpStatus.OK);
 	}
@@ -49,7 +48,7 @@ public class ReviewService {
 
 
 	//GET/:id review service class********************************************************
-	public ResponseEntity<?> showReviewByIdService(int reviewId) {
+	public ResponseEntity<?> showReviewByIdService(Long reviewId) {
 
         Review newreview= reviewRepo.findById(reviewId).get();
         System.out.print(newreview.getId());
@@ -59,13 +58,13 @@ public class ReviewService {
 	
 
 	//PUT review service class***********************************************************
-	public ResponseEntity<?> updateReviewService(int reviewId, Review review) {
+	public ResponseEntity<?> updateReviewService(Long reviewId, Review review) {
 		
 		Review exsistingReview = reviewRepo.findById(reviewId).get();
 		
 		exsistingReview.setRating(review.getRating());
-		exsistingReview.setReview(review.getReview());
-		exsistingReview.setSources(review.getSources());
+		exsistingReview.setReviewNote(review.getReviewNote());
+		exsistingReview.setSource(review.getSource());
 		
 		reviewRepo.save(exsistingReview);
 		return new ResponseEntity<Review>(exsistingReview, HttpStatus.OK);
@@ -74,7 +73,7 @@ public class ReviewService {
 	
 
 	//DELETE review serice class****************************************************
-	public ResponseEntity<?> deleteReviewService(int  reviewId) {
+	public ResponseEntity<?> deleteReviewService(Long  reviewId) {
 		reviewRepo.deleteById(reviewId);
 		return new ResponseEntity<String>("Successfully deleted", HttpStatus.OK);
 	}

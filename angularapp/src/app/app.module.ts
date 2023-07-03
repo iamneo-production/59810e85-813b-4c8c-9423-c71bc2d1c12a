@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ReviewServiceService } from './Services/review-service.service';
 import { ReviewUpdateFormComponent } from './review-update-form/review-update-form.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { ReviewUpdateFormComponent } from './review-update-form/review-update-fo
     FormsModule,
     RouterModule 
   ],
-  providers: [ReviewServiceService],
+  providers: [ReviewServiceService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

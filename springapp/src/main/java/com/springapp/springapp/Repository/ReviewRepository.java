@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.springapp.springapp.Review;
 
 @Repository
-public interface ReviewRepo extends JpaRepository<Review, Integer>  {
+public interface ReviewRepository extends JpaRepository<Review, Long>  {
     
     @Query("SELECT u from Review u")
 	ArrayList<Review> findAllReview();
