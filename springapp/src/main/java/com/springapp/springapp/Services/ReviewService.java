@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.springapp.springapp.ReviewDTO;
 import com.springapp.springapp.Review;
 import com.springapp.springapp.ReviewRepository;
 
@@ -78,5 +77,15 @@ public class ReviewService {
 		return new ResponseEntity<String>("Successfully deleted", HttpStatus.OK);
 	}
 
+
+	
+
+	//GET all reviews for a specific movie *****************************************
+	public ArrayList<Review> getAllReviewsForMovieService(Long movieId){
+
+		ArrayList<Review> allReviewMovie = reviewRepo.findAllReviewMovie(movieId);
+        Collections.reverse(allReviewMovie);
+    	return allReviewMovie;
+	}
     
 }

@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springapp.springapp.ReviewDTO;
 import com.springapp.springapp.Review;
 import com.springapp.springapp.ReviewService;
 
@@ -58,6 +57,7 @@ public class ReviewController {
 		return reviewService.updateReviewService(id,review);
 	}
 	
+
 	
 //	Delete a review using review id ************************************************
 	@DeleteMapping("/DELETE/review/{id}")
@@ -68,4 +68,11 @@ public class ReviewController {
 		
 	}
 
+    
+//  Get all reviews for a specific movie *******************************************
+	@GetMapping("/GET/review/movie/{movieId}")
+	public ArrayList<Review>  getAllReviewsForMovie(@PathVariable Long movieId){
+
+		return reviewService.getAllReviewsForMovieService(movieId);
+	}
 }

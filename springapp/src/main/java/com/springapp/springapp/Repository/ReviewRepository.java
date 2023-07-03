@@ -14,4 +14,7 @@ public interface ReviewRepository extends JpaRepository<Review, Long>  {
     @Query("SELECT u from Review u")
 	ArrayList<Review> findAllReview();
 
+
+    @Query("SELECT u from Review u Where movieId=?1")
+	ArrayList<Review>findAllReviewMovie(Long movieId);
 }
