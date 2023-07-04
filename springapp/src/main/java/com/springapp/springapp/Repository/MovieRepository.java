@@ -13,3 +13,5 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 	@Query("SELECT u from Movie u")
 	ArrayList<Movie> findAllMovie();
 }
+
+//Somnath mandal

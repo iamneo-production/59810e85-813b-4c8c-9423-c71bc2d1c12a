@@ -18,7 +18,7 @@ public class MovieService {
 	private MovieRepository movieRepository;
 	
 	
-	//POST MOVIES SERVICE CLASS************************
+	//POST MOVIES SERVICE CLASS************************--------------------------------
 	
 	public ResponseEntity<?> addMovieService(Movie movie){
 		 long movieId= movie.getMovieId();
@@ -36,7 +36,7 @@ public class MovieService {
 		
 	}
 	
-	//GET MOVIE SERVICE CLASS************************************
+	//GET MOVIE SERVICE CLASS************************************--------------------------
 	
 	public ArrayList<Movie> showAllMovieService(){
 		ArrayList<Movie> allMovie = movieRepository.findAllMovie();
@@ -44,7 +44,7 @@ public class MovieService {
 		return allMovie;
 	}
 	
-	//GET/movie/:id  SERVICE CLASS*********************************************
+	//GET/movie/:id  SERVICE CLASS*********************************************-------------------
 	
 	public ResponseEntity<?> showMovieByIdService(long movieId){
 		Movie newMovie = movieRepository.findById(movieId).get();
@@ -53,3 +53,5 @@ public class MovieService {
 	}
 
 }
+
+//Somnath mandal
