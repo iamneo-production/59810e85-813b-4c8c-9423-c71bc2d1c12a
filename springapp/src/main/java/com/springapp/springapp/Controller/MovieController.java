@@ -17,7 +17,7 @@ import com.springapp.springapp.MovieService;
 
 
 @RestController
-@CrossOrigin(origins="https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")
+@CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")
 @RequestMapping
 public class MovieController {
 

@@ -51,7 +51,9 @@ export class MovieListComponent {
   }
 
   getMovies(){
-    this.movieService.getMovies().subscribe();
+    this.movieService.getMovies().subscribe((res)=>{
+      console.log(res);
+    });
   }
 
  /* movies:Movie[] = [

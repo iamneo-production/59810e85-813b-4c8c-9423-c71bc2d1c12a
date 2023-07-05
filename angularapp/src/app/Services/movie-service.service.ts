@@ -14,8 +14,8 @@ export class MovieService{
 
     error = new Subject<string>();
 
-    private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie";
-    private postUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    private getUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie";
+    private postUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
     
     id?:number;
     constructor(private http:HttpClient) { }
