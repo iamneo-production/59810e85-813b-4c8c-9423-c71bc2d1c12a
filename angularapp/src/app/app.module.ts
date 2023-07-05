@@ -10,12 +10,16 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ReviewServiceService } from './Services/review-service.service';
 import { ReviewUpdateFormComponent } from './review-update-form/review-update-form.component';
+import { DatePipe } from '@angular/common';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { MovieService } from './Services/movie-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReviewFormComponent,
-    ReviewUpdateFormComponent
+    ReviewUpdateFormComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,7 @@ import { ReviewUpdateFormComponent } from './review-update-form/review-update-fo
     FormsModule,
     RouterModule 
   ],
-  providers: [ReviewServiceService],
+  providers: [ReviewServiceService, DatePipe,MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
