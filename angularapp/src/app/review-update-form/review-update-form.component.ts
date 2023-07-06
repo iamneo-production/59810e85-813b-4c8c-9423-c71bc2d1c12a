@@ -35,6 +35,7 @@ export class ReviewUpdateFormComponent implements OnInit {
 
   updateReview() {
     this.reviewService.updateOldReview(this.review).subscribe();
+    alert("Your Form is updated./nBack to Review list to see your Update")
   }
 
 

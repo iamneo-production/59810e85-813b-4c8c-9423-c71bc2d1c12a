@@ -25,6 +25,7 @@ export class ReviewFormComponent implements OnInit{
   addNewReview(){
     console.log(this.reviewForm);
     this.reviewService.addNewReview(this.reviewForm).subscribe();
+    alert('Your Review Form is Submitted.\nBack to review list to see your review')
   }
 
 }
