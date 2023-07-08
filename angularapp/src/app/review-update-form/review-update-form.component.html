@@ -8,20 +8,18 @@
             
             <div ngModelGroup="personalDetails">
 
-                <label for="review_id">Review Id</label>
-                <input type="number" id="review_id" name="review_id" [(ngModel)]="review.id" disabled>
+                <label for="reviewId">Review Id</label>
+                <input type="number" id="reviewId" name="reviewId" [(ngModel)]="review.id" disabled />
 
-                <label for="movie_id">Movie Id</label>
-                <input type="number" id="movie_d" name="movie_id" [(ngModel)]="review.movie_id" disabled>
+                <label for="movieId">Movie Id</label>
+                <input type="number" id="movieId" name="movieId" [(ngModel)]="review.movieId" disabled />
 
-                <label for="user_id">User Id</label>
-                <input type="number" id="user_id" name="user_id" [(ngModel)]="review.user_id" disabled>
+                <label for="userId">User Id</label>
+                <input type="number" id="userId" name="userId" [(ngModel)]="review.userId" disabled />
 
-                <label for="useremail">User Email</label>
-                <input type="text" id="useremail" name="useremail" [(ngModel)]="review.useremail" disabled>
-
-                <label for="username">User Name</label>
-                <input type="text" id="username" name="username"  [(ngModel)]="review.username" disabled>
+                <label for="date">Date</label>
+                <input type="text" id="date" name="date" [(ngModel)]="review.date" disabled/>
+                
             </div>
 
             <div>
@@ -44,11 +42,11 @@
 
             <div>
 
-                <label for="review">Your Review</label>
-                <input type="text" id="review" name="review" placeholder="Your Review" [(ngModel)]="review.review">
+                <label for="reviewNote">Your Review</label>
+                <input type="text" id="reviewNote" name="reviewNote" placeholder="Your Review" [(ngModel)]="review.reviewNote" required>
 
-                <label for="sources">Provide Sources</label>
-                <input type="text" id="sources" name="sources" placeholder="all sources" [(ngModel)]="review.sources">
+                <label for="source">Provide Sources</label>
+                <input type="text" id="source" name="source" placeholder="all sources" [(ngModel)]="review.source" required>
             </div>
 
             <input type="submit"  (click)="updateReview()" value="Update"  id="btn">
