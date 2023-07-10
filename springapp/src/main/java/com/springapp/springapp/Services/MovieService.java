@@ -21,16 +21,15 @@ public class MovieService {
 	//POST MOVIES SERVICE CLASS************************--------------------------------
 	
 	public ResponseEntity<?> addMovieService(Movie movie){
-		 long movieId= movie.getMovieId();
-		String movieTitle= movie.getMovieTitle();
+		 long id= movie.getId();
+		String title= movie.getTitle();
 		String genre2 = movie.getGenre();
-		double rating2= movie.getRating();
-		String actor2= movie.getActor();
+		String rating2= movie.getRating();
 		Date date2= movie.getReleaseDate();
 		String cast2= movie.getCast();
 		String plot2= movie.getPlotSummary();
 		
-		Movie movieObj= new Movie(movieId,movieTitle,date2,rating2,genre2,actor2,plot2,cast2);
+		Movie movieObj= new Movie(id,title,date2,rating2,genre2,plot2,cast2);
 		movieRepository.save(movieObj);
 		return new ResponseEntity<Movie>(movieObj,HttpStatus.OK);
 		
@@ -46,11 +45,19 @@ public class MovieService {
 	
 	//GET/movie/:id  SERVICE CLASS*********************************************-------------------
 	
-	public ResponseEntity<?> showMovieByIdService(long movieId){
-		Movie newMovie = movieRepository.findById(movieId).get();
-		System.out.print(newMovie.getMovieId());
+	public ResponseEntity<?> showMovieByIdService(long id){
+		Movie newMovie = movieRepository.findById(id).get();
+		System.out.print(newMovie.getId());
 		return  new ResponseEntity<Movie>(newMovie, HttpStatus.OK);
 	}
+
+	//Search movie by title or genre*********************************************
+	
+	public ArrayList<Movie>searchMovieService(String text){
+		ArrayList<Movie> search = movieRepository.serachMovie(text);
+		Collections.reverse(search);
+		return search;
+		}
 
 }
 

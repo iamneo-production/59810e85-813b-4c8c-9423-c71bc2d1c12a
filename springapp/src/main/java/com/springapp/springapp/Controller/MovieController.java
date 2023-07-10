@@ -47,6 +47,13 @@ public class MovieController {
 		
 		return movieService.showMovieByIdService(id);
 	}
+
+	//Search movie by title or genre*******************************
+	
+	@GetMapping("/GET/movie/search/{text}")
+	public ArrayList<Movie> searchMovie(@PathVariable String text){
+		return movieService.searchMovieService(text);
+	}
 }
 
 //Somnath mandal

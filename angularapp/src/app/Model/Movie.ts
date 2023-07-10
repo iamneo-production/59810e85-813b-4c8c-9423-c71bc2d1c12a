@@ -1,10 +1,9 @@
 export class Movie{
-    movieId:number=0;
-    movieTitle:string='';
+    id:number=0;
+    title:string='';
     releaseDate:Date=new Date();
-    rating:number=0;
+    rating:string='';
     genre:string='';
-    actor:string='';
     plotSummary:string='';
     cast:string='';
 }
