@@ -1,1 +1,10 @@
-<p>review-list works!</p>
+<h2>Movie Reviews</h2>
+
+<ul>
+    <li *ngFor="let rev of allReviews">
+        <h3>{{ rev.id}}</h3>
+        <p>Review: {{ rev.reviewNote }}</p>
+        <p>Rating: {{ rev.rating }}</p>
+        <p>Source: {{ rev.source }}</p>
+    </li>
+</ul>
