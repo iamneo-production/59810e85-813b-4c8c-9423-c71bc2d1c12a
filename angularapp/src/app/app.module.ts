@@ -13,13 +13,15 @@ import { ReviewUpdateFormComponent } from './review-update-form/review-update-fo
 import { DatePipe } from '@angular/common';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieService } from './Services/movie-service.service';
+import { ReviewListComponent } from './review-list/review-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReviewFormComponent,
     ReviewUpdateFormComponent,
-    MovieListComponent
+    MovieListComponent,
+    ReviewListComponent
   ],
   imports: [
     BrowserModule,
