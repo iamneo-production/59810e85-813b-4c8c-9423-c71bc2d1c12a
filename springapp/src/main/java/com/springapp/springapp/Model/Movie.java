@@ -15,12 +15,11 @@ public class Movie {
     
     @Id
 	//@GeneratedValue(strategy  = GenerationType.AUTO)
-	private long movieId;
-	private String movieTitle;
+	private long id;
+	private String title;
 	private Date releaseDate;
-	private double rating;
+	private String rating;
 	private String genre;
-	private String actor;
 	private String plotSummary;
 	private String cast;
 	//private List<Reviews> reviews;
@@ -31,37 +30,36 @@ public class Movie {
 	}
 	
 	
-	public Movie(long movieId, String movieTitle, Date releaseDate, double rating, String genre, String actor,
+	public Movie(long id, String title, Date releaseDate, String rating, String genre,
 			String plotSummary, String cast) {
 		super();
-		this.movieId = movieId;
-		this.movieTitle = movieTitle;
+		this.id = id;
+		this.title = title;
 		this.releaseDate = releaseDate;
 		this.rating = rating;
 		this.genre = genre;
-		this.actor = actor;
 		this.plotSummary = plotSummary;
 		this.cast = cast;
 	}
 
 
-	public long getMovieId() {
-		return movieId;
+	public long getId() {
+		return id;
 	}
 
 
-	public void setMovieId(long movieId) {
-		this.movieId = movieId;
+	public void setId(long id) {
+		this.id = id;
 	}
 
 
-	public String getMovieTitle() {
-		return movieTitle;
+	public String getTitle() {
+		return title;
 	}
 
 
-	public void setMovieTitle(String movieTitle) {
-		this.movieTitle = movieTitle;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 
@@ -75,12 +73,12 @@ public class Movie {
 	}
 
 
-	public double getRating() {
+	public String getRating() {
 		return rating;
 	}
 
 
-	public void setRating(double rating) {
+	public void setRating(String rating) {
 		this.rating = rating;
 	}
 
@@ -94,15 +92,6 @@ public class Movie {
 		this.genre = genre;
 	}
 
-
-	public String getActor() {
-		return actor;
-	}
-
-
-	public void setActor(String actor) {
-		this.actor = actor;
-	}
 
 
 	public String getPlotSummary() {
