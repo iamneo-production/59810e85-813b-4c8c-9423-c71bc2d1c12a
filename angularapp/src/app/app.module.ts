@@ -10,12 +10,14 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ReviewServiceService } from './Services/review-service.service';
 import { ReviewUpdateFormComponent } from './review-update-form/review-update-form.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReviewFormComponent,
-    ReviewUpdateFormComponent
+    ReviewUpdateFormComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
