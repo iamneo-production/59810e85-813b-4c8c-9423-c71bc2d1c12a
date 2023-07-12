@@ -6,12 +6,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.springapp.springapp.Review;
-
+import com.springapp.springapp.Movie;
 @Repository
-public interface ReviewRepo extends JpaRepository<Review, Integer>  {
-    
-    @Query("SELECT u from Review u")
-	ArrayList<Review> findAllReview();
+public interface MovieRepository extends JpaRepository<Movie, Long> {
 
+	@Query("SELECT u from Movie u")
+	ArrayList<Movie> findAllMovie();
 }
+
+//Somnath mandal

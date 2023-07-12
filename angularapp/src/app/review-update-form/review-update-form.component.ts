@@ -23,19 +23,19 @@ export class ReviewUpdateFormComponent implements OnInit {
       // this.review=data;
       console.log(data);
       this.review.id = data.id;
-      this.review.movie_id = data.movie_id;
-      this.review.user_id = data.user_id;
-      this.review.useremail = data.useremail;
-      this.review.username = data.username;
+      this.review.movieId = data.movieId;
+      this.review.userId = data.userId;
+      this.review.date=data.date;
       this.review.rating = data.rating;
-      this.review.review = data.review;
-      this.review.sources = data.sources;
+      this.review.reviewNote = data.reviewNote;
+      this.review.source = data.source;
     });
   }
 
 
   updateReview() {
     this.reviewService.updateOldReview(this.review).subscribe();
+    alert("Your Form is updated./nBack to Review list to see your Update")
   }
 
 
