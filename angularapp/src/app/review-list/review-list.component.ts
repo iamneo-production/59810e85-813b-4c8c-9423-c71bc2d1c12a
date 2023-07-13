@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Review } from '../Model/Review';
 import { ReviewListserviceService } from '../Services/review-listservice.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class ReviewListComponent implements OnInit {
   review: Review = new Review() ;
   reviews: Review[]=[];
 
-  constructor(private reviewService: ReviewListserviceService) { }
+  constructor(private reviewService: ReviewListserviceService, private router:Router) { }
 
   ngOnInit(): void {
     this.getReviews();
@@ -24,4 +25,12 @@ export class ReviewListComponent implements OnInit {
       reviews => this.reviews = reviews);
       console.log(this.reviews);
   }
+
+
+
+//Button For Review
+  gotoReviewForm() {
+    this.router.navigateByUrl('ReviewForm');
+  }
+
 }

@@ -9,7 +9,13 @@ import { Review } from '../Model/Review';
 export class ReviewListserviceService {
   private baseUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
 
+  
+  movieId: number = 1;
   constructor(private http: HttpClient) { }
+  
+  getMovieId(movId:number){
+    this.movieId=movId;
+   }
 
   getReviews(movieId: number): Observable<Review[]> {
     //const url = '${this.baseUrl}/${movieId}/reviews';
