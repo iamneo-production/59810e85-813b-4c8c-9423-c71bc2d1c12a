@@ -18,7 +18,8 @@ import com.springapp.springapp.Review;
 import com.springapp.springapp.ReviewService;
 
 @RestController
-@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")
+//@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")
+@CrossOrigin(origins = "https://8081-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/")
 @RequestMapping
 public class ReviewController {
     

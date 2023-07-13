@@ -17,8 +17,8 @@ export class ReviewListserviceService {
     this.movieId=movId;
    }
 
-  getReviews(movieId: number): Observable<Review[]> {
+  getReviews( ): Observable<Review[]> {
     //const url = '${this.baseUrl}/${movieId}/reviews';
-    return this.http.get<Review[]>(`${this.baseUrl}/${movieId}`);
+    return this.http.get<Review[]>(`${this.baseUrl}/${this.movieId}`);
   }
 }
