@@ -9,9 +9,9 @@ import { ReviewListserviceService } from '../Services/review-listservice.service
   styleUrls: ['./review-list.component.css']
 })
 export class ReviewListComponent implements OnInit {
-  movieId: number = 1; //Example movie ID
+  movieId: number = 3; //Example movie ID
   review: Review = new Review() ;
-  allReviews: Review[]=[];
+  reviews: Review[]=[];
 
   constructor(private reviewService: ReviewListserviceService) { }
 
@@ -20,8 +20,8 @@ export class ReviewListComponent implements OnInit {
   }
 
   getReviews(): void {
-    this.reviewService.getReviews(this.movieId)
-      .subscribe(reviews => this.review = reviews);
-      console.log(this.review);
+    this.reviewService.getReviews(this.movieId).subscribe(
+      reviews => this.reviews = reviews);
+      console.log(this.reviews);
   }
 }
