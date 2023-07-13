@@ -1,64 +1,32 @@
 <app-admin></app-admin>
+<router-outlet></router-outlet>
 
-<div class="align">
-    <div class="col-md-6 offset-md-3 ">
-      <div>
-      <form  class="form-container">
-        
-      <mat-card>
-      <span style="text-align: center; margin-top: 5px;"><b> Movie Details</b></span>
-      <br>
-  
-      <mat-card-content>
-        <mat-form-field class="mat-50">
-          <mat-label>id</mat-label>
-          <input  matInput>
-        </mat-form-field>
-        
-        <mat-form-field class="mat-50">
-          <mat-label>title</mat-label>
-            <input  matInput>
-        </mat-form-field>
-        
-        <mat-form-field class="mat-50">
-          <mat-label>Genre</mat-label>
-          <input  matInput>
-        </mat-form-field>
-        
-        <mat-form-field class="mat-50">
-          <mat-label>rating</mat-label>
-            <input matInput>
-        </mat-form-field>
-      
-        <mat-form-field  class="mat-50">
-          <mat-label>cast</mat-label>
-            <input matInput>
-        </mat-form-field>
-        
-        <mat-form-field class="mat-50">
-          <mat-label>releaseDate</mat-label>
-            <input matInput [matDatepicker]="picker">
-            <mat-datepicker #picker></mat-datepicker> 
-        </mat-form-field>
-        
-        <mat-form-field>
-          <mat-label>plotSummary</mat-label>
-            <textarea matInput></textarea>
-        </mat-form-field>
-  
-        <mat-form-field>
-          <mat-label>review</mat-label>
-            <textarea matInput></textarea>
-        </mat-form-field>
-      
-        <div style="margin:2%; text-align: end;"> 
-          <button mat-raised-button type="submit" color="primary" (click)="navigatetoMoviedetails()">Edit Details</button>
-          <button mat-raised-button type="submit" color="primary" (click)="navigatetoReviewmovie()">View Reviews</button>
-        </div>
-          </mat-card-content>
-          </mat-card>
-        </form>
-      </div> 
+
+
+
+
+
+
+
+<br>
+<div class="movie-card rowposter mt-3 p-2">
+  <ng-container>
+    <div class="card" style="width: 13rem ;">
+      <div class="card-body">
+      <h5>Flash</h5>
+      <p>09-08-2010</p>
+      <p>8.5</p>
+      <div style="margin:2%; text-align: end;">
+      <button (click)="navigatetoMoviedetail()">Show details</button>
+      </div>
     </div>
-  </div>
-  
+    </div>
+  </ng-container> 
+
+
+
+
+
+
+
+

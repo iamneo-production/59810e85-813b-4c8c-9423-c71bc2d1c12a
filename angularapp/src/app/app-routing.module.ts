@@ -15,9 +15,9 @@ const routes: Routes = [
   pathMatch:"full"
 },
 {path:"movies", component:MovieListComponent,pathMatch:"full"},
-{ path: 'admin', component: AdminComponent },
-{ path: 'allmovies', component: AllMoviesComponent, children: [
-  { path: 'moviedetail', component: MovieDetailComponent }
+{ path: '', component: AdminComponent },
+{ path:'allmovies', component: AllMoviesComponent, children: [
+  { path:'moviedetail', component: MovieDetailComponent }
 ]},
 
 ];
@@ -27,4 +27,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

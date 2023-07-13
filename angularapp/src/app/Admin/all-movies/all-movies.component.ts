@@ -10,12 +10,6 @@ export class AllMoviesComponent {
   constructor(private router:Router){}
 
   navigatetoMoviedetail(){
-    this.router.navigate(["/allmovies/moviedetail"])
+    this.router.navigate(["/moviedetail"])
    }
-   navigatetoMoviedetails(){
-    this.router.navigate(["/allmovies/moviedetail/editmovie"])
-   }
-   navigatetoReviewmovie(){
-     this.router.navigate(["/allmovies/moviedetail/reviewmovie"])
-    }
 }
