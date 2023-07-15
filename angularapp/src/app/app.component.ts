@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReviewListserviceService } from './Services/review-listservice.service';
+import { ReviewServiceService } from './Services/review-service.service';
+import { ReviewUpdateFormComponent } from './review-update-form/review-update-form.component';
 
 
 @Component({
@@ -14,7 +16,7 @@ export class AppComponent {
 
   searchResults:string[]=[];
 
-  constructor(private router: Router,private service:ReviewListserviceService){}
+  constructor(private router: Router,private service:ReviewListserviceService,private review:ReviewUpdateFormComponent){}
 
   performSearch(searchTerm:string):void
 {
@@ -28,4 +30,10 @@ export class AppComponent {
     this.router.navigate(['ReviewList',movId]);
     this.service.getMovieId(movId);
   }
+
+  gotoReviewUpdate(revId:number){
+    this.router.navigate(['ReviewUpdate',revId]);
+    this.review.getReviewById(revId);
+  }
+
 }
