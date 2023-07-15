@@ -1,4 +1,4 @@
-package com.springapp.springapp;
+package com.example.springapp;
 
 import java.util.ArrayList;
 
@@ -14,11 +14,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springapp.springapp.Review;
-import com.springapp.springapp.ReviewService;
+import com.example.springapp.Review;
+import com.example.springapp.ReviewService;
 
 @RestController
-@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")
+// @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")   //Somnath 
+@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
+// @CrossOrigin(origins = "")     //Sakthivel
+// @CrossOrigin(origins = "")     //Ragavi
+// @CrossOrigin(origins = "")     //Aishwarya R
+// @CrossOrigin(origins = "")     //GOKULNATHAN 
+// @CrossOrigin(origins = "")     //Jyothsna
+// @CrossOrigin(origins = "")     //Nandhini
 @RequestMapping
 public class ReviewController {
     

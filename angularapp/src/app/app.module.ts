@@ -16,7 +16,11 @@ import { SignupComponent } from './signup/signup.component';
 import { DatePipe } from '@angular/common';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieService } from './Services/movie-service.service';
+<<<<<<< HEAD
 >>>>>>> 7245517b8d0eea30f7efcebfd528bed4e0e959a3
+=======
+import { ReviewListComponent } from './review-list/review-list.component';
+>>>>>>> 6c3602f96e3dd2ea561b4f9f23cb25f779fb99e3
 
 @NgModule({
   declarations: [
@@ -24,10 +28,15 @@ import { MovieService } from './Services/movie-service.service';
     ReviewFormComponent,
     ReviewUpdateFormComponent,
 <<<<<<< HEAD
+<<<<<<< HEAD
     SignupComponent
 =======
     MovieListComponent
 >>>>>>> 7245517b8d0eea30f7efcebfd528bed4e0e959a3
+=======
+    MovieListComponent,
+    ReviewListComponent
+>>>>>>> 6c3602f96e3dd2ea561b4f9f23cb25f779fb99e3
   ],
   imports: [
     BrowserModule,

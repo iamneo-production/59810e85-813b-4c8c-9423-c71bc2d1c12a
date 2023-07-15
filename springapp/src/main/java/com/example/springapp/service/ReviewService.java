@@ -1,4 +1,4 @@
-package com.springapp.springapp;
+package com.example.springapp;
 
 import java.util.ArrayList;
 import java.util.*;
@@ -8,8 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.springapp.springapp.Review;
-import com.springapp.springapp.ReviewRepository;
+import com.example.springapp.Review;
+import com.example.springapp.ReviewRepository;
 
 @Service
 public class ReviewService {

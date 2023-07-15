@@ -10,27 +10,33 @@ import { Router } from '@angular/router';
 })
 export class MovieListComponent {
 
-  movie: Movie =new Movie();
+ 
 
   constructor(private movieService:MovieService, private router:Router){}
 
 
   searchTerm:string="";
-  @Output() searchEvent = new EventEmitter<string>();
+  movie: Movie =new Movie();
+  allMovies:Movie[]=[];
+
+  //@Output() searchEvent = new EventEmitter<string>();
 
 
-  search():void{
+  /*search():void{
     this.searchEvent.emit(this.searchTerm);
     console.log('thanks for search '+this.searchTerm+' movies');
   
-  }
+  } */
 
+  fetchAllMovies(){
+    this.getMovies();
+  }
 
  
   ngOnInit(): void {
    // this.addNewMovie();
     //this.getMovieById();
-    this.getMovies();
+    //this.getMovies();
   }
   addNewMovie(){
     console.log(this.movie);
@@ -39,12 +45,11 @@ export class MovieListComponent {
 
   getMovieById(){
     this.movieService.getMovieById().subscribe(data =>{
-      this.movie.movieId = data.movieId;
-      this.movie.movieTitle = data.movieTitle;
+      this.movie.id = data.id;
+      this.movie.title = data.title;
       this.movie.releaseDate =data.releaseDate;
       this.movie.rating = data.rating;
       this.movie.genre = data.genre;
-      this.movie.actor = data.actor;
       this.movie.plotSummary = data.plotSummary;
       this.movie.cast = data.cast;
     })
@@ -53,6 +58,14 @@ export class MovieListComponent {
   getMovies(){
     this.movieService.getMovies().subscribe((res)=>{
       console.log(res);
+      this.allMovies=res;
+    });
+  }
+
+  searchMovie(title:string){
+    this.movieService.searchMovieService(title).subscribe((response:any) =>{
+      console.log(response);
+      this.allMovies =response;
     });
   }
 
