@@ -11,15 +11,15 @@ import { Router } from '@angular/router';
 export class ReviewUpdateFormComponent implements OnInit {
 
   review: Review = new Review();
-
+  
   constructor(private reviewService: ReviewServiceService, private router: Router) { }
 
   ngOnInit(): void {
-    this.getReviewById();
+    // this.getReviewById();
   }
 
-  getReviewById() {
-    this.reviewService.getReviewById().subscribe(data => {
+  getReviewById(revId:number) {
+    this.reviewService.getReviewById(revId).subscribe(data => {
       // this.review=data;
       console.log(data);
       this.review.id = data.id;

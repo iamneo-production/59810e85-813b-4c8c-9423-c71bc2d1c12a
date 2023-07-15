@@ -28,4 +28,10 @@ export class AppComponent {
     this.router.navigate(['ReviewList',movId]);
     this.service.getMovieId(movId);
   }
+
+  // gotoReviewUpdate(revId:number){
+  //   this.router.navigate(['ReviewUpdate',revId]);
+  //   this.review.getReviewById(revId);
+  // }
+
 }
