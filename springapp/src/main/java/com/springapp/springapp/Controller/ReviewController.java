@@ -18,15 +18,7 @@ import com.springapp.springapp.Review;
 import com.springapp.springapp.ReviewService;
 
 @RestController
-// @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")   //Somnath 
-@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
-// @CrossOrigin(origins = "")     //Sakthivel
-// @CrossOrigin(origins = "")     //Ragavi
-// @CrossOrigin(origins = "")     //Aishwarya R
-// @CrossOrigin(origins = "")     //GOKULNATHAN 
-// @CrossOrigin(origins = "")     //Jyothsna
-// @CrossOrigin(origins = "")     //Nandhini
-
+@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")
 @RequestMapping
 public class ReviewController {
     

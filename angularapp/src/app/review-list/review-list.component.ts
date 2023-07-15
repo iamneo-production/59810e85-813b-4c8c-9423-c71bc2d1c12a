@@ -21,7 +21,7 @@ export class ReviewListComponent implements OnInit {
   }
 
   getReviews(): void {
-    this.reviewService.getReviews(this.movieId).subscribe(
+    this.reviewService.getReviews( ).subscribe(
       reviews => this.reviews = reviews);
       console.log(this.reviews);
   }
