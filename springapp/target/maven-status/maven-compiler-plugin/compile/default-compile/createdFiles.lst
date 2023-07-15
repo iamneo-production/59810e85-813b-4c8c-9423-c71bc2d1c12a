@@ -1,0 +1,10 @@
+com/example/springapp/SpringappApplication.class
+com/example/springapp/ReviewService.class
+com/example/springapp/MovieService.class
+com/example/springapp/ReviewRepository.class
+com/example/springapp/Movie.class
+com/example/springapp/Review.class
+demo.class
+com/example/springapp/ReviewController.class
+com/example/springapp/MovieController.class
+com/example/springapp/MovieRepository.class
