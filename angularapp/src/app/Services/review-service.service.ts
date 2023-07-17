@@ -10,10 +10,15 @@ import { HttpClient } from '@angular/common/http';
 export class ReviewServiceService {
 
   error = new Subject<string>();
-
+  
+  //Aishwarya Ghosh
   private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review";
   private postUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/review";
   private putUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/review";
+
+  // private getUrl = "/GET/review";
+  // private postUrl = "/POST/review";
+  // private putUrl = "/PUT/review";
 
   id?: number;
   constructor(private http: HttpClient) { }
@@ -36,7 +41,7 @@ export class ReviewServiceService {
   getId(getId?: number) {
     this.id = getId;
   }
-  getReviewById(id?: number): Observable<Review> {
+  getReviewById(): Observable<Review> {
     return this.http.get<Review>(`${this.getUrl}/${this.id}`);
   }
 
