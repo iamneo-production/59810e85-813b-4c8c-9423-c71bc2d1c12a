@@ -14,8 +14,9 @@ export class MovieService{
 
     error = new Subject<string>();
 
-    private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie";
-    private postUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    private getUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie";
+    private postUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    private searchUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
     
     id?:number;
     constructor(private http:HttpClient) { }
@@ -40,5 +41,11 @@ export class MovieService{
 
     getMovieById(id?:number):Observable<Movie>{
         return this.http.get<Movie>(`${this.getUrl}/${this.id}`);
+    }
+
+    // search movie by title or genre
+    
+    searchMovieService(title:string):Observable<Movie[]>{
+        return this.http.get<Movie[]>(`${this.searchUrl}/${title}`);
     }
 }    

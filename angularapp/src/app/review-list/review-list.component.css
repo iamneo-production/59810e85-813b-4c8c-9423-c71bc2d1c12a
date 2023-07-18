@@ -1,0 +1,14 @@
+.review-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.review-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-details {
+    margin-top: 5px;
+}
