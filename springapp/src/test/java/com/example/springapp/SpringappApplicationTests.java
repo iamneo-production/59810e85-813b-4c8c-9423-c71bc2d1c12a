@@ -22,6 +22,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 //import com.example.springapp.model.Movie;
 //import com.example.springapp.model.Review;
+// import com.example.springapp.model.Movie;
+// import com.example.springapp.model.Review;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -89,4 +91,14 @@ class SpringappApplicationTests {
       File directory = new File(directoryPath);
       assertTrue(directory.exists() && directory.isDirectory());;
       }
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
+
+// @SpringBootTest
+// class SpringappApplicationTests {
+
+// 	@Test
+// 	void contextLoads() {
+// 	}
+
 }
