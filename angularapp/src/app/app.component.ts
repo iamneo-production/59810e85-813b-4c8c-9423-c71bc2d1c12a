@@ -1,6 +1,8 @@
 import { Renderer2 } from '@angular/core';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ReviewListserviceService } from './Services/review-listservice.service';
+import { ReviewServiceService } from './Services/review-service.service';
 
 
 @Component({
@@ -12,21 +14,26 @@ export class AppComponent {
 
   title = 'angularapp';
 
-  searchResults:string[]=[];
+  searchResults: string[] = [];
 
-  constructor(private renderer: Renderer2,router: Router){}
-  ngOnInit(){
-    this.renderer.setStyle(document.body, 'background-color','cornsilk')
+  constructor(private router: Router, private service: ReviewListserviceService, private revService: ReviewServiceService) { }
+
+  performSearch(searchTerm: string): void {
+    this.searchResults = [];
   }
-  performSearch(searchTerm:string):void
-{
-  this.searchResults=[];
-}
 
 
 
-// gotoReviewForm() {
-//   this.router.navigateByUrl('ReviewForm');
-//   }
+  goToReviewList(movId: number) {
+    this.router.navigate(['ReviewList', movId]);
+    this.service.getMovieId(movId);
+  }
+
+
+  //Review Update form
+  gotoReviewUpdate(revId: number) {
+    this.router.navigate(['ReviewUpdate', revId]);
+    this.revService.getId(revId);
+  }
 
 }

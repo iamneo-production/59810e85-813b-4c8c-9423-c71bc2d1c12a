@@ -20,10 +20,7 @@ import { ReviewUpdateFormComponent } from './review-update-form/review-update-fo
 import { DatePipe } from '@angular/common';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieService } from './Services/movie-service.service';
-import { AdminComponent } from './Admin/admin.component';
-import { AllMoviesComponent } from './Admin/all-movies/all-movies.component';
-import { MovieDetailComponent } from './Admin/all-movies/movie-detail/movie-detail.component';
-import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/edit-movie.component';
+import { ReviewListComponent } from './review-list/review-list.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +28,7 @@ import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/e
     ReviewFormComponent,
     ReviewUpdateFormComponent,
     MovieListComponent,
-    AdminComponent,
-    AllMoviesComponent,
-    MovieDetailComponent,
-    EditMovieComponent
+    ReviewListComponent
   ],
   imports: [
     BrowserModule,
