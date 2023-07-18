@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -22,6 +23,7 @@ import { MovieService } from './Services/movie-service.service';
 import { AdminComponent } from './Admin/admin.component';
 import { AllMoviesComponent } from './Admin/all-movies/all-movies.component';
 import { MovieDetailComponent } from './Admin/all-movies/movie-detail/movie-detail.component';
+import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/edit-movie.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,12 @@ import { MovieDetailComponent } from './Admin/all-movies/movie-detail/movie-deta
     MovieListComponent,
     AdminComponent,
     AllMoviesComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    EditMovieComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

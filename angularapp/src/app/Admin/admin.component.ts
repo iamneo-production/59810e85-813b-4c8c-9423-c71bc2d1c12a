@@ -7,14 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
- 
   constructor(public route:Router){}
   navigatetoallmovies(){
-    this.route.navigate(['/allmovies'])
+    this.route.navigate(['/all-movies'])
   }
   navigatetoaddnewmovies()
   {
 	  this.route.navigate(['/addnewmovies'])
   }
-
 }

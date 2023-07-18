@@ -1,3 +1,4 @@
+import { Renderer2 } from '@angular/core';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -13,8 +14,10 @@ export class AppComponent {
 
   searchResults:string[]=[];
 
-  constructor(private router: Router){}
-
+  constructor(private renderer: Renderer2,router: Router){}
+  ngOnInit(){
+    this.renderer.setStyle(document.body, 'background-color','cornsilk')
+  }
   performSearch(searchTerm:string):void
 {
   this.searchResults=[];
