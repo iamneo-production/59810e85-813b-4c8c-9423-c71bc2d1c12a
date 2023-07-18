@@ -5,6 +5,10 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
 import { ReviewUpdateFormComponent } from './review-update-form/review-update-form.component';
 import { ReviewListComponent } from './review-list/review-list.component';
+import { AdminComponent } from './Admin/admin.component';
+import { AllMoviesComponent } from './Admin/all-movies/all-movies.component';
+import { MovieDetailComponent } from './Admin/all-movies/movie-detail/movie-detail.component';
+import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/edit-movie.component';
 
 const routes: Routes = [
   {
