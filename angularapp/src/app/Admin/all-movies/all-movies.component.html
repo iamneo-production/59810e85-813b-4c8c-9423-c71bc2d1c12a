@@ -1,32 +1,25 @@
 <app-admin></app-admin>
 <router-outlet></router-outlet>
 
-
-
-
-
-
-
-
 <br>
-<div class="movie-card rowposter mt-3 p-2">
-  <ng-container>
-    <div class="card" style="width: 13rem ;">
-      <div class="card-body">
-      <h5>Flash</h5>
-      <p>09-08-2010</p>
-      <p>8.5</p>
-      <div style="margin:2%; text-align: end;">
-      <button (click)="navigatetoMoviedetail()">Show details</button>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-mb-4 col-4 " *ngFor="let movies of movie">
+      <div class="card ">
+        <div class="card-body">
+          <strong>Id: </strong>{{ movies.id }}<br>
+          <strong>Title: </strong>{{ movies.title }}<br>
+          <strong>Release Date: </strong>{{ movies.releaseDate }}<br>
+          <strong>Average Rating: </strong>{{ movies.rating }}
+          <div class="button">
+            <button  mat-raised-button  color="primary" routerLink="/all-movies/movie-detail" (click)="onClick(movies.id)">Details</button>
+            <button  mat-raised-button  color="warn">Delete</button>
+          </div>
+        </div>
       </div>
     </div>
-    </div>
-  </ng-container> 
+  </div>
+</div>
 
 
-
-
-
-
-
-
+    

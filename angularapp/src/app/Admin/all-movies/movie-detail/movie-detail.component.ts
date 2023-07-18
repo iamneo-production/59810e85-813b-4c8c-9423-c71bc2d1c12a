@@ -8,10 +8,10 @@ import { Router } from '@angular/router';
 })
 export class MovieDetailComponent {
   constructor(private router:Router){}
-  navigatetoMoviedetails(){
-   this.router.navigate(["/allmovies/moviedetail/editmovie"])
+  navigatetoEditmovie(){
+   this.router.navigate(["all-movies/movie-detail/edit-movie"])
   }
   navigatetoReviewmovie(){
-    this.router.navigate(["/allmovies/moviedetail/reviewmovie"])
+    this.router.navigate([""])
    }
 }
