@@ -1,6 +1,5 @@
 package com.example.springapp;
 
-<<<<<<< HEAD
 import static org.junit.Assert.assertTrue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -21,8 +20,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import com.example.springapp.model.Movie;
-import com.example.springapp.model.Review;
+//import com.example.springapp.model.Movie;
+//import com.example.springapp.model.Review;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -90,16 +89,4 @@ class SpringappApplicationTests {
       File directory = new File(directoryPath);
       assertTrue(directory.exists() && directory.isDirectory());;
       }
-=======
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class SpringappApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
->>>>>>> 88ccedf2be08df52bdaaa1400ad5df2e656ed10d
 }
