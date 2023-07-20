@@ -42,11 +42,11 @@ public class MovieController {
 	
 	//GET A MOVIE BY MOVIE ID****************************************
 	
-	@GetMapping("/GET/movie/{id}")
-	public ResponseEntity<?> showMovieById(@PathVariable long id){
+	// @GetMapping("/GET/movie/{id}")
+	// public ResponseEntity<?> showMovieById(@PathVariable long id){
 		
-		return movieService.showMovieByIdService(id);
-	}
+	// 	return movieService.showMovieByIdService(id);
+	// }
 
 	//Search movie by title or genre*******************************
 	
