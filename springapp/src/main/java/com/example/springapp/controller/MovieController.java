@@ -2,6 +2,7 @@ package com.example.springapp.controller;
 
 import java.util.*;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -43,14 +44,14 @@ public class MovieController {
 	//GET A MOVIE BY MOVIE ID****************************************
 	
 	@GetMapping("/GET/movie/{id}")
-    	public ResponseEntity<Movie> getMovieById(@PathVariable("id") Long id) {
-        	Movie movie = movieService.getMovieById(id);
-       		if (movie != null) {
-            	return new ResponseEntity<>(movie, HttpStatus.OK);
-        	} else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-       		}
-    	}
+	public ResponseEntity<Movie> getMovieById(@PathVariable("id") Long id) {
+		Movie movie = movieService.getMovieById(id);
+		if (movie != null) {
+			return new ResponseEntity<>(movie, HttpStatus.OK);
+		} else {
+		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+	}
 
 	// @GetMapping("/GET/movie/{id}")
 	// public ResponseEntity<?> showMovieById(@PathVariable long id){
