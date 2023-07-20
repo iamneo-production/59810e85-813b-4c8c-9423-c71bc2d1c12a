@@ -1,4 +1,4 @@
-package com.example.springapp;
+package com.example.springapp.service;
 
 import java.util.ArrayList;
 import java.util.*;
@@ -8,8 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.example.springapp.Review;
-import com.example.springapp.ReviewRepository;
+import com.example.springapp.model.Review;
+import com.example.springapp.model.Movie;
+import com.example.springapp.repository.ReviewRepository;
 
 @Service
 public class ReviewService {
@@ -26,9 +27,10 @@ public class ReviewService {
 		String reviewNote = reviewDTO.getReviewNote();
 		String source = reviewDTO.getSource();
 		Date date = reviewDTO.getDate();
-		Long movieId = reviewDTO.getMovieId();
+		//Long movieId = reviewDTO.getMovieId();
+		Movie movie = reviewDTO.getMovie();
 		
-		Review reviewObj= new Review(userId,rating,reviewNote,source,date,movieId);
+		Review reviewObj= new Review(userId,rating,reviewNote,source,date,movie);
 		reviewRepo.save(reviewObj);
 		return new ResponseEntity<Review>(reviewObj, HttpStatus.OK);
 	}
@@ -36,9 +38,9 @@ public class ReviewService {
 	
 
 	//GET review service class***************************************************
-	public ArrayList<Review> showAllReviewService() {
+	public List<Review> showAllReviewService() {
 		
-		ArrayList<Review> allReview = reviewRepo.findAllReview();
+		List<Review> allReview = reviewRepo.findAllReview();
         Collections.reverse(allReview);
     	return allReview;
 		
@@ -47,6 +49,8 @@ public class ReviewService {
 
 
 	//GET/:id review service class********************************************************
+
+	
 	public ResponseEntity<?> showReviewByIdService(Long reviewId) {
 
         Review newreview= reviewRepo.findById(reviewId).get();
@@ -81,9 +85,9 @@ public class ReviewService {
 	
 
 	//GET all reviews for a specific movie *****************************************
-	public ArrayList<Review> getAllReviewsForMovieService(Long movieId){
+	public List<Review> getAllReviewsForMovieService(Long id){
 
-		ArrayList<Review> allReviewMovie = reviewRepo.findAllReviewMovie(movieId);
+		List<Review> allReviewMovie = reviewRepo.findAllByMovieId( id);
         Collections.reverse(allReviewMovie);
     	return allReviewMovie;
 	}

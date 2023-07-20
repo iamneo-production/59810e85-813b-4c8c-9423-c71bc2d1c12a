@@ -1,18 +1,28 @@
-package com.example.springapp;
+package com.example.springapp.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.OneToMany;
+import javax.persistence.CascadeType;
+import javax.persistence.*;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
+import com.example.springapp.model.Review;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 
 @Entity
 @Table
-public class Movie {
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class Movie implements Serializable {
     
+	private static final long serialVersionUID = 1L;
     @Id
 	//@GeneratedValue(strategy  = GenerationType.AUTO)
 	private long id;
@@ -22,7 +32,9 @@ public class Movie {
 	private String genre;
 	private String plotSummary;
 	private String cast;
-	//private List<Reviews> reviews;
+	@OneToMany(mappedBy = "movie",cascade = CascadeType.ALL,fetch = FetchType.LAZY )
+	@JsonBackReference
+	private List<Review> reviews;
 
     public Movie() {
 		super();
@@ -30,8 +42,10 @@ public class Movie {
 	}
 	
 	
+
+
 	public Movie(long id, String title, Date releaseDate, String rating, String genre,
-			String plotSummary, String cast) {
+			String plotSummary, String cast,List<Review> reviews) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -40,7 +54,17 @@ public class Movie {
 		this.genre = genre;
 		this.plotSummary = plotSummary;
 		this.cast = cast;
+		this.reviews = reviews;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Movie [cast=" + cast + ", genre=" + genre + ", id=" + id + ", plotSummary=" + plotSummary + ", rating="
+				+ rating + ", releaseDate=" + releaseDate + ", reviews=" + reviews + ", title=" + title + "]";
+	}
+
+
 
 
 	public long getId() {
@@ -111,6 +135,15 @@ public class Movie {
 
 	public void setCast(String cast) {
 		this.cast = cast;
+	}
+
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
 	}
 	
 	
