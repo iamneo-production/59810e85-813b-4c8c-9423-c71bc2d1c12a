@@ -1,0 +1,16 @@
+<h2>Movie Reviews</h2>
+
+    <div *ngFor="let review of reviews" class="review-item">
+       <div class="review-header"> 
+        <h3>Review ID: {{ review.id }}</h3>
+        <p>User ID: {{ review.userId }}</p>
+        <p>Date: {{ review.date | date }}</p>
+    </div>
+    <div class="review-details">
+        <p>Rating: {{ review.rating }}</p>
+        <p>Review Note: {{ review.reviewNote }}</p>
+        <p>Source: {{review.source }}</p>
+        <p>Movie ID: {{ review.movieId }}</p>
+    </div>
+
+    <button (click)="gotoReviewForm()">Review</button>
