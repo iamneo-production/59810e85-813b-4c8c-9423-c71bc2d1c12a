@@ -20,10 +20,10 @@ import com.example.springapp.service.ReviewService;
 @RestController
 // @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")   //Somnath 
 @CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
+// @CrossOrigin(origins = "https://8081-aaffdaaaacdbfdecacdccdbbedbeeabbebbdd.project.examly.io/")   //GOKULNATHAN
 // @CrossOrigin(origins = "")     //Sakthivel
 // @CrossOrigin(origins = "")     //Ragavi
-// @CrossOrigin(origins = "")     //Aishwarya R
-// @CrossOrigin(origins = "")     //GOKULNATHAN 
+// @CrossOrigin(origins = "")     //Aishwarya R 
 // @CrossOrigin(origins = "")     //Jyothsna
 // @CrossOrigin(origins = "")     //Nandhini
 @RequestMapping

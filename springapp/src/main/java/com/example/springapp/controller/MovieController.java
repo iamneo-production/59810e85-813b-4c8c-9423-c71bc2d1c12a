@@ -19,6 +19,7 @@ import com.example.springapp.service.MovieService;
 
 @RestController
 @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/")
+// @CrossOrigin(origins="https://8081-aaffdaaaacdbfdecacdccdbbedbeeabbebbdd.project.examly.io/")  //GOKULNATHAN
 @RequestMapping
 public class MovieController {
 
@@ -43,15 +44,17 @@ public class MovieController {
 	
 	//GET A MOVIE BY MOVIE ID****************************************
 	
-	@GetMapping("/GET/movie/{id}")
-	public ResponseEntity<Movie> getMovieById(@PathVariable("id") Long id) {
-		Movie movie = movieService.getMovieById(id);
-		if (movie != null) {
-			return new ResponseEntity<>(movie, HttpStatus.OK);
-		} else {
-		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		@GetMapping("/GET/movie/{id}")
+		public ResponseEntity<Movie> getMovieById(@PathVariable("id") Long id) {
+			Movie movie = movieService.getMovieById(id);
+			if (movie != null) {
+				return new ResponseEntity<>(movie, HttpStatus.OK);
+			} else {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			}
 		}
-	}
+
+		//Gokulnathan
 
 	// @GetMapping("/GET/movie/{id}")
 	// public ResponseEntity<?> showMovieById(@PathVariable long id){
