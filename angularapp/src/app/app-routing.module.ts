@@ -25,10 +25,11 @@ const routes: Routes = [
   pathMatch:"full"
 },
 {path:"movies", component:MovieListComponent,pathMatch:"full"},
+
 { path: '', component: AdminComponent },
 { path:'all-movies', component: AllMoviesComponent},
 { path:'all-movies/movie-detail', component: MovieDetailComponent},
-{ path:'all-movies/movie-detail/edit-movie', component: EditMovieComponent}
+{ path:'all-movies/movie-detail/edit-movie/:id', component: EditMovieComponent}
 ];
 
 @NgModule({
