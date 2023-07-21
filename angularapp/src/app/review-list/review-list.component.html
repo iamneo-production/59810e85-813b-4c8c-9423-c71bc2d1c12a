@@ -3,6 +3,7 @@
 <div class="left-side">
   <h3>All Reviews</h3>
   <div *ngFor="let review of reviews" class="review-item">
+    <div *ngIf="(review.userId==5)">
     <div class="review-header"> 
       <h4>Review ID: {{ review.id }}</h4>
       <p>User ID: {{ review.userId }}</p>
@@ -12,7 +13,8 @@
       <p>Rating: {{ review.rating }}</p>
       <p>Review Note: {{ review.reviewNote }}</p>
       <p>Source: {{review.source }}</p>
-      <p>Movie ID: {{ review.movie.movieId}}</p>
+      <p>Movie ID: {{ review.movie.id}}</p>
+    </div>
     </div>
 
 <div class="right-side">

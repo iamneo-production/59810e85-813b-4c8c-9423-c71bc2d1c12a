@@ -59,11 +59,15 @@
                 </div>
 
             </div>
+            <div>
                <label for="movie">Movie</label>
                <input type="text" id="movie" name="movie" placeholder="movie" [(ngModel)]="reviewForm.movie"
                    #source="ngModel" disabled required/>
-            <div>
-                </div>
+              </div>
+              <div>
+                <label for="movieId">Movie Id</label>
+                <input type="number" [(ngModel)]="reviewForm.movie.id" />
+              </div>
             <input type="submit" value="Submit" (click)="addNewReview()" id="btn" [disabled]="!myForm.valid"
                 onclick="this.style.visibility='hidden'">
 
