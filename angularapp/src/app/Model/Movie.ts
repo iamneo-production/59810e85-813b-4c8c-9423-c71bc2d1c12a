@@ -6,4 +6,5 @@ export class Movie{
     genre:string='';
     plotSummary:string='';
     cast:string='';
+    movieId: any;
 }
