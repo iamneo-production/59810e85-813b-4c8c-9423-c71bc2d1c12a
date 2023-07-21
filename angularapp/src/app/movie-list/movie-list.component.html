@@ -4,11 +4,11 @@
        <span>Movie Review Aggregator</span>
 
      </div>
-        <ul>
+        <!-- <ul>
           <li><button routerLink="/movies" (click)="fetchAllMovies()">All Movies</button></li>
           <li><button routerLink="/logout">Logout</button></li>
           <li><button routerLink="/account">Account</button></li>
-        </ul>
+        </ul> -->
       </nav>
     <div class="search-box">
         <input type="text" [(ngModel)]="searchTerm" placeholder="Search by title or genre..." />
@@ -26,7 +26,7 @@
               <strong>Average Rating:</strong> {{ movies.rating }}
 
               <button class="show_btn">Show Details</button>
-              <button class="review_btn">Give Review</button>
+              <button class="review_btn" (click)="gotoReviewForm(movies.id,5)">Give Review</button>
             </li>  
             
 

@@ -50,7 +50,7 @@ public class ReviewController {
 	
 	
 //	Get all Reviews and rating using review Id *************************************
-	@GetMapping("/GET/review/{id}")
+	@GetMapping("/review/{id}")
 	public ResponseEntity<?> showReviewById(@PathVariable("id") long id){
 		
 		return reviewService.showReviewByIdService(id);
