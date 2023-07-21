@@ -1,0 +1,74 @@
+<!-- Aishwarya Ghosh -->
+
+<div class="back">
+    <button (click)="goToReviewList(reviewForm.movie.id)">Back To All Review Page</button>
+
+    <div class="form">
+        <h2 id="registration">Review Form</h2>
+        <form #myForm="ngForm">
+            <div ngModelGroup="personalDetails">
+                <!-- <label for="movieId">Movie Id</label>
+                <input type="number" id="movieId" name="movieId" [(ngModel)]="reviewForm.movieId" /> -->
+
+                <label for="userId">User Id</label>
+                <input type="number" id="userId" name="userId" [(ngModel)]="reviewForm.userId" disabled/>
+
+                <label for="date">Date </label><br>
+                <input type="text" id="date" name="date" [(ngModel)]="reviewForm.date" disabled />
+
+
+            </div>
+
+            <div>
+                <label for="rating">Movie Rating</label>
+                <br>
+                <span class="star-cb-group">
+                    <input type="radio" id="rating-5" name="rating" value="5" [(ngModel)]="reviewForm.rating" />
+                    <label for="rating-5">5</label>
+                    <input type="radio" id="rating-4" name="rating" value="4" [(ngModel)]="reviewForm.rating"
+                        checked="checked" />
+                    <label for="rating-4">4</label>
+                    <input type="radio" id="rating-3" name="rating" value="3" [(ngModel)]="reviewForm.rating" />
+                    <label for="rating-3">3</label>
+                    <input type="radio" id="rating-2" name="rating" value="2" [(ngModel)]="reviewForm.rating" />
+                    <label for="rating-2">2</label>
+                    <input type="radio" id="rating-1" name="rating" value="1" [(ngModel)]="reviewForm.rating" />
+                    <label for="rating-1">1</label>
+                </span>
+                <br><br>
+            </div>
+
+            <div>
+
+                <label for="reviewNote">Your Review</label>
+                <input type="text" id="reviewNote" name="reviewNote" placeholder="Your Review"
+                    [(ngModel)]="reviewForm.reviewNote" #reviewNote="ngModel" required />
+
+                <div>
+                    <small *ngIf="reviewNote.invalid && reviewNote.touched">Review is required field</small>
+                </div>
+
+
+
+                <label for="source">Provide Sources</label>
+                <input type="text" id="source" name="source" placeholder="all sources" [(ngModel)]="reviewForm.source"
+                    #source="ngModel" required />
+
+                <div>
+                    <small *ngIf="source.invalid && source.touched">Review is required field</small>
+                </div>
+
+            </div>
+               <label for="movie">Movie</label>
+               <input type="text" id="movie" name="movie" placeholder="movie" [(ngModel)]="reviewForm.movie"
+                   #source="ngModel" disabled required/>
+            <div>
+                </div>
+            <input type="submit" value="Submit" (click)="addNewReview()" id="btn" [disabled]="!myForm.valid"
+                onclick="this.style.visibility='hidden'">
+
+        </form>
+    </div>
+</div>
+<!-- <button (click)="gotoReviewUpdate(2)">Update</button>
+<router-outlet></router-outlet> -->
