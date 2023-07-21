@@ -8,9 +8,12 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.10</version>
 		<relativePath /> <!-- lookup parent from repository -->
+<<<<<<< HEAD
 		<version>2.7.10</version>
 		<relativePath /> <!-- lookup parent from repository -->
 		
+=======
+>>>>>>> 352d35bc5eec6e93c1f743f0df6b86351068e61a
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>springapp</artifactId>
@@ -59,6 +62,7 @@
 			<artifactId>mockito-core</artifactId>
 		</dependency>
 
+<<<<<<< HEAD
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -78,11 +82,15 @@
 		</dependency>
 
 		<!--<dependency>
+=======
+		<!-- <dependency>
+>>>>>>> 352d35bc5eec6e93c1f743f0df6b86351068e61a
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 			<version>2.5.5</version>
 		</dependency> -->
 
+<<<<<<< HEAD
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 <dependency>
     <groupId>com.fasterxml.jackson.core</groupId>
@@ -105,9 +113,11 @@
             <version>2.2</version>
         </dependency>
 
+=======
+>>>>>>> 352d35bc5eec6e93c1f743f0df6b86351068e61a
 		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
 		</dependency>
 
 		<dependency>
@@ -118,6 +128,7 @@
 		</dependency>
 
 
+<<<<<<< HEAD
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -134,6 +145,8 @@
 			<artifactId>jackson-dataformat-xml</artifactId>
 			</dependency>
 				
+=======
+>>>>>>> 352d35bc5eec6e93c1f743f0df6b86351068e61a
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -141,11 +154,6 @@
 			<version>1.18.24</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-core</artifactId>
-</dependency>
-
 	</dependencies>
 
 	<build>
