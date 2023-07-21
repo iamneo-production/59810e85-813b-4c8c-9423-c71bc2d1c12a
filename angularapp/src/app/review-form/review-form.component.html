@@ -1,17 +1,17 @@
 <!-- Aishwarya Ghosh -->
 
 <div class="back">
-    <button (click)="goToReviewList(reviewForm.movieId)">Back To All Review Page</button>
+    <button (click)="goToReviewList(reviewForm.movie.id)">Back To All Review Page</button>
 
     <div class="form">
         <h2 id="registration">Review Form</h2>
         <form #myForm="ngForm">
             <div ngModelGroup="personalDetails">
-                <label for="movieId">Movie Id</label>
-                <input type="number" id="movieId" name="movieId" [(ngModel)]="reviewForm.movieId" />
+                <!-- <label for="movieId">Movie Id</label>
+                <input type="number" id="movieId" name="movieId" [(ngModel)]="reviewForm.movieId" /> -->
 
                 <label for="userId">User Id</label>
-                <input type="number" id="userId" name="userId" [(ngModel)]="reviewForm.userId" />
+                <input type="number" id="userId" name="userId" [(ngModel)]="reviewForm.userId" disabled/>
 
                 <label for="date">Date </label><br>
                 <input type="text" id="date" name="date" [(ngModel)]="reviewForm.date" disabled />
@@ -59,10 +59,16 @@
                 </div>
 
             </div>
-
+               <label for="movie">Movie</label>
+               <input type="text" id="movie" name="movie" placeholder="movie" [(ngModel)]="reviewForm.movie"
+                   #source="ngModel" disabled required/>
+            <div>
+                </div>
             <input type="submit" value="Submit" (click)="addNewReview()" id="btn" [disabled]="!myForm.valid"
                 onclick="this.style.visibility='hidden'">
 
         </form>
     </div>
 </div>
+<!-- <button (click)="gotoReviewUpdate(2)">Update</button>
+<router-outlet></router-outlet> -->

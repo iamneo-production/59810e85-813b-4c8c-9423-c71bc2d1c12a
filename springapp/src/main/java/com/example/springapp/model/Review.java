@@ -1,28 +1,35 @@
-package com.example.springapp;
+package com.example.springapp.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
 @Entity
 @Table
-public class Review {
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class Review implements Serializable{
     
+	private static final long serialVersionUID = 1L;
     @Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Long userId;
 	private String rating;
 	private String reviewNote;
 	private String source;	
 	private Date date;
-	// private Movie movie;
-	private Long movieId;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name= "movie_id")
+	 private Movie movie;
+	//private Long movieId;
 	
 	
 	public Review() {
@@ -32,13 +39,34 @@ public class Review {
 
 	
 
-	public Review(Long userId, String rating, String reviewNote, String source, Date date, Long movieId) {
+	public Review(Long userId, String rating, String reviewNote, String source, Date date, Movie movie) {
 		this.userId = userId;
 		this.rating = rating;
 		this.reviewNote = reviewNote;
 		this.source = source;
 		this.date = date;
-		this.movieId = movieId;
+		//this.movieId = movieId;
+		this.movie= movie;
+	}
+
+
+
+	public Movie getMovie() {
+		return movie;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Review [date=" + date + ", id=" + id + ", movie=" + movie + ", rating=" + rating + ", reviewNote="
+				+ reviewNote + ", source=" + source + ", userId=" + userId + "]";
+	}
+
+
+
+	public void setMovie(Movie movie) {
+		this.movie = movie;
 	}
 
 
@@ -115,15 +143,7 @@ public class Review {
 
 
 
-	public Long getMovieId() {
-		return movieId;
-	}
-
-
-
-	public void setMovieId(Long movieId) {
-		this.movieId = movieId;
-	}
+	
 
 }
 
