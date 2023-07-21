@@ -3,6 +3,22 @@
 <div class="left-side">
   <h3>All Reviews</h3>
   <div *ngFor="let review of reviews" class="review-item">
+    <div class="review-header"> 
+      <h4>Review ID: {{ review.id }}</h4>
+      <p>User ID: {{ review.userId }}</p>
+      <p>Date: {{ review.date | date }}</p>
+    </div>
+    <div class="review-details">
+      <p>Rating: {{ review.rating }}</p>
+      <p>Review Note: {{ review.reviewNote }}</p>
+      <p>Source: {{review.source }}</p>
+      <p>Movie ID: {{ review.movie.id}}</p>  
+    </div>
+  </div>
+
+<div class="right-side">
+  <h5>Your Review</h5>
+  <div *ngFor="let review of reviews" class="review-item">
     <div *ngIf="(review.userId==5)">
     <div class="review-header"> 
       <h4>Review ID: {{ review.id }}</h4>
@@ -13,15 +29,13 @@
       <p>Rating: {{ review.rating }}</p>
       <p>Review Note: {{ review.reviewNote }}</p>
       <p>Source: {{review.source }}</p>
-     <!-- <p>Movie ID: {{ review.movie.movieId}}</p>  -->
+      <p>Movie ID: {{ review.movie.id}}</p>  
     </div>
-
-<div class="right-side">
-  <h5>Your Review</h5>
+    </div>
   <button (click)="gotoReviewForm(review.movie.id,5)">Review</button>
   <button (click)="gotoUpdateForm(review.id)">Update</button>
 </div>
 </div>
-</div>
+
 
   
