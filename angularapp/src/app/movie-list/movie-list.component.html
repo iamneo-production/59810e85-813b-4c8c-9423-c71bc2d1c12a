@@ -1,0 +1,37 @@
+<div class="bg">
+    <nav>
+     <div class="text">
+       <span>Movie Review Aggregator</span>
+
+     </div>
+        <ul>
+          <li><button routerLink="/movies" (click)="fetchAllMovies()">All Movies</button></li>
+          <li><button routerLink="/logout">Logout</button></li>
+          <li><button routerLink="/account">Account</button></li>
+        </ul>
+      </nav>
+    <div class="search-box">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Search by title or genre..." />
+      </div>
+
+      <button routerLink="/searchmovie" class="btn1" (click)="searchMovie(searchTerm)">Search</button>
+
+ <div>
+        <h2>List of Movies:</h2>
+         <label class="movie-list">
+       <li *ngFor="let movies of allMovies" class="movie-item"> 
+              <strong>Id:</strong> {{ movies.id }}<br>
+              <strong>Title:</strong> {{ movies.title }}<br>
+              <strong>Release Date:</strong> {{ movies.releaseDate }}<br>
+              <strong>Average Rating:</strong> {{ movies.rating }}
+
+              <button class="show_btn">Show Details</button>
+              <button class="review_btn">Give Review</button>
+            </li>  
+            
+
+         </label>
+
+      </div> 
+
+</div>
