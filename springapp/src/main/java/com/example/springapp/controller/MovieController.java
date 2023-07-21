@@ -17,7 +17,8 @@ import com.example.springapp.service.MovieService;
 
 
 @RestController
-@CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/")
+@CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/")   //Somnath Mandal
+//@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
 @RequestMapping
 public class MovieController {
 
@@ -42,7 +43,7 @@ public class MovieController {
 	
 	//GET A MOVIE BY MOVIE ID****************************************
 	
-	@GetMapping("/GET/movie/{id}")
+	@GetMapping("/movie/{id}")
 	public ResponseEntity<?> showMovieById(@PathVariable long id){
 		
 		return movieService.showMovieByIdService(id);
