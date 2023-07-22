@@ -15,7 +15,7 @@ const routes: Routes = [
     component:MovieListComponent,
     pathMatch:"full"
   },
-  {path:"/movie/:id", component:MovieDetailsComponent},
+  {path:"movies/:id", component:MovieDetailsComponent},
   {path:"movies", component:MovieListComponent,pathMatch:"full"},
   {path:"ReviewList/:id",component:ReviewListComponent},
   {path:'ReviewForm', component:ReviewFormComponent},

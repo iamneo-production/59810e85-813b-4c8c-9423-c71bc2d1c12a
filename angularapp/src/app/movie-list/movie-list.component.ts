@@ -86,7 +86,6 @@ export class MovieListComponent {
   //Button For Show details
   navShowDetails(id:any){
     localStorage.setItem('movieId',id);
-    this.router.navigateByUrl("/movie/:id");
+    this.router.navigateByUrl('movies/:id');
   }
-
 }

@@ -22,3 +22,13 @@ button:hover{
     color: #ffffff;
     border: 2px solid #000000;
 }
+
+/* .review-id,
+.review-user-id, 
+.review-rating,
+.review-source,
+.review-date ,
+.review-note {
+    margin-top: 5px;
+    list-style: none;
+} */

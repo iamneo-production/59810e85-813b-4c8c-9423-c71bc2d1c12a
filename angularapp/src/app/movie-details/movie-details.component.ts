@@ -11,12 +11,24 @@ import { ReviewServiceService } from '../Services/review-service.service';
 })
 export class MovieDetailsComponent {
 
+  movie: Movie = {
+    id: 0,
+    title: '',
+    rating: '',
+    cast: '',
+    plotSummary: '',
+    genre: '',
+    releaseDate: new Date(),
+  };
 
-  movie: Movie =new Movie();
-  allMovies:Movie[]=[];
-
-  constructor(private movieService : MovieService) { }
+  constructor(private movieService : MovieService, private reviewform: ReviewServiceService, private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  //Button For Review
+  gotoReviewForm(movieid:number,userid:number) {
+    this.router.navigateByUrl('ReviewForm');
+    this.reviewform.getUserMovieId(movieid,userid)
   }
 }
