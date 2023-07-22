@@ -3,7 +3,6 @@ import { MovieService } from '../Services/movie-service.service';
 import { ReviewServiceService } from '../Services/review-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from '../Model/Movie';
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-movie-details',
