@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ReviewServiceService } from '../Services/review-service.service';
 import { DatePipe } from '@angular/common';
 import { ReviewListserviceService } from '../Services/review-listservice.service';
+import { Movie } from '../Model/Movie';
 
 @Component({
   selector: 'app-review-form',
@@ -20,9 +21,6 @@ export class ReviewFormComponent implements OnInit{
        var today= new Date();
       // this.reviewForm.date=datePipe.transform((new Date),'dd-MM-yyyy');
       this.reviewForm.date=today;
-<<<<<<< HEAD
-
-=======
       this.reviewForm.userId=this.reviewService.UserId;
       // console.log("77");
       this.reviewService.getTheMovie().subscribe(data=>{
@@ -30,7 +28,6 @@ export class ReviewFormComponent implements OnInit{
         this.reviewForm.movie=data;
         // this.movieId=this.reviewForm.movie.id;
       })
->>>>>>> dcb09f0db326cd9579e05298fb492ab919934001
       
   }
   addNewReview(){
@@ -43,5 +40,11 @@ export class ReviewFormComponent implements OnInit{
     this.router.navigate(['ReviewList',movId]);
     this.RevListservice.getMovieId(movId);
   }
+//  //Review Update form
+//   gotoReviewUpdate(revId: number) {
+//     this.router.navigate(['ReviewUpdate', revId]);
+//     this.reviewService.getId(revId);
+//   }
+
 }
 // Aishwarya Ghosh

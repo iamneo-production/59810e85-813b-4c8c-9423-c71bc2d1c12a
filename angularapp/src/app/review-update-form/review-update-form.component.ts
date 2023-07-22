@@ -24,13 +24,14 @@ export class ReviewUpdateFormComponent implements OnInit {
       // this.review=data;
       console.log(data);
       this.review.id = data.id;
-      this.review.movieId = data.movieId;
+      // this.review.movieId = data.movieId;
       this.review.userId = data.userId;
       this.review.date=data.date;
       this.ratingnum=Number(data.rating);
       this.review.rating = data.rating;
       this.review.reviewNote = data.reviewNote;
       this.review.source = data.source;
+      this.review.movie = data.movie;
     });
   }
 

@@ -1,6 +1,6 @@
 <!-- Aishwarya Ghosh -->
 <div class="back">
-    <button (click)="goToReviewList(review.movieId)">Back To review page</button>
+    <button (click)="goToReviewList(review.movie.id)">Back To review page</button>
 
     <div class="form">
         <h2 id="registration">Update Your Review </h2>
@@ -11,8 +11,8 @@
                 <label for="reviewId">Review Id</label>
                 <input type="number" id="reviewId" name="reviewId" [(ngModel)]="review.id" disabled />
 
-                <label for="movieId">Movie Id</label>
-                <input type="number" id="movieId" name="movieId" [(ngModel)]="review.movieId" disabled />
+                <!-- <label for="movieId">Movie Id</label>
+                <input type="number" id="movieId" name="movieId" [(ngModel)]="review.movieId" disabled /> -->
 
                 <label for="userId">User Id</label>
                 <input type="number" id="userId" name="userId" [(ngModel)]="review.userId" disabled />
@@ -48,6 +48,10 @@
                 <label for="source">Provide Sources</label>
                 <input type="text" id="source" name="source" placeholder="all sources" [(ngModel)]="review.source" required>
             </div>
+            <div>
+                <label for="movie">Provide Movies</label>
+                <input type="text" id="movie" name="movie" placeholder="movie" [(ngModel)]="review.movie" disabled />
+                </div>
 
                 <div>
                     <label for="movieId">Movie Id</label>

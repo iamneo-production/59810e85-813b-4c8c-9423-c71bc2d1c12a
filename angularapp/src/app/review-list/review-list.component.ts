@@ -36,9 +36,6 @@ export class ReviewListComponent implements OnInit {
     this.reviewform.getUserMovieId(movieid,userid)
   }
 
-<<<<<<< HEAD
-}
-=======
 //Button for Update
 gotoUpdateForm(id:number){
   this.router.navigate(['ReviewUpdate',id]);
@@ -46,4 +43,3 @@ gotoUpdateForm(id:number){
 }
 
 }
->>>>>>> dcb09f0db326cd9579e05298fb492ab919934001
