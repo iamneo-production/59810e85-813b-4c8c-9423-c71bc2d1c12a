@@ -19,30 +19,31 @@ export class MovieDetailsComponent {
   constructor(private movieService:MovieService ,private reviewform: ReviewServiceService, private router:Router,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getMovieDetails();
+    // this.getMovieById()
+    
   }
   
-  getMovieDetails() {
-    const movieId = this.route.snapshot.paramMap.get('id'); 
-    if (movieId) {
-      const id = parseInt(movieId, 10);
-      this.movieService.getMovieById(id).subscribe((data: Movie) => {
-        this.movie = data;
-      });
-    }
-  }
-
-  // getMovieById(){
-  //   this.movieService.getMovieById().subscribe(data =>{
-  //     this.movie.id = data.id;
-  //     this.movie.title = data.title;
-  //     this.movie.releaseDate =data.releaseDate;
-  //     this.movie.rating = data.rating;
-  //     this.movie.genre = data.genre;
-  //     this.movie.plotSummary = data.plotSummary;
-  //     this.movie.cast = data.cast;
-  //   })
+  // getMovieDetails() {
+  //   const movieId = this.route.snapshot.paramMap.get('id'); 
+  //   if (movieId) {
+  //     const id = parseInt(movieId, 10);
+  //     this.movieService.getMovieById(id).subscribe((data: Movie) => {
+  //       this.movie = data;
+  //     });
+  //   }
   // }
+
+  getMovieById(){
+    this.movieService.getMovieById().subscribe(data =>{
+      this.movie.id = data.id;
+      this.movie.title = data.title;
+      this.movie.releaseDate =data.releaseDate;
+      this.movie.rating = data.rating;
+      this.movie.genre = data.genre;
+      this.movie.plotSummary = data.plotSummary;
+      this.movie.cast = data.cast;
+    })
+  }
   
    //Button For Review
    gotoReviewForm(movieid:number,userid:number) {
