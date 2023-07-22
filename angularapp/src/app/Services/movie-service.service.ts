@@ -50,7 +50,7 @@ export class MovieService{
     }
 
     getMovieById(id?:number):Observable<Movie>{
-        return this.http.get<Movie>(`${this.getUrl}/${this.id}`);
+        return this.http.get<Movie>(`${this.getUrl}/${id}`);
     }
 
     // search movie by title or genre

@@ -24,8 +24,15 @@ export class MovieDetailsComponent {
   constructor(private movieService : MovieService, private reviewform: ReviewServiceService, private router:Router) { }
 
   ngOnInit(): void {
+    this.getMovie();
   }
 
+  private getMovie(){
+    this.movieService.getMovieById(Number(localStorage.getItem('movieId'))).subscribe(data=>{
+      this.movie = data;
+      console.log(this.movie);
+    })
+  }
   //Button For Review
   gotoReviewForm(movieid:number,userid:number) {
     this.router.navigateByUrl('ReviewForm');
