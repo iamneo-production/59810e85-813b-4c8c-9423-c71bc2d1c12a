@@ -84,3 +84,6 @@ export class MovieListComponent {
   }
 
 }
+
+
+//Somnath Mandal
