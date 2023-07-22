@@ -11,4 +11,32 @@
 
 .review-details {
     margin-top: 5px;
+<<<<<<< HEAD
+=======
+}
+
+.tab {
+    width: 100%;
+    background-color: rgb(210, 199, 199);
+}
+
+.left-side {
+
+    max-width: 45%;
+    text-align: left;
+    background-color: rgb(210, 199, 199);
+    float:left;
+    float: width 80px;
+}
+
+.right-side {
+
+    /* margin-left: 45%;
+    margin-top: 0; */
+    max-width: 50%;
+    margin-left: 45%;
+    text-align: right;
+    float:right;
+    background-color: rgb(210, 199, 199);
+>>>>>>> dcb09f0db326cd9579e05298fb492ab919934001
 }

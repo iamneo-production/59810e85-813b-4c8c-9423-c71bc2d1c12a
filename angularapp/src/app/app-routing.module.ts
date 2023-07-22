@@ -5,8 +5,10 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
 import { ReviewUpdateFormComponent } from './review-update-form/review-update-form.component';
 import { ReviewListComponent } from './review-list/review-list.component';
+import { HomeComponentComponent } from './home-component/home-component.component';
 
 const routes: Routes = [
+  {path:"",component:HomeComponentComponent},
   {
     path:"searchmovie",
     component:MovieListComponent,

@@ -13,14 +13,24 @@ import { ReviewListserviceService } from '../Services/review-listservice.service
 export class ReviewFormComponent implements OnInit{
 
   reviewForm : Review = new Review();
-  
+  // movieId:number=0;
   constructor(private reviewService: ReviewServiceService,private RevListservice: ReviewListserviceService ,private router: Router,private datePipe:DatePipe){}
 
   ngOnInit(): void {
        var today= new Date();
       // this.reviewForm.date=datePipe.transform((new Date),'dd-MM-yyyy');
       this.reviewForm.date=today;
+<<<<<<< HEAD
 
+=======
+      this.reviewForm.userId=this.reviewService.UserId;
+      // console.log("77");
+      this.reviewService.getTheMovie().subscribe(data=>{
+        console.log(data);
+        this.reviewForm.movie=data;
+        // this.movieId=this.reviewForm.movie.id;
+      })
+>>>>>>> dcb09f0db326cd9579e05298fb492ab919934001
       
   }
   addNewReview(){
