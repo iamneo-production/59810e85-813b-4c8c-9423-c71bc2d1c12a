@@ -83,4 +83,9 @@ export class MovieListComponent {
     this.reviewform.getUserMovieId(movieid,userid)
   }
 
+  //Button For ShowDetails
+  navShowDetails(id:any){
+    localStorage.setItem('movieId',id);
+    this.router.navigateByUrl('movie/:id');
+  }
 }

@@ -16,6 +16,7 @@ import { MovieService } from './Services/movie-service.service';
 import { ReviewListComponent } from './review-list/review-list.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeComponentComponent } from './home-component/home-component.componen
     MovieListComponent,
     ReviewListComponent,
     UserNavComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,

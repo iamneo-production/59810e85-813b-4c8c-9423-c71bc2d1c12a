@@ -1,0 +1,39 @@
+.row{
+    padding-left: 20px;
+}
+
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+h4{
+    font-weight: bold;
+}
+
+.right{
+    font-size: 1.25rem; 
+    font-weight: bold;
+}
+
+button{
+    background-color: #0000FF;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: #0000FF;
+    color: #ffffff;
+    border: 2px solid #000000;
+}
+
+/* .review-id,
+.review-user-id, 
+.review-rating,
+.review-source,
+.review-date ,
+.review-note {
+    margin-top: 5px;
+    list-style: none;
+} */
