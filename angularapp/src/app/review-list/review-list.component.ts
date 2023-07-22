@@ -26,6 +26,7 @@ export class ReviewListComponent implements OnInit {
     this.reviewService.getReviews( ).subscribe(
       reviews => this.reviews = reviews);
       console.log(this.reviews);
+      this.reviewService.movieId=this.movieId;
   }
 
 
@@ -42,12 +43,20 @@ gotoUpdateForm(id:number){
   this.reviewform.getId(id);
 }
 
-deleteReview(reviewId: number) {
+//Button for Delete
+deleteReview(reviewId: number,movieId:number) {
   const confirmed=window.confirm('Are you sure you ant to delete this review?');
   if(confirmed){
-    this.reviewService.deleteReview(reviewId).subscribe(() => {
-      this.reviews = this.reviews.filter(review => review.id !== reviewId);
-    });
+    // this.reviewService.deleteReview(reviewId).subscribe(() => {
+    //   this.reviews = this.reviews.filter(review => review.id !== reviewId);
+    // this.reviewform.getId(reviewId);
+    // this.reviewform.getReviewById().subscribe((data) => {
+    //   this.review=data;
+    // });
+    this.reviewService.deleteReview(reviewId).subscribe();
+    this.router.navigate(['ReviewList',movieId]);
+    this.reviewService.getMovieId(movieId);
+    };
   }
 }
-}
+
