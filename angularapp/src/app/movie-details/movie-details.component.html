@@ -1,7 +1,7 @@
 <app-user-nav></app-user-nav> 
-<div class="row">
-    <div class="p-5" *ngIf="movie">
-      <h2 class="mt-5">{{movie.title}}</h2>
+<div class="row" *ngIf="movie">
+  <h2 class="mt-5">{{movie.title}}</h2>
+    <div class="p-5" >
         <h5 class="mt-3 mb-3"><strong>Id : {{movie.id}}</strong></h5>
         <hr>
         <h5 class="mt-2 mb-2"><strong>Plot Summary :</strong></h5>
