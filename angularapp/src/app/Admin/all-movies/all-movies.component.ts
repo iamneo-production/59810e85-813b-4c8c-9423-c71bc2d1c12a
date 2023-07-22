@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Movie } from 'src/app/Model/Movie';
+import { MovieService } from 'src/app/Services/movie-service.service';
 
 
 @Component({
@@ -8,15 +10,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./all-movies.component.css']
 })
 export class AllMoviesComponent {
-  constructor(private router:Router){}
-
+  constructor(private service:MovieService,private router:Router){}
   navigatetoMoviedetail(){
     this.router.navigate(["/movie-detail"])
    }
-  // navigatetoMoviedetails(){
-  //   this.router.navigate(["/allmovies/moviedetail/editmovie"])
-  //  }
-  //  navigatetoReviewmovie(){
-  //    this.router.navigate(["/allmovies/moviedetail/reviewmovie"])
-  //   }
+  
+   ngOnInit(): void {
+    this.fetchAllMovies();
+  }
+
+  onClick(id:any){
+    localStorage.setItem('movieId',id);
+  }
+
+  movie:Movie[]=[];
+
+  fetchAllMovies(){
+    this.service.getMovies().subscribe(data=>{
+      this.movie=data;
+    })
+     
+  }
 }

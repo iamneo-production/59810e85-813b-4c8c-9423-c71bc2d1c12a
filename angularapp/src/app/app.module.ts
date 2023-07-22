@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
@@ -11,6 +12,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -22,6 +24,11 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieService } from './Services/movie-service.service';
 import { ReviewListComponent } from './review-list/review-list.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
+import { AdminComponent } from './Admin/admin.component';
+import { AllMoviesComponent } from './Admin/all-movies/all-movies.component';
+import { MovieDetailComponent } from './Admin/all-movies/movie-detail/movie-detail.component';
+import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/edit-movie.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +37,11 @@ import { UserNavComponent } from './user-nav/user-nav.component';
     ReviewUpdateFormComponent,
     MovieListComponent,
     ReviewListComponent,
-    UserNavComponent
+    UserNavComponent,
+    AdminComponent,
+    AllMoviesComponent,
+    MovieDetailComponent,
+    EditMovieComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +53,7 @@ import { UserNavComponent } from './user-nav/user-nav.component';
     MatButtonModule,
     MatCardModule,
     MatDatepickerModule,
+    MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule
   ],
@@ -49,3 +61,4 @@ import { UserNavComponent } from './user-nav/user-nav.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
