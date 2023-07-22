@@ -21,4 +21,8 @@ export class ReviewListserviceService {
     //const url = '${this.baseUrl}/${movieId}/reviews';
     return this.http.get<Review[]>(`${this.baseUrl}/${this.movieId}`);
   }
+
+  deleteReview(reviewId: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/reviews/${reviewId}`);
+  }
 }

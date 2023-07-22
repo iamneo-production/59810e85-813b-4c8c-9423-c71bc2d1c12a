@@ -42,4 +42,12 @@ gotoUpdateForm(id:number){
   this.reviewform.getId(id);
 }
 
+deleteReview(reviewId: number) {
+  const confirmed=window.confirm('Are you sure you ant to delete this review?');
+  if(confirmed){
+    this.reviewService.deleteReview(reviewId).subscribe(() => {
+      this.reviews = this.reviews.filter(review => review.id !== reviewId);
+    });
+  }
+}
 }
