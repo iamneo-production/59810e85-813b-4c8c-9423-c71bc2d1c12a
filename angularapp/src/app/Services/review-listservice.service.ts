@@ -7,9 +7,11 @@ import { Review } from '../Model/Review';
   providedIn: 'root'
 })
 export class ReviewListserviceService {
-  private baseUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
-
+  // private baseUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
   
+  //Aishwarya Ghosh
+  private baseUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
+  private deleteUrl= "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review"
   movieId: number = 1;
   constructor(private http: HttpClient) { }
   
@@ -23,7 +25,7 @@ export class ReviewListserviceService {
   }
 
   deleteReview(reviewId: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/reviews/${reviewId}`);
+    return this.http.delete(`${this.deleteUrl}/${reviewId}`);
   }
 }
 

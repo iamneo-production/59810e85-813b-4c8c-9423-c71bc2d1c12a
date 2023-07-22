@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ReviewServiceService } from './Services/review-service.service';
 import { ReviewUpdateFormComponent } from './review-update-form/review-update-form.component';
@@ -16,7 +16,9 @@ import { MovieService } from './Services/movie-service.service';
 import { ReviewListComponent } from './review-list/review-list.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { NewmovieComponent } from './newmovie/newmovie.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+
 
 @NgModule({
   declarations: [
@@ -27,14 +29,17 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     ReviewListComponent,
     UserNavComponent,
     HomeComponentComponent,
-    MovieDetailsComponent
+    NewmovieComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule 
+    RouterModule,
+    ReactiveFormsModule,
+    MovieDetailsComponent,
+    
   ],
   providers: [ReviewServiceService, DatePipe,MovieService],
   bootstrap: [AppComponent]
