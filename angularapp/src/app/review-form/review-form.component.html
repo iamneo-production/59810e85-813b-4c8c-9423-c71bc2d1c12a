@@ -11,7 +11,7 @@
                 <input type="number" id="movieId" name="movieId" [(ngModel)]="reviewForm.movieId" /> -->
 
                 <label for="userId">User Id</label>
-                <input type="number" id="userId" name="userId" [(ngModel)]="reviewForm.userId" disabled/>
+                <input type="number" id="userId" name="userId" [(ngModel)]="reviewForm.userId" disabled />
 
                 <label for="date">Date </label><br>
                 <input type="text" id="date" name="date" [(ngModel)]="reviewForm.date" disabled />
@@ -60,14 +60,16 @@
 
             </div>
             <div>
-               <label for="movie">Movie</label>
-               <input type="text" id="movie" name="movie" placeholder="movie" [(ngModel)]="reviewForm.movie"
-                   #source="ngModel" disabled required/>
-              </div>
-              <!-- <div>
+                <label for="movie">Movie</label>
+                <input type="text" id="movie" name="movie" placeholder="movie" [(ngModel)]="reviewForm.movie"
+                    #source="ngModel" disabled/>
+            </div>
+            <div>
                 <label for="movieId">Movie Id</label>
-                <input type="number" [(ngModel)]="reviewForm.movie.id" />
-              </div> -->
+                <input type="number" id="movieId" name="movieId" [(ngModel)]="reviewForm.movie.id" disabled />
+                <label for="movieId">Movie Name</label>
+                <input type="text" id="movieId" name="moviename" [(ngModel)]="reviewForm.movie.title" disabled />
+            </div>
             <input type="submit" value="Submit" (click)="addNewReview()" id="btn" [disabled]="!myForm.valid"
                 onclick="this.style.visibility='hidden'">
 
