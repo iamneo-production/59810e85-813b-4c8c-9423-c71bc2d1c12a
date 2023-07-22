@@ -1,4 +1,4 @@
-package com.example.springapp;
+package com.example.springapp.service;
 
 import java.util.ArrayList;
 import java.util.*;
@@ -8,8 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.example.springapp.Movie;
-import com.example.springapp.MovieRepository;
+import com.example.springapp.model.Movie;
+import com.example.springapp.model.Review;
+import com.example.springapp.repository.MovieRepository;
 
 @Service
 public class MovieService {
@@ -28,8 +29,10 @@ public class MovieService {
 		Date date2= movie.getReleaseDate();
 		String cast2= movie.getCast();
 		String plot2= movie.getPlotSummary();
+		List<Review> reviews= movie.getReviews();
+
 		
-		Movie movieObj= new Movie(id,title,date2,rating2,genre2,plot2,cast2);
+		Movie movieObj= new Movie(id,title,date2,rating2,genre2,plot2,cast2,reviews);
 		movieRepository.save(movieObj);
 		return new ResponseEntity<Movie>(movieObj,HttpStatus.OK);
 		
@@ -37,8 +40,8 @@ public class MovieService {
 	
 	//GET MOVIE SERVICE CLASS************************************--------------------------
 	
-	public ArrayList<Movie> showAllMovieService(){
-		ArrayList<Movie> allMovie = movieRepository.findAllMovie();
+	public List<Movie> showAllMovieService(){
+		List<Movie> allMovie = movieRepository.findAllMovie();
 		Collections.reverse(allMovie);
 		return allMovie;
 	}

@@ -1,6 +1,6 @@
-package com.example.springapp;
+package com.example.springapp.controller;
 
-import java.util.ArrayList;
+import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,17 +14,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.springapp.Review;
-import com.example.springapp.ReviewService;
+import com.example.springapp.model.Review;
+import com.example.springapp.service.ReviewService;
 
 @RestController
-// @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")   //Somnath 
-@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
+// @CrossOrigin(origins="https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/")   //Somnath 
+//@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
 // @CrossOrigin(origins = "")     //Sakthivel
 // @CrossOrigin(origins = "")     //Ragavi
 // @CrossOrigin(origins = "")     //Aishwarya R
 // @CrossOrigin(origins = "")     //GOKULNATHAN 
-// @CrossOrigin(origins = "")     //Jyothsna
+ @CrossOrigin(origins = "https://8081-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Jyothsna
 // @CrossOrigin(origins = "")     //Nandhini
 @RequestMapping
 public class ReviewController {
@@ -42,16 +42,16 @@ public class ReviewController {
 
 	
 //	Get all Reviews and rating of all movie ****************************************
-	@GetMapping("/GET/review")
-	public ArrayList<Review> showAllReviews(){
+	@GetMapping("/review")
+	public List<Review> showAllReviews(){
 		
 		return reviewService.showAllReviewService();
 	}
 	
 	
 //	Get all Reviews and rating using review Id *************************************
-	@GetMapping("/GET/review/{id}")
-	public ResponseEntity<?> showReviewById(@PathVariable Long id){
+	@GetMapping("/review/{id}")
+	public ResponseEntity<?> showReviewById(@PathVariable("id") long id){
 		
 		return reviewService.showReviewByIdService(id);
 	}
@@ -78,7 +78,7 @@ public class ReviewController {
     
 //  Get all reviews for a specific movie *******************************************
 	@GetMapping("/GET/review/movie/{movieId}")
-	public ArrayList<Review>  getAllReviewsForMovie(@PathVariable Long movieId){
+	public List<Review>  getAllReviewsForMovie(@PathVariable Long movieId){
 
 		return reviewService.getAllReviewsForMovieService(movieId);
 	}

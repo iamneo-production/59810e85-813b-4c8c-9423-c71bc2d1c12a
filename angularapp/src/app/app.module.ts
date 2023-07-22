@@ -14,6 +14,8 @@ import { DatePipe } from '@angular/common';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieService } from './Services/movie-service.service';
 import { ReviewListComponent } from './review-list/review-list.component';
+import { UserNavComponent } from './user-nav/user-nav.component';
+import { HomeComponentComponent } from './home-component/home-component.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ReviewListComponent } from './review-list/review-list.component';
     ReviewFormComponent,
     ReviewUpdateFormComponent,
     MovieListComponent,
-    ReviewListComponent
+    ReviewListComponent,
+    UserNavComponent,
+    HomeComponentComponent
   ],
   imports: [
     BrowserModule,

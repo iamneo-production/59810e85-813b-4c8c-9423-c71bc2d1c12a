@@ -1,3 +1,5 @@
+import { Movie } from "./Movie";
+
 export class Review{
     id:number=0;
     userId:number=0;
@@ -5,5 +7,5 @@ export class Review{
     reviewNote:string='';
     source: string='';
     date: Date | undefined;
-    movieId:number=0;
+    movie:Movie=new Movie();
 }
