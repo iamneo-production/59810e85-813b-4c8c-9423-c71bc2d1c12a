@@ -20,15 +20,6 @@ export class MovieDetailsComponent {
   constructor(private movieService:MovieService ,private reviewform: ReviewServiceService, private router:Router,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.movie = {
-      id: 1,
-      title: 'Flash',
-      releaseDate: new Date('2022-01-01'),
-      rating: 'PG-13',
-      genre: 'Action, Adventure',
-      plotSummary: 'A movie about the superhero Flash',
-      cast: 'Actor1, Actor2, Actor3'
-    };
     this.getMovieDetails();
   }
   
