@@ -89,3 +89,6 @@ export class MovieListComponent {
     this.router.navigateByUrl('movies/:id');
   }
 }
+
+
+//Somnath Mandal
