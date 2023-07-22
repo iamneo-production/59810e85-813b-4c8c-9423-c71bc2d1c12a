@@ -53,6 +53,12 @@
                 <input type="text" id="movie" name="movie" placeholder="movie" [(ngModel)]="review.movie" disabled />
                 </div>
 
+                <div>
+                    <label for="movieId">Movie Id</label>
+                    <input type="number" id="movieId" name="movieId" [(ngModel)]="review.movie.id" disabled />
+                    <label for="movieId">Movie Name</label>
+                    <input type="text" id="movieId" name="moviename" [(ngModel)]="review.movie.title" disabled />
+                </div>
             <input type="submit"  (click)="updateReview()" value="Update"  id="btn">
             
         </form>

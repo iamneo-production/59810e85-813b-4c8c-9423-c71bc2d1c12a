@@ -24,7 +24,7 @@ import com.example.springapp.service.ReviewService;
 // @CrossOrigin(origins = "")     //Ragavi
 // @CrossOrigin(origins = "")     //Aishwarya R
 // @CrossOrigin(origins = "")     //GOKULNATHAN 
-// @CrossOrigin(origins = "")     //Jyothsna
+//  @CrossOrigin(origins = "https://8081-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Jyothsna
 // @CrossOrigin(origins = "")     //Nandhini
 @RequestMapping
 public class ReviewController {
