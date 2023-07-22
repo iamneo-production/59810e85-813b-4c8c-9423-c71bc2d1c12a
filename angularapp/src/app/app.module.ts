@@ -17,7 +17,6 @@ import { ReviewListComponent } from './review-list/review-list.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { NewmovieComponent } from './newmovie/newmovie.component';
-import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 
 
@@ -31,7 +30,6 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     UserNavComponent,
     HomeComponentComponent,
     NewmovieComponent,
-    MovieDetailsComponent,
   ],
   imports: [
     BrowserModule,
