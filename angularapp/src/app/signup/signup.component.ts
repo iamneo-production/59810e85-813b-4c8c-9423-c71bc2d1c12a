@@ -25,10 +25,10 @@ export class SignupComponent {
       alert('Please enter all required information.'); // Display an alert for missing data
       return;
     }
-
-    this.http.post<any>('https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/user/register', this.signupData).subscribe(
+    else{
+      this.http.post<any>('https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/user/register', this.signupData).subscribe(
       response => {
-        console.log(this.signup);
+        console.log(this.signupData);
         alert('Signup successful. Please login with your new account.');
         this.router.navigate(['']);
       },
@@ -36,6 +36,7 @@ export class SignupComponent {
         alert('invalid credentials. Please try again later.');
       }
     );
+    }
   }
 }
 // Aishwarya R 
