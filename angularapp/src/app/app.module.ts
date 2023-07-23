@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ReviewServiceService } from './Services/review-service.service';
 import { ReviewUpdateFormComponent } from './review-update-form/review-update-form.component';
+import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DatePipe } from '@angular/common';
 import { MovieListComponent } from './movie-list/movie-list.component';
@@ -26,13 +27,7 @@ import { NewmovieComponent } from './newmovie/newmovie.component';
   declarations: [
     AppComponent,
     ReviewFormComponent,
-    ReviewUpdateFormComponent,
-    SignupComponent,
-    MovieListComponent,
-    ReviewListComponent,
-    UserNavComponent,
-    HomeComponentComponent,
-    NewmovieComponent,
+    ReviewUpdateFormComponent
   ],
   imports: [
     BrowserModule,
