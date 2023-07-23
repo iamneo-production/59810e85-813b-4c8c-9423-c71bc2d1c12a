@@ -20,6 +20,7 @@ export class ReviewListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getReviews();
+    this.reviewService.movieId=this.movieId;
   }
 
   getReviews(): void {
@@ -34,7 +35,8 @@ export class ReviewListComponent implements OnInit {
 //Button For Review
   gotoReviewForm(movieid:number,userid:number) {
     this.router.navigateByUrl('ReviewForm');
-    this.reviewform.getUserMovieId(movieid,userid)
+    this.getReviews();
+    this.reviewform.getUserMovieId(movieid,userid);
   }
 
 //Button for Update
@@ -54,7 +56,8 @@ deleteReview(reviewId: number,movieId:number) {
     //   this.review=data;
     // });
     this.reviewService.deleteReview(reviewId).subscribe();
-    this.router.navigate(['ReviewList',movieId]);
+    this.router.getCurrentNavigation();
+    // this.router.navigate(['ReviewList',movieId]);
     this.reviewService.getMovieId(movieId);
     };
   }

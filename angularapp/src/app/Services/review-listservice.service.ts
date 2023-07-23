@@ -16,7 +16,7 @@ export class ReviewListserviceService {
   private deleteUrl= "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/DELETE/review";
   //Aishwarya Ghosh
   //private baseUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
-  //private deleteUrl= "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
+  //private deleteUrl= "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review"
   movieId: number = 1;
   constructor(private http: HttpClient) { }
   
