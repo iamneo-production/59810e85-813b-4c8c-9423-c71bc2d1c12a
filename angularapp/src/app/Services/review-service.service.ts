@@ -2,20 +2,37 @@ import { Injectable } from '@angular/core';
 import { Review } from '../Model/Review';
 import { Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Movie } from '../Model/Movie';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class ReviewServiceService {
-
+  
   error = new Subject<string>();
-
-  private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review";
+  
+  //Aishwarya Ghosh
+  private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/review";
   private postUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/review";
   private putUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/review";
+  private getMovieUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+
+  //  private getUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/review";
+  //  private postUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/POST/review";
+  //  private putUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/review";
+  //  private getMovieUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+
+  //GOKULNATHAN
+  // private getUrl = "https://8080-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/review";
+  // private postUrl = "https://8080-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/POST/review";
+  // private putUrl = "https://8080-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/review";
+  // private getMovieUrl = "https://8080-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
 
   id?: number;
+  movieId:number=1;
+  UserId:number=7;
+
   constructor(private http: HttpClient) { }
 
   //GET ALL REVIEWS*************************************************
@@ -26,6 +43,16 @@ export class ReviewServiceService {
 
 
   //POST A NEW REVIEW***********************************************
+
+  getUserMovieId(movieid:number,userid:number){
+    this.movieId=movieid;
+    this.UserId=userid;
+  }
+
+  getTheMovie(): Observable<Movie>{
+    return this.http.get<Movie>(`${this.getMovieUrl}/${this.movieId}`);
+  }
+
   addNewReview(review?: Review): Observable<Object> {
     return this.http.post<Object>(`${this.postUrl}`, review);
   }
@@ -36,7 +63,7 @@ export class ReviewServiceService {
   getId(getId?: number) {
     this.id = getId;
   }
-  getReviewById(id?: number): Observable<Review> {
+  getReviewById(): Observable<Review> {
     return this.http.get<Review>(`${this.getUrl}/${this.id}`);
   }
 

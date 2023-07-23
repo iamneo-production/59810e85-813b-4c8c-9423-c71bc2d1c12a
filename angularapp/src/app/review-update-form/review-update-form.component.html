@@ -1,6 +1,6 @@
 <!-- Aishwarya Ghosh -->
 <div class="back">
-    <button>Back To review page</button>
+    <button (click)="goToReviewList(review.movie.id)">Back To review page</button>
 
     <div class="form">
         <h2 id="registration">Update Your Review </h2>
@@ -11,8 +11,8 @@
                 <label for="reviewId">Review Id</label>
                 <input type="number" id="reviewId" name="reviewId" [(ngModel)]="review.id" disabled />
 
-                <label for="movieId">Movie Id</label>
-                <input type="number" id="movieId" name="movieId" [(ngModel)]="review.movieId" disabled />
+                <!-- <label for="movieId">Movie Id</label>
+                <input type="number" id="movieId" name="movieId" [(ngModel)]="review.movieId" disabled /> -->
 
                 <label for="userId">User Id</label>
                 <input type="number" id="userId" name="userId" [(ngModel)]="review.userId" disabled />
@@ -26,15 +26,15 @@
                 <label for="rating">Movie Rating</label>
                 <br>
                 <span class="star-cb-group">
-                    <input type="radio" id="rating-5" name="rating" [value]="5" [(ngModel)]="review.rating" />
+                    <input type="radio" id="rating-5" name="rating" [value]="5" [(ngModel)]="ratingnum" />
                     <label for="rating-5">5</label>
-                    <input type="radio" id="rating-4" name="rating" [value]="4" [(ngModel)]="review.rating" />
+                    <input type="radio" id="rating-4" name="rating" [value]="4" [(ngModel)]="ratingnum" />
                     <label for="rating-4">4</label>
-                    <input type="radio" id="rating-3" name="rating" [value]="3" [(ngModel)]="review.rating" />
+                    <input type="radio" id="rating-3" name="rating" [value]="3" [(ngModel)]="ratingnum" />
                     <label for="rating-3">3</label>
-                    <input type="radio" id="rating-2" name="rating" [value]="2" [(ngModel)]="review.rating"/>
+                    <input type="radio" id="rating-2" name="rating" [value]="2" [(ngModel)]="ratingnum"/>
                     <label for="rating-2">2</label>
-                    <input type="radio" id="rating-1" name="rating" [value]="1" [(ngModel)]="review.rating" />
+                    <input type="radio" id="rating-1" name="rating" [value]="1" [(ngModel)]="ratingnum" />
                     <label for="rating-1">1</label>
                 </span>
                 <br><br>
@@ -48,7 +48,17 @@
                 <label for="source">Provide Sources</label>
                 <input type="text" id="source" name="source" placeholder="all sources" [(ngModel)]="review.source" required>
             </div>
+            <div>
+                <label for="movie">Provide Movies</label>
+                <input type="text" id="movie" name="movie" placeholder="movie" [(ngModel)]="review.movie" disabled />
+                </div>
 
+                <div>
+                    <label for="movieId">Movie Id</label>
+                    <input type="number" id="movieId" name="movieId" [(ngModel)]="review.movie.id" disabled />
+                    <label for="movieId">Movie Name</label>
+                    <input type="text" id="movieId" name="moviename" [(ngModel)]="review.movie.title" disabled />
+                </div>
             <input type="submit"  (click)="updateReview()" value="Update"  id="btn">
             
         </form>
