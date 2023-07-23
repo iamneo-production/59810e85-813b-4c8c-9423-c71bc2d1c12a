@@ -29,7 +29,14 @@ import com.example.springapp.service.UserService;
 
 @RestController
 @RequestMapping
-@CrossOrigin(origins = "*")
+ @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/")   //Somnath 
+// @CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
+// @CrossOrigin(origins = "")     //Sakthivel
+// @CrossOrigin(origins = "")     //Ragavi
+//@CrossOrigin(origins = "https://8081-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Aishwarya R
+// @CrossOrigin(origins = "https://8081-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/")     //GOKULNATHAN 
+//  @CrossOrigin(origins = "https://8081-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Jyothsna
+// @CrossOrigin(origins = "")     //Nandhini
 
 public class UserController {
 
