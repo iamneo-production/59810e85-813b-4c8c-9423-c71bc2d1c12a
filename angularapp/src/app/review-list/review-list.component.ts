@@ -28,6 +28,7 @@ export class ReviewListComponent implements OnInit {
       reviews => this.reviews = reviews);
       console.log(this.reviews);
       this.reviewService.movieId=this.movieId;
+      console.log(this.reviewService.movieId);
   }
 
 
