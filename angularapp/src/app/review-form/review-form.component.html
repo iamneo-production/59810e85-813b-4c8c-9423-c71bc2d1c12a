@@ -1,17 +1,22 @@
 <!-- Aishwarya Ghosh -->
 
 <div class="back">
-    <button>Back To review page</button>
+    <button (click)="goToReviewList(reviewForm.movie.id)">Back To All Review Page</button>
 
     <div class="form">
         <h2 id="registration">Review Form</h2>
-        <form>
+        <form #myForm="ngForm">
             <div ngModelGroup="personalDetails">
-                <label for="movie_id">Movie Id</label>
-                <input type="number" id="movie_d" name="movie_id" [(ngModel)]="reviewForm.movie_id">
+                <!-- <label for="movieId">Movie Id</label>
+                <input type="number" id="movieId" name="movieId" [(ngModel)]="reviewForm.movieId" /> -->
 
-                <label for="user_id">User Id</label>
-                <input type="number" id="user_id" name="user_id" [(ngModel)]="reviewForm.user_id">
+                <label for="userId">User Id</label>
+                <input type="number" id="userId" name="userId" [(ngModel)]="reviewForm.userId" disabled />
+
+                <label for="date">Date </label><br>
+                <input type="text" id="date" name="date" [(ngModel)]="reviewForm.date" disabled />
+
+
             </div>
 
             <div>
@@ -35,17 +40,41 @@
 
             <div>
 
-                <label for="review">Your Review</label>
-                <input type="text" id="review" name="review" placeholder="Your Review" [(ngModel)]="reviewForm.review"
-                    required>
+                <label for="reviewNote">Your Review</label>
+                <input type="text" id="reviewNote" name="reviewNote" placeholder="Your Review"
+                    [(ngModel)]="reviewForm.reviewNote" #reviewNote="ngModel" required />
 
-                <label for="sources">Provide Sources</label>
-                <input type="text" id="sources" name="sources" placeholder="all sources"
-                    [(ngModel)]="reviewForm.sources" required>
+                <div>
+                    <small *ngIf="reviewNote.invalid && reviewNote.touched">Review is required field</small>
+                </div>
+
+
+
+                <label for="source">Provide Sources</label>
+                <input type="text" id="source" name="source" placeholder="all sources" [(ngModel)]="reviewForm.source"
+                    #source="ngModel" required />
+
+                <div>
+                    <small *ngIf="source.invalid && source.touched">Review is required field</small>
+                </div>
+
             </div>
-
-            <input type="submit" value="Submit" (click)="addNewReview()" id="btn">
+            <div>
+                <label for="movie">Movie</label>
+                <input type="text" id="movie" name="movie" placeholder="movie" [(ngModel)]="reviewForm.movie"
+                    #source="ngModel" disabled/>
+            </div>
+            <div>
+                <label for="movieId">Movie Id</label>
+                <input type="number" id="movieId" name="movieId" [(ngModel)]="reviewForm.movie.id" disabled />
+                <label for="movieId">Movie Name</label>
+                <input type="text" id="movieId" name="moviename" [(ngModel)]="reviewForm.movie.title" disabled />
+            </div>
+            <input type="submit" value="Submit" (click)="addNewReview()" id="btn" [disabled]="!myForm.valid"
+                onclick="this.style.visibility='hidden'">
 
         </form>
     </div>
 </div>
+<!-- <button (click)="gotoReviewUpdate(2)">Update</button>
+<router-outlet></router-outlet> -->
