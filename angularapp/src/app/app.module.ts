@@ -15,7 +15,7 @@ import {MatInputModule} from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ReviewServiceService } from './Services/review-service.service';
 import { ReviewUpdateFormComponent } from './review-update-form/review-update-form.component';
@@ -24,6 +24,8 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieService } from './Services/movie-service.service';
 import { ReviewListComponent } from './review-list/review-list.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
+import { HomeComponentComponent } from './home-component/home-component.component';
+import { NewmovieComponent } from './newmovie/newmovie.component';
 import { AdminComponent } from './Admin/admin.component';
 import { AllMoviesComponent } from './Admin/all-movies/all-movies.component';
 import { MovieDetailComponent } from './Admin/all-movies/movie-detail/movie-detail.component';
@@ -41,7 +43,9 @@ import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/e
     AdminComponent,
     AllMoviesComponent,
     MovieDetailComponent,
-    EditMovieComponent
+    EditMovieComponent,
+    HomeComponentComponent,
+    NewmovieComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,9 @@ import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/e
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule,
+
   ],
   providers: [ReviewServiceService, DatePipe,MovieService],
   bootstrap: [AppComponent]

@@ -9,8 +9,10 @@ import { AdminComponent } from './Admin/admin.component';
 import { AllMoviesComponent } from './Admin/all-movies/all-movies.component';
 import { MovieDetailComponent } from './Admin/all-movies/movie-detail/movie-detail.component';
 import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/edit-movie.component';
+import { HomeComponentComponent } from './home-component/home-component.component';
 
 const routes: Routes = [
+  {path:"",component:HomeComponentComponent},
   {
     path:"searchmovie",
     component:MovieListComponent,

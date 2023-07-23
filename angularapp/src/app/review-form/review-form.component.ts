@@ -14,7 +14,7 @@ import { Movie } from '../Model/Movie';
 export class ReviewFormComponent implements OnInit{
 
   reviewForm : Review = new Review();
-  
+  // movieId:number=0;
   constructor(private reviewService: ReviewServiceService,private RevListservice: ReviewListserviceService ,private router: Router,private datePipe:DatePipe){}
 
   ngOnInit(): void {
@@ -26,6 +26,7 @@ export class ReviewFormComponent implements OnInit{
       this.reviewService.getTheMovie().subscribe(data=>{
         console.log(data);
         this.reviewForm.movie=data;
+        // this.movieId=this.reviewForm.movie.id;
       })
       
   }
