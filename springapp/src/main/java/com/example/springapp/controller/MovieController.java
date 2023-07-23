@@ -1,6 +1,6 @@
-package com.example.springapp;
+package com.example.springapp.controller;
 
-import java.util.ArrayList;
+import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,12 +12,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.springapp.Movie;
-import com.example.springapp.MovieService;
+import com.example.springapp.model.Movie;
+import com.example.springapp.service.MovieService;
 
 
 @RestController
-@CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/")
+// @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/")   //Somnath Mandal
+@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
+// @CrossOrigin(origins = "https://8081-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/")     //GOKULNATHAN 
 @RequestMapping
 public class MovieController {
 
@@ -34,15 +36,15 @@ public class MovieController {
 	
 	//GET ALL MOVIES***************************************************
 	
-	@GetMapping("/GET/movie")
-	public ArrayList<Movie> showAllMovies(){
+	@GetMapping("/movie")
+	public List<Movie> showAllMovies(){
 		return movieService.showAllMovieService();
 		
 	}
 	
 	//GET A MOVIE BY MOVIE ID****************************************
 	
-	@GetMapping("/GET/movie/{id}")
+	@GetMapping("/movie/{id}")
 	public ResponseEntity<?> showMovieById(@PathVariable long id){
 		
 		return movieService.showMovieByIdService(id);
