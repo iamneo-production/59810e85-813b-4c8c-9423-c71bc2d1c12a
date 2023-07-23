@@ -23,7 +23,7 @@ import com.example.springapp.service.ReviewService;
 // @CrossOrigin(origins = "")     //Sakthivel
 // @CrossOrigin(origins = "")     //Ragavi
 // @CrossOrigin(origins = "")     //Aishwarya R
-// @CrossOrigin(origins = "")     //GOKULNATHAN 
+// @CrossOrigin(origins = "https://8081-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/")     //GOKULNATHAN 
 //  @CrossOrigin(origins = "https://8081-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Jyothsna
 // @CrossOrigin(origins = "")     //Nandhini
 @RequestMapping

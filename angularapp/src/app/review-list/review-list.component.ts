@@ -20,12 +20,14 @@ export class ReviewListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getReviews();
+    this.reviewService.movieId=this.movieId;
   }
 
   getReviews(): void {
     this.reviewService.getReviews( ).subscribe(
       reviews => this.reviews = reviews);
       console.log(this.reviews);
+      this.reviewService.movieId=this.movieId;
   }
 
 
@@ -33,7 +35,8 @@ export class ReviewListComponent implements OnInit {
 //Button For Review
   gotoReviewForm(movieid:number,userid:number) {
     this.router.navigateByUrl('ReviewForm');
-    this.reviewform.getUserMovieId(movieid,userid)
+    this.getReviews();
+    this.reviewform.getUserMovieId(movieid,userid);
   }
 
 //Button for Update
@@ -42,4 +45,21 @@ gotoUpdateForm(id:number){
   this.reviewform.getId(id);
 }
 
+//Button for Delete
+deleteReview(reviewId: number,movieId:number) {
+  const confirmed=window.confirm('Are you sure you ant to delete this review?');
+  if(confirmed){
+    // this.reviewService.deleteReview(reviewId).subscribe(() => {
+    //   this.reviews = this.reviews.filter(review => review.id !== reviewId);
+    // this.reviewform.getId(reviewId);
+    // this.reviewform.getReviewById().subscribe((data) => {
+    //   this.review=data;
+    // });
+    this.reviewService.deleteReview(reviewId).subscribe();
+    this.router.getCurrentNavigation();
+    // this.router.navigate(['ReviewList',movieId]);
+    this.reviewService.getMovieId(movieId);
+    };
+  }
 }
+
