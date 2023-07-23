@@ -25,7 +25,7 @@ export class NewmovieService {
     console.log(newmovie);
 
 
-    this.http.post<Observable<Object>>("https://8080-ebfcdbbebddbafeedecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie",finaldata, { headers : headers}).subscribe(
+    this.http.post<Observable<Object>>("https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/POST/movie",finaldata, { headers : headers}).subscribe(
       (response) => {
         console.log(response);
         return response;
