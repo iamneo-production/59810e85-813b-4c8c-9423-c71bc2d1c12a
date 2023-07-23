@@ -60,3 +60,6 @@ export class MovieService{
         return this.http.get<Movie[]>(`${this.searchUrl}/${title}`);
     }
 }    
+
+
+//Somnath mandal
