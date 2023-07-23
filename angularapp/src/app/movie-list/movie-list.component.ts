@@ -83,4 +83,12 @@ export class MovieListComponent {
     this.reviewform.getUserMovieId(movieid,userid)
   }
 
+  //Button For Show details
+  navShowDetails(id:any){
+    localStorage.setItem('movieId',id);
+    this.router.navigateByUrl('movies/:id');
+  }
 }
+
+
+//Somnath Mandal

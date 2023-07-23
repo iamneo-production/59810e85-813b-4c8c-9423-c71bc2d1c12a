@@ -10,6 +10,7 @@ import { AllMoviesComponent } from './Admin/all-movies/all-movies.component';
 import { MovieDetailComponent } from './Admin/all-movies/movie-detail/movie-detail.component';
 import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/edit-movie.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponentComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
     component:MovieListComponent,
     pathMatch:"full"
   },
+  {path:"movies/:id", component:MovieDetailsComponent},
   {path:"movies", component:MovieListComponent,pathMatch:"full"},
   {path:"ReviewList/:id",component:ReviewListComponent},
   {path:'ReviewForm', component:ReviewFormComponent},

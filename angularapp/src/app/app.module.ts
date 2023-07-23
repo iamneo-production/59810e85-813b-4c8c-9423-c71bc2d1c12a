@@ -61,7 +61,6 @@ import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/e
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-
   ],
   providers: [ReviewServiceService, DatePipe,MovieService],
   bootstrap: [AppComponent]

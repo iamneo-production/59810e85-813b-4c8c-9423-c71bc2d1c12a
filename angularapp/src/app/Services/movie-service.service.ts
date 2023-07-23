@@ -22,7 +22,6 @@ export class MovieService{
     private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
     private postUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
     private searchUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
-    private putUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
     
     id?:number;
     constructor(private http:HttpClient) { }
@@ -46,7 +45,7 @@ export class MovieService{
     }
 
     getMovieById(id?:number):Observable<Movie>{
-        return this.http.get<Movie>(`${this.getUrl}/${this.id}`);
+        return this.http.get<Movie>(`${this.getUrl}/${id}`);
     }
 
     // search movie by title or genre
