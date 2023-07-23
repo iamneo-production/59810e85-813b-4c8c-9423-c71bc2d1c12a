@@ -25,7 +25,7 @@
               <strong>Release Date:</strong> {{ movies.releaseDate }}<br>
               <strong>Average Rating:</strong> {{ movies.rating }}
 
-              <button class="show_btn">Show Details</button>
+              <button class="show_btn" (click)="navShowDetails(movies.id)">Show Details</button>
               <button class="review_btn" (click)="gotoReviewForm(movies.id,5)">Give Review</button>
             </li>  
             
