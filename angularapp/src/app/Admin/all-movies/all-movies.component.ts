@@ -11,9 +11,11 @@ import { MovieService } from 'src/app/Services/movie-service.service';
 })
 export class AllMoviesComponent {
   constructor(private service:MovieService,private router:Router){}
-  navigatetoMoviedetail(){
-    this.router.navigate(["/movie-detail"])
-   }
+
+  navigatetoMoviedetail(id:any){
+    localStorage.setItem('movieId',id);
+    this.router.navigateByUrl('/all-movies/movie-detail');
+  }
   
    ngOnInit(): void {
     this.fetchAllMovies();

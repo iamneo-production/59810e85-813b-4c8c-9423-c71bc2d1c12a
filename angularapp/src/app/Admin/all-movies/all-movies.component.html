@@ -12,7 +12,7 @@
           <strong>Release Date: </strong>{{ movies.releaseDate }}<br>
           <strong>Average Rating: </strong>{{ movies.rating }}
           <div class="button">
-            <button  mat-raised-button  color="primary" routerLink="/all-movies/movie-detail" (click)="onClick(movies.id)">Details</button>
+            <button  mat-raised-button  color="primary" (click)="navigatetoMoviedetail(movies.id)">Details</button>
             <button  mat-raised-button  color="warn">Delete</button>
           </div>
         </div>

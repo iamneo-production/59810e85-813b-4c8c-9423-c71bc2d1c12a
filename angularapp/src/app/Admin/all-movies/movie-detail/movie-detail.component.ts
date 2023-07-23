@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Movie } from 'src/app/Model/Movie';
+import { MovieService } from 'src/app/Services/movie-service.service';
 
 
 @Component({
@@ -9,38 +10,28 @@ import { Movie } from 'src/app/Model/Movie';
   styleUrls: ['./movie-detail.component.css']
 })
 export class MovieDetailComponent {
-  MovieService: any;
-  constructor(private router:Router){}
-
+  movie: Movie =new Movie();
+  allMovies:Movie[]=[];
   
-  movie: Movie = {
-    id: 0,
-    title: '',
-    rating: '',
-    cast: '',
-    plotSummary: '',
-    genre: '',
-    releaseDate: new Date(),
-    movieId: undefined
-  };
 
-  
+  constructor(private movieService : MovieService, private router:Router) { }
 
   ngOnInit(): void {
     this.getMovie();
   }
 
   private getMovie(){
-    this.MovieService.getMovieList(localStorage.getItem('movieId')).subscribe((data: Movie)=>{
+    this.movieService.getMovieById(Number(localStorage.getItem('movieId'))).subscribe(data=>{
       this.movie = data;
       console.log(this.movie);
     })
   }
+
   navigatetoEditmovie(id:number){
    this.router.navigate(["/all-movies/movie-detail/edit-movie",id]);
   }
 
-  navigatetoReviewmovie(){
-    this.router.navigate([""])
+  navigatetoAllReview(id:number){
+    this.router.navigate(["/ReviewList",id]);
    }
 }

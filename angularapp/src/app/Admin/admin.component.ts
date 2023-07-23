@@ -14,7 +14,7 @@ export class AdminComponent {
   }
   navigatetoaddnewmovies()
   {
-	  this.router.navigate(['/addnewmovies'])
+	  this.router.navigate(['/new-movie'])
   }
 
   ngOnInit(){

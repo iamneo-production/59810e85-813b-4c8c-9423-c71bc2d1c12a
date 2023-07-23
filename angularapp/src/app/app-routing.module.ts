@@ -11,6 +11,7 @@ import { MovieDetailComponent } from './Admin/all-movies/movie-detail/movie-deta
 import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/edit-movie.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { NewmovieComponent } from './newmovie/newmovie.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponentComponent},
@@ -30,10 +31,11 @@ const routes: Routes = [
 },
 {path:"movies", component:MovieListComponent,pathMatch:"full"},
 
-{ path: '', component: AdminComponent },
+{ path: 'admin', component: AdminComponent },
 { path:'all-movies', component: AllMoviesComponent},
 { path:'all-movies/movie-detail', component: MovieDetailComponent},
-{ path:'all-movies/movie-detail/edit-movie/:id', component: EditMovieComponent}
+{ path:'all-movies/movie-detail/edit-movie/:id', component: EditMovieComponent},
+{ path:'new-movie', component: NewmovieComponent},
 ];
 
 @NgModule({
