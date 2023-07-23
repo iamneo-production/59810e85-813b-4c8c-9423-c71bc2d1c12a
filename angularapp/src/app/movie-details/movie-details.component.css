@@ -1,0 +1,34 @@
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+h4{
+    font-weight: bold;
+}
+
+.right{
+    font-size: medium;
+}
+
+button{
+    background-color: #0000FF;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: #0000FF;
+    color: #ffffff;
+    border: 2px solid #000000;
+}
+
+/* .review-id,
+.review-user-id, 
+.review-rating,
+.review-source,
+.review-date ,
+.review-note {
+    margin-top: 5px;
+    list-style: none;
+} */
