@@ -20,6 +20,8 @@ import { NewmovieComponent } from './newmovie/newmovie.component';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

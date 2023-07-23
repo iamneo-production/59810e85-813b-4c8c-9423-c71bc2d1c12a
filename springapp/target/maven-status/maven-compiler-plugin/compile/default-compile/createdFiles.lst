@@ -4,7 +4,13 @@ com/example/springapp/repository/MovieRepository.class
 com/example/springapp/controller/MovieController.class
 demo.class
 com/example/springapp/model/Movie.class
+<<<<<<< HEAD
 com/example/springapp/controller/ReviewController.class
 com/example/springapp/service/MovieService.class
 com/example/springapp/repository/ReviewRepository.class
+=======
+com/example/springapp/service/MovieService.class
+com/example/springapp/repository/ReviewRepository.class
+com/example/springapp/controller/ReviewController.class
+>>>>>>> 0cc0a2b6dd98e72bed197e8563fb3f66e37bb602
 com/example/springapp/service/ReviewService.class
