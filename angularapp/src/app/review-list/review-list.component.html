@@ -1,16 +1,50 @@
-<h2>Movie Reviews</h2>
+<div class="tab" ><h2>Movie Reviews</h2>
 
-    <div *ngFor="let review of reviews" class="review-item">
-       <div class="review-header"> 
-        <h3>Review ID: {{ review.id }}</h3>
-        <p>User ID: {{ review.userId }}</p>
-        <p>Date: {{ review.date | date }}</p>
+<div class="left-side">
+  <h3 style="color: rgb(200, 122, 6);">All Reviews</h3>
+  <div *ngFor="let review of reviews" class="review-item">
+    <div class="review-header"> 
+      <h4>Review ID: {{ review.id }}</h4>
+      <p>User ID: {{ review.userId }}</p>
+      <p>Date: {{ review.date | date }}</p>
     </div>
     <div class="review-details">
-        <p>Rating: {{ review.rating }}</p>
-        <p>Review Note: {{ review.reviewNote }}</p>
-        <p>Source: {{review.source }}</p>
-        <p>Movie ID: {{ review.movieId }}</p>
+      <p>Rating: {{ review.rating }}</p>
+      <p>Review Note: {{ review.reviewNote }}</p>
+      <p>Source: {{review.source }}</p>
+      <p>Movie ID: {{ review.movie.id}}</p>  
     </div>
+  </div>
+</div>
 
-    <button (click)="gotoReviewForm()">Review</button>
+
+<div class="right-side">
+  <h3 style="color: rgb(200, 122, 6);">Your Review</h3>
+  <h3>
+    Give Your review</h3>
+    <!-- <button (click)="gotoReviewForm(movieId,6)">Give Your Review</button> -->
+  <div *ngFor="let review of reviews" class="review-item">
+    <button (click)="gotoReviewForm(review.movie.id,6)">Give Your Review</button>
+    <div *ngIf="(review.userId==6);">
+    <div class="review-header"> 
+      <h4>Review ID: {{ review.id }}</h4>
+      <p>User ID: {{ review.userId }}</p>
+      <p>Date: {{ review.date | date }}</p>
+    </div>
+    <div class="review-details">
+      <p>Rating: {{ review.rating }}</p>
+      <p>Review Note: {{ review.reviewNote }}</p>
+      <p>Source: {{review.source }}</p>
+      <p>Movie ID: {{ review.movie.id}}</p>  
+    </div>
+  <!-- <button (click)="gotoReviewForm(review.movie.id,6)">Review</button>  -->
+  <button (click)="gotoUpdateForm(review.id)">Update</button>
+  <button (click)="deleteReview(review.id,review.movie.id)">Delete</button>
+  
+</div>
+</div>
+  
+</div>
+</div>
+
+  

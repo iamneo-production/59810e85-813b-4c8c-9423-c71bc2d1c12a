@@ -1,4 +1,4 @@
-package com.example.springapp;
+package com.example.springapp.repository;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.example.springapp.Movie;
+import com.example.springapp.model.Movie;
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, Long> {
 
