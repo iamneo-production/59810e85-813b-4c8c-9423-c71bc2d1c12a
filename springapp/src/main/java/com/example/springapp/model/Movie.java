@@ -153,4 +153,3 @@ public class Movie implements Serializable {
 
 
 //Somnath mandal
-
