@@ -30,8 +30,4 @@ export class MovieDetailComponent {
   navigatetoEditmovie(id:number){
    this.router.navigate(["/all-movies/movie-detail/edit-movie",id]);
   }
-
-  navigatetoAllReview(id:number){
-    this.router.navigate(["/ReviewList",id]);
-   }
 }

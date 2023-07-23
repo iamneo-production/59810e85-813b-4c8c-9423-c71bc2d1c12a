@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ReviewServiceService } from './Services/review-service.service';
 import { ReviewUpdateFormComponent } from './review-update-form/review-update-form.component';
+import { SignupComponent } from './signup/signup.component';
 import { DatePipe } from '@angular/common';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieService } from './Services/movie-service.service';
@@ -32,11 +33,15 @@ import { MovieDetailComponent } from './Admin/all-movies/movie-detail/movie-deta
 import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/edit-movie.component';
 
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     ReviewFormComponent,
     ReviewUpdateFormComponent,
+    SignupComponent,
     MovieListComponent,
     ReviewListComponent,
     UserNavComponent,
@@ -45,7 +50,7 @@ import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/e
     MovieDetailComponent,
     EditMovieComponent,
     HomeComponentComponent,
-    NewmovieComponent,
+    NewmovieComponent
   ],
   imports: [
     BrowserModule,

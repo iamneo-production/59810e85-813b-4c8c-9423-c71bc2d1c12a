@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { SignupComponent } from './signup/signup.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
 import { ReviewUpdateFormComponent } from './review-update-form/review-update-form.component';
@@ -14,6 +14,8 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { NewmovieComponent } from './newmovie/newmovie.component';
 
 const routes: Routes = [
+ 
+  {path:'signup',component:SignupComponent},
   {path:"",component:HomeComponentComponent},
   {
     path:"searchmovie",
@@ -36,6 +38,7 @@ const routes: Routes = [
 { path:'all-movies/movie-detail', component: MovieDetailComponent},
 { path:'all-movies/movie-detail/edit-movie/:id', component: EditMovieComponent},
 { path:'new-movie', component: NewmovieComponent},
+
 ];
 
 @NgModule({
