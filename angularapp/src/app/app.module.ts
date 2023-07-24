@@ -27,8 +27,15 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     AppComponent,
     ReviewFormComponent,
-    ReviewUpdateFormComponent
-  ],
+    ReviewUpdateFormComponent,
+    SignupComponent,
+    MovieListComponent,
+    ReviewListComponent,
+    UserNavComponent,
+    HomeComponentComponent,
+    NewmovieComponent,
+    LoginComponent 
+],
   imports: [
     BrowserModule,
     AppRoutingModule,
