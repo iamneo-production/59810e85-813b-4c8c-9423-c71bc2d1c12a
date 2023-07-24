@@ -23,7 +23,6 @@ export class AppComponent {
 
 
 
-
   goToReviewList(movId: number) {
     this.router.navigate(['ReviewList', movId]);
     this.service.getMovieId(movId);
