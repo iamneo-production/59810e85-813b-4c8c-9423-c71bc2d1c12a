@@ -141,12 +141,6 @@ a {
     text-decoration: none;
 }
 
-a.forgot {
-    bottom: 240px;
-    margin-left:40px;
-    position: relative;
-
-}
 
 .create {
     display: flex;
@@ -186,4 +180,3 @@ a.forgot {
   margin-top: 5px;
   font-size: 14px;
 }
-/* Aishwarya R */

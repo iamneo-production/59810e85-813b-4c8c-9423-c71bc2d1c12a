@@ -27,7 +27,16 @@ import { NewmovieComponent } from './newmovie/newmovie.component';
   declarations: [
     AppComponent,
     ReviewFormComponent,
-    ReviewUpdateFormComponent
+    ReviewUpdateFormComponent,
+    SignupComponent,
+    MovieListComponent,
+    ReviewListComponent,
+    UserNavComponent,
+    
+    HomeComponentComponent,
+    NewmovieComponent,
+    LoginComponent
+ 
   ],
   imports: [
     BrowserModule,
