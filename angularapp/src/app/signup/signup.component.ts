@@ -26,8 +26,6 @@ export class SignupComponent {
       alert('Please enter all required information.'); // Display an alert for missing data
       return;
     }
-
-    this.http.post<any>('https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/user/register', this.signupData).subscribe(
     else{
       this.http.post<any>('https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/user/register', this.signupData).subscribe(
       response => {
@@ -40,4 +38,5 @@ export class SignupComponent {
       }
     );
   }
+}
 }

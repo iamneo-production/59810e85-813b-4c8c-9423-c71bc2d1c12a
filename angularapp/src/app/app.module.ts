@@ -46,10 +46,15 @@ import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/e
     MovieListComponent,
     ReviewListComponent,
     UserNavComponent,
-    
+    AdminComponent,    
     HomeComponentComponent,
-    NewmovieComponent
-    LoginComponent
+    NewmovieComponent,
+    LoginComponent,
+    AllMoviesComponent,
+    MovieDetailComponent,
+    EditMovieComponent
+
+
  
   ],
   imports: [
