@@ -33,26 +33,28 @@
      }
   
      .movie-list {
-      list-style-type: none;
-      padding: 0;
+      list-style-type:none;
+      padding: 10px;
     }
     
     .movie-item {
       background-color: #f2f2f2;
       padding: 10px;
       margin-bottom: 10px;
+      height: 100%;
+      list-style: none;
     }
   
     .show_btn{
-      margin-left: 5%;
+      margin-left: 20%;
       padding: 5px;
-      width: 8%;
+      width: 35%;
     }
   
     .review_btn{
-      margin-left: 5%;
+      margin-left: 20%;
       padding: 5px;
-      width: 8%;
+      width: 35%;
     }
 
     button {

@@ -28,6 +28,8 @@ export class SignupComponent {
     }
 
     this.http.post<any>('https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/user/register', this.signupData).subscribe(
+    else{
+      this.http.post<any>('https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/user/register', this.signupData).subscribe(
       response => {
         alert('Signup successful. Please login with your new account.');
         this.navigateToLogin();
