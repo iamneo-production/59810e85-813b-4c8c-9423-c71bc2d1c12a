@@ -17,6 +17,7 @@ import { NewmovieComponent } from './newmovie/newmovie.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
+  {path:"",component:HomeComponentComponent},
 
 
 
@@ -33,24 +34,16 @@ const routes: Routes = [
 { path:'all-movies/movie-detail/edit-movie/:id', component: EditMovieComponent},
 { path:'new-movie', component: NewmovieComponent},
 
-];
 
  
-  // {path:'signup',component:SignupComponent},
-  // {path:'login',component:LoginComponent},
-  // {path:'login',pathMatch:'full',redirectTo:'/login'},
-  // {path:"",component:HomeComponentComponent},
-//   {
-//     path:"searchmovie",
-//     component:MovieListComponent,
-//     pathMatch:"full"
-//   },
-//   {path:"movies/:id", component:MovieDetailsComponent},
-//   {path:"movies", component:MovieListComponent,pathMatch:"full"},
-//   {path:"ReviewList/:id",component:ReviewListComponent},
-//   {path:'ReviewForm', component:ReviewFormComponent},
-//   {path:'ReviewUpdate/:id',component:ReviewUpdateFormComponent}
-// ];
+  {path:"",component:HomeComponentComponent},
+  
+  {path:"movies/:id", component:MovieDetailsComponent},
+  {path:"movies", component:MovieListComponent,pathMatch:"full"},
+  {path:"ReviewList/:id",component:ReviewListComponent},
+  {path:'ReviewForm', component:ReviewFormComponent},
+  {path:'ReviewUpdate/:id',component:ReviewUpdateFormComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
