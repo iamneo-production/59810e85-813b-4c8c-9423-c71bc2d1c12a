@@ -37,6 +37,8 @@ import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/e
 
 
 
+import { LoginComponent } from './login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
