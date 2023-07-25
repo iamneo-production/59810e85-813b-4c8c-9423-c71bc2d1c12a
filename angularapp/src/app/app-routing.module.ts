@@ -15,6 +15,9 @@ import { LoginComponent } from './login/login.component';
 import { NewmovieComponent } from './newmovie/newmovie.component';
 
 const routes: Routes = [
+  
+  // {path:'',pathMatch:'full',redirectTo:'/login'},
+  {path:'', component: HomeComponentComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'',pathMatch:'full',redirectTo:'/login'},
@@ -22,7 +25,11 @@ const routes: Routes = [
   component:MovieListComponent,
   pathMatch:"full"
 },
-{path:"movies", component:MovieListComponent,pathMatch:"full"},
+{path:"movies/:id", component:MovieDetailsComponent},
+  {path:"movies", component:MovieListComponent,pathMatch:"full"},
+  {path:"ReviewList/:id",component:ReviewListComponent},
+  {path:'ReviewForm', component:ReviewFormComponent},
+  {path:'ReviewUpdate/:id',component:ReviewUpdateFormComponent},
 
 { path: 'admin', component: AdminComponent },
 { path:'all-movies', component: AllMoviesComponent},
