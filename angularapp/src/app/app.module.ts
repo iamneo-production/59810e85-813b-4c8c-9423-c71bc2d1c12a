@@ -6,13 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import { MatNativeDateModule } from '@angular/material/core';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -56,18 +50,13 @@ import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/e
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     RouterModule,
     MatButtonModule,
-    MatCardModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
+    
+       ReactiveFormsModule,
   ],
   providers: [ReviewServiceService, DatePipe,MovieService],
   bootstrap: [AppComponent]

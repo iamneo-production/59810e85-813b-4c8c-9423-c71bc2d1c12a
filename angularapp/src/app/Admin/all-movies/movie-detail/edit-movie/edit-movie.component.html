@@ -1,59 +1,36 @@
 <app-admin></app-admin>
 
-<div class="align">
-  <div class="col-md-6 offset-md-3"> 
-    <div>
-      <form class="form-container">
-        <mat-card>
-          <span style="text-align: center; margin-top: 5px;"><Strong> Movie Details</Strong></span>
-            <br>
-        
-          <mat-card-content>
-            <mat-form-field class="mat-50">
-              <mat-label>Movie Id</mat-label>
-              <input [(ngModel)]="movie.id" [ngModelOptions]="{standalone: true}"matInput>
-            </mat-form-field>
-                 
-            <mat-form-field class="mat-50">
-              <mat-label>Movie Title</mat-label>
-              <input  [(ngModel)]="movie.title" [ngModelOptions]="{standalone: true}" matInput>
-            </mat-form-field>
-              
-            <mat-form-field class="mat-50">
-              <mat-label>Gener</mat-label>
-              <input  [(ngModel)]="movie.genre" [ngModelOptions]="{standalone: true}"matInput>
-            </mat-form-field>
-              
-            <mat-form-field class="mat-50">
-              <mat-label>Rating</mat-label>
-              <input  [(ngModel)]="movie.rating" [ngModelOptions]="{standalone: true}"matInput>
-            </mat-form-field>
-              
-            <mat-form-field  class="mat-50">
-              <mat-label>Casts</mat-label>
-              <input [(ngModel)]="movie.cast" [ngModelOptions]="{standalone: true}" matInput>
-            </mat-form-field> 
-              
-            <mat-form-field class="mat-50">
-              <mat-label>Release Date</mat-label>
-              <input [(ngModel)]="movie.releaseDate" [ngModelOptions]="{standalone: true}" matInput [matDatepicker]="picker">
-              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-              
-            <mat-form-field>
-              <mat-label>Plot Summary</mat-label>
-              <textarea  [(ngModel)]="movie.plotSummary" [ngModelOptions]="{standalone: true}" matInput></textarea>
-            </mat-form-field>
-              
-            <div style="margin:2%; text-align: end;"> 
-              <button mat-raised-button type="submit" color="primary" (click)="onSubmit()">Update</button>
-              <button mat-raised-button type="submit" color="primary" (click)="navigatetoMoviedetail()">Close</button>
-            </div>  
-          </mat-card-content>
-        </mat-card>
-      </form> 
-    </div>
-  </div>
+<form id="movie-form">
+  <div class="card mt-5" style="padding: 20px;">
+  <div class="form-group">
+      <label>Movie Id:</label>
+      <input [(ngModel)]="movie.id" [ngModelOptions]="{standalone: true}">
 </div>
-
+  <div class="form-group">
+    <label>Movie Title:</label>
+    <input [(ngModel)]="movie.title" [ngModelOptions]="{standalone: true}">
+</div>
+  <div class="form-group">
+    <label>Movie Genre:</label>
+    <input [(ngModel)]="movie.genre" [ngModelOptions]="{standalone: true}">
+    
+  </div>
+ 
+  <div class="form-group">
+    <label>Top Cast:</label>
+    <input [(ngModel)]="movie.cast" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label >Release Date:</label>
+    <input type="date" [(ngModel)]="movie.releaseDate" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label>Plot Summary:</label>
+    <textarea [(ngModel)]="movie.plotSummary" [ngModelOptions]="{standalone: true}"></textarea>
+  </div>
+  <div class="button col-lg-10">
+  <button mat-raised-button type="submit" color="primary" (click)="onSubmit()">Update</button>
+  <button mat-raised-button type="submit" color="primary" (click)="navigatetoMoviedetail()">Close</button>
+  </div>
+  </div>
+</form>
