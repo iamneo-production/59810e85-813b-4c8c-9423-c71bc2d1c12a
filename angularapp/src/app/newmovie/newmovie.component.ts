@@ -23,8 +23,7 @@ export class NewmovieComponent {
   constructor(private handler : NewmovieService) {
 
   }
-  Generlist=['Anime','Crime','Drama','Horror','Kids & Family','Science Fiction','Sports','Thiriller','War']
-  item : any = "";
+  
   addMovie() {
     let id = this.fg.controls.id.value;
     let title = this.fg.controls.title.value;
@@ -35,7 +34,7 @@ export class NewmovieComponent {
     let plotsummary = this.fg.controls.plotsummary.value;
   
     
-    console.log(this.item);
+   
 
     let moviedetail = {
       id:id,
