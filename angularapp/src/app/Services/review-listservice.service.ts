@@ -8,7 +8,7 @@ import { Review } from '../Model/Review';
 })
 export class ReviewListserviceService {
   private baseUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
-  private deleteUrl= "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io//DELETE/review";
+  private deleteUrl= "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
 
   // //Somnath mandal
   // private baseUrl = "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/GET/review/movie";
@@ -33,3 +33,5 @@ export class ReviewListserviceService {
     return this.http.delete(`${this.deleteUrl}/${reviewId}`);
   }
 }
+
+//jyothsna
