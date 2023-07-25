@@ -17,9 +17,6 @@ import { NewmovieComponent } from './newmovie/newmovie.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
-
-
-
   {path:'',pathMatch:'full',redirectTo:'/login'},
   {path:"searchmovie",
   component:MovieListComponent,
