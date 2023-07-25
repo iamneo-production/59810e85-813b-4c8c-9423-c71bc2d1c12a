@@ -29,13 +29,13 @@ import com.example.springapp.service.UserService;
 
 @RestController
 @RequestMapping
-// @CrossOrigin(origins="https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/")   //Somnath 
+//  @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/")   //Somnath 
 // @CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
 // @CrossOrigin(origins = "")     //Sakthivel
-// @CrossOrigin(origins = "")     //Ragavi
-@CrossOrigin(origins = "https://8081-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Aishwarya R
+//  @CrossOrigin(origins = "https://8081-edcacfccfabeecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Ragavi
+//@CrossOrigin(origins = "https://8081-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Aishwarya R
 // @CrossOrigin(origins = "https://8081-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/")     //GOKULNATHAN 
-//  @CrossOrigin(origins = "https://8081-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Jyothsna
+ @CrossOrigin(origins = "https://8081-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Jyothsna
 // @CrossOrigin(origins = "")     //Nandhini
 
 public class UserController {
@@ -53,11 +53,10 @@ public class UserController {
 
 	@PostMapping("/user/register")
     public User registerNewUser(@RequestBody User user) throws Exception {
-		// System.out.println(user.getEmail());
         return userService.registerNewUser(user);
     }
     
-
+     
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> user(@RequestBody User user) {
         String result = userService.login(user.getEmail(), user.getPassword());

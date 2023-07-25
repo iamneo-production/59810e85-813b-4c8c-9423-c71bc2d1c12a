@@ -62,6 +62,29 @@ public class MovieService {
 		return search;
 		}
 
+
+	//PUT Update movie by Id
+
+	public Movie updateMovie(Long id, Movie updatedMovie) {
+        Optional<Movie> optionalMovie = movieRepository.findById(id);
+        if (optionalMovie.isPresent()) {
+            Movie movie = optionalMovie.get();
+            
+            movie.setTitle(updatedMovie.getTitle());
+            movie.setRating(updatedMovie.getRating());
+            movie.setCast(updatedMovie.getCast());
+            movie.setPlotSummary(updatedMovie.getPlotSummary());
+            movie.setGenre(updatedMovie.getGenre());
+            movie.setReleaseDate(updatedMovie.getReleaseDate());
+            // movie.setReviews(updatedMovie.getReviews());
+            movieRepository.save(movie);
+            return movie;
+
+        } else {
+            return null;
+        }
+    }
+
 }
 
 //Somnath mandal
