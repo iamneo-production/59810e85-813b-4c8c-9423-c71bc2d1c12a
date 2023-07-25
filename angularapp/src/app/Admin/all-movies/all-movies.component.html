@@ -12,8 +12,8 @@
           <strong>Release Date: </strong>{{ movies.releaseDate }}<br>
           <strong>Average Rating: </strong>{{ movies.rating }}
           <div class="button">
-            <button  mat-raised-button  color="primary" (click)="navigatetoMoviedetail(movies.id)">Details</button>
-            <button  mat-raised-button  color="warn">Delete</button>
+            <button class="btn btn-primary" (click)="navigatetoMoviedetail(movies.id)">Details</button>
+            <button class="btn btn-danger">Delete</button>
           </div>
         </div>
       </div>

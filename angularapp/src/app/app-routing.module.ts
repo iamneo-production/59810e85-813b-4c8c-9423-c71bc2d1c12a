@@ -21,6 +21,7 @@ const routes: Routes = [
   {path:'', component: HomeComponentComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
+  {path:'',pathMatch:'full',redirectTo:'/login'},
   {path:"searchmovie",
   component:MovieListComponent,
   pathMatch:"full"
