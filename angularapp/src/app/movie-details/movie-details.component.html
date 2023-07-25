@@ -8,7 +8,7 @@
       <hr>
       <p class="release mt-3 mb-3"><strong class="right">Release Date :</strong>  {{movie.releaseDate}}</p>
       <hr>
-      <p class="rating mt-3 mb-3"><strong class="right">Movie Rating :</strong> {{movie.rating}} <strong>/</strong> 10</p>
+      <p class="rating mt-3 mb-3"><strong class="right">Movie Rating :</strong> {{movie.rating}} <strong>/</strong> 5</p>
       <hr>
       <p class="rating mt-3 mb-3"><strong class="right">Movie Genre :</strong> {{movie.genre}} </p>
       <hr>
@@ -20,6 +20,7 @@
           <div class="row mt-2 mb-2">
             <div class="button col-lg-10" >
               <button type="button" class="btn btn-primary" (click)="gotoReviewForm(movie.id,5)">Give Review</button>
+              <button type="button" class="btn btn-primary" (click)="goToReviewList(movie.id)">See All Review</button>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { Movie } from '../Model/Movie';
 import { MovieService } from '../Services/movie-service.service';
 import { Router } from '@angular/router';
 import { ReviewServiceService } from '../Services/review-service.service';
+import { ReviewListserviceService } from '../Services/review-listservice.service';
 
 @Component({
   selector: 'app-movie-details',
@@ -15,7 +16,7 @@ export class MovieDetailsComponent {
   allMovies:Movie[]=[];
   
 
-  constructor(private movieService : MovieService, private reviewform: ReviewServiceService, private router:Router) { }
+  constructor(private movieService : MovieService,private RevListservice: ReviewListserviceService , private reviewform: ReviewServiceService, private router:Router) { }
 
   ngOnInit(): void {
     this.getMovie();
@@ -32,5 +33,10 @@ export class MovieDetailsComponent {
   gotoReviewForm(movieid:number,userid:number) {
     this.router.navigateByUrl('ReviewForm');
     this.reviewform.getUserMovieId(movieid,userid)
+  }
+
+  goToReviewList(movId:number){
+    this.router.navigate(['ReviewList',movId]);
+    this.RevListservice.getMovieId(movId);
   }
 }
