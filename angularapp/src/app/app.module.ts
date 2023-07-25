@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
-
-import {MatButtonModule} from '@angular/material/button';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -54,9 +51,7 @@ import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/e
     HttpClientModule,
     FormsModule,
     RouterModule,
-    MatButtonModule,
-    
-       ReactiveFormsModule,
+    ReactiveFormsModule,
   ],
   providers: [ReviewServiceService, DatePipe,MovieService],
   bootstrap: [AppComponent]
