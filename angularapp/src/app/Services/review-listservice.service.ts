@@ -11,8 +11,8 @@ export class ReviewListserviceService {
   // private deleteUrl= "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
 
   // //Somnath mandal
-  // private baseUrl = "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/GET/review/movie";
-  // private deleteUrl= "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/DELETE/review";
+  // private baseUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
+  // private deleteUrl= "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
   
   //Aishwarya Ghosh
  private baseUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";

@@ -10,7 +10,7 @@
         <hr>
         <p class="release mt-3 mb-3"><strong>Release date :</strong>  {{movie.releaseDate}}</p>
         <hr>
-        <p class="rating mt-3 mb-3"><strong>Movie rating :</strong> {{movie.rating}} <strong>/</strong> 5</p>
+        <p class="rating mt-3 mb-3"><strong>Movie rating :</strong> {{movie.rating}} <strong>/</strong> 10</p>
         <hr>
         <p class="rating mt-3 mb-3"><strong>Movie genre :</strong> {{movie.genre}} </p>
         <hr>
@@ -21,8 +21,8 @@
           <div class="col-lg-4">
             <div class="row mt-2 mb-2">
               <div class="button col-lg-10" >
-                <button mat-raised-button type="submit" color="primary" (click)="navigatetoEditmovie(movie.id)">Edit Details</button>
-                <button mat-raised-button type="submit" color="primary" >All Reviews</button>
+                <button  type="submit" class="btn btn-primary" (click)="navigatetoEditmovie(movie.id)">Edit Details</button>
+                <button  type="submit" class="btn btn-primary"  >All Reviews</button>
               </div>
             </div>
           </div>

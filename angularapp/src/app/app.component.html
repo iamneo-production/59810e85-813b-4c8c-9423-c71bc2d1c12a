@@ -1,6 +1,6 @@
 
-<app-user-nav></app-user-nav>
-<router-outlet></router-outlet>
+ <!-- <app-user-nav></app-user-nav>
+<router-outlet></router-outlet> --> 
 
 <!-- <app-signup></app-signup> -->
 
@@ -9,3 +9,9 @@
 <!-- <router-outlet></router-outlet>  -->
 
 <!-- <app-admin></app-admin> -->
+
+<ul>
+    <li routerLink="/signup" (click)="signUpPage()" hidden></li>
+    <li routerLink="/login" (click)="loginPage()" hidden></li>
+</ul>
+<router-outlet></router-outlet> 
