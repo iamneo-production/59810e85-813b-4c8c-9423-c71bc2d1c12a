@@ -47,13 +47,17 @@ public class MovieService {
 		return allMovie;
 	}
 	
-	//GET/movie/:id  SERVICE CLASS*********************************************-------------------
-	
-	public ResponseEntity<?> showMovieByIdService(long id){
-		Movie newMovie = movieRepository.findById(id).get();
-		System.out.print(newMovie.getId());
-		return  new ResponseEntity<Movie>(newMovie, HttpStatus.OK);
-	}
+	//GET/movie/:id  SERVICE CLASS*********************************************
+
+	public Movie getMovieById(Long id) {
+        return movieRepository.findById(id).orElse(null);
+    }
+
+	// public ResponseEntity<?> showMovieByIdService(long id){
+	// 	Movie newMovie = movieRepository.findById(id).get();
+	// 	System.out.print(newMovie.getId());
+	// 	return  new ResponseEntity<Movie>(newMovie, HttpStatus.OK);
+	// }
 
 	//Search movie by title or genre*********************************************
 	
