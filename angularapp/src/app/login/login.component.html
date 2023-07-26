@@ -12,7 +12,7 @@
 
 <body>
   <div class="container">
-    <img src="assets/image/login (2).png">
+    <img src="assets/images/login (2).png">
     <div class="login">
       <h1 class="title"><b>Login</b></h1>
       <form (ngSubmit)="login()"> <!-- Move the ngSubmit to the form tag -->
@@ -26,15 +26,15 @@
           <input type="password" placeholder="Password" [(ngModel)]="loginData.password" name="password" required>
         </div>
 
-        <div class="text-input">
-          <i class="fa-solid fa-user"></i>
+        <!-- <div class="text-input"> -->
+          <!-- <i class="fa-solid fa-user"></i> -->
           <!-- <input type="Select" placeholder="Select Role" > -->
-          <select id="Select Role" class="select-user-type" [(ngModel)]="selectedRole" name="role">
+          <!-- <select id="Select Role" class="select-user-type" [(ngModel)]="selectedRole" name="role"> -->
             <!-- <option value="" disabled selected>Select Role</option> -->
-            <option value="User">USER</option>
-            <option value="Admin">ADMIN</option>
-          </select>
-        </div>
+            <!-- <option value="User">USER</option> -->
+            <!-- <option value="Admin">ADMIN</option> -->
+          <!-- </select> -->
+        <!-- </div> -->
 
         <button class="login-btn" type="submit">LOGIN</button>
       </form>
