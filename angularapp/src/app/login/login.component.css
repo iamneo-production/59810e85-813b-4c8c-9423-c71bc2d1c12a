@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*, html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    margin-top: 0;
+}
+.container img{
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+    width: 100%;
+    margin-left: 22px;
+    height:fit-content;
+    display:flex;
+}
+.container {
+    width: 50vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "login";
+    box-shadow: 0 0 5px 5px rgb(0 0 0 / 30%);
+    border-radius: 5px;
+    background: white;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+
+
+
+.login {
+    grid-area: login;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: white;
+}
+
+.login h1.title {
+    margin-bottom:35px;
+    margin-right: 35px;
+    margin-top:10px;
+
+}
+
+.text-input i {
+  margin-right: 20px; /* Adjust the value as per your preference */
+}
+.text-input {
+    background: #e6e6e6;
+    height: 40px;
+    top:2px;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 35px;
+    margin: 5px 0;
+    margin-bottom: 40px;
+}
+
+.text-input input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+
+}
+.text-input {
+    position: relative;
+  }
+  
+  .text-input select {
+    width: calc(100% - 30px); /* Adjust the value as per your preference */
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 0;
+    left: 30px;
+  }
+ 
+  
+
+.text-input i {
+    color: black;
+
+}
+.text-input .fa-envelope {
+  position: absolute;
+  left: 15px; /* Adjust the value as needed */
+  top: 45%;
+  transform: translateY(-50%);
+  color: red;
+}
+.text-input .fa-lock {
+  position: absolute;
+  left: 15px; /* Adjust the value as needed */
+  top: 45%;
+  transform: translateY(-50%);
+  color: red;
+}
+.text-input .fa-user{
+    position: absolute;
+    left: 15px; /* Adjust the value as needed */
+    top: 45%;
+    transform: translateY(-50%);
+    color: red;
+  
+  }
+
+.text-input input[type="text"]::placeholder {
+  position: relative;
+  top: 4px; /* Adjust the value as needed */
+}
+.text-input input[type="password"]::placeholder {
+  position: relative;
+  top: 34%;
+  transform: translateY(-50%);
+}
+
+::placeholder {
+    color:black;
+}
+
+.login-btn {
+    width: 50%;
+    height: 5vh;
+    padding: 10px;
+    color: white;
+    background: red;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 60px;
+    display: block;
+    margin-bottom: 10px;
+    margin-left:50px;
+}
+
+a {
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+}
+
+a.forgot {
+    bottom: 10px;
+    margin-left:40px;
+    position: relative;
+
+}
+
+.create {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+}
+
+.create a{
+    color: black;
+    margin-right:50px;
+    margin-left: 30px;
+    margin-bottom:40px;
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "design login";
+    }
+
+    .design {
+        display: block;
+    }
+}
+.text-input {
+  position: relative;
+}
+
+.text-danger {
+  text-decoration:double;
+  color: red;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 5px;
+  font-size: 14px;
+}

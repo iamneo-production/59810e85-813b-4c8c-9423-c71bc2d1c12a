@@ -1,5 +1,7 @@
-export class User{
-  username:string='';
-  email:string='';
-  password:string='';
+export class User {
+    id!:number;
+    email!:string;
+    password!:string;
+    role!:string
+    //constructor(){}
 }
