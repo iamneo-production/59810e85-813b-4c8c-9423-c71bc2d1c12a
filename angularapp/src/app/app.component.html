@@ -11,7 +11,7 @@
 <!-- <app-admin></app-admin> -->
 
 <ul>
-    <li><button routerLink="/signup" (click)="signUpPage()">Signup</button></li>
-    <li><button routerLink="/login" (click)="loginPage()">login</button></li>
+    <li routerLink="/signup" (click)="signUpPage()" hidden></li>
+    <li routerLink="/login" (click)="loginPage()" hidden></li>
 </ul>
 <router-outlet></router-outlet> 

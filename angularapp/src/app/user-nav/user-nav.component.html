@@ -1,13 +1,15 @@
+<router-outlet></router-outlet>
 <nav>
     <div class="text">
       <span>Movie Review Aggregator</span>
-
     </div>
        <ul>
-         <li><button routerLink="/movies" (click)="fetchAllMovies()">All Movies</button></li>
-         <li><button routerLink="/logout">Logout</button></li>
+         <li><button routerLink="/movies" (click)="fetchAllMovies()">All Movies</button></li>              
+         <li><a class="nav-link text-white" routerLink="/login" routerLinkActive="active" aria-current="page"> 
+        Logout </a>  </li>      
+       
          <li><button routerLink="/account">Account</button></li>
-       </ul>
+     </ul>
      </nav>
 
      
