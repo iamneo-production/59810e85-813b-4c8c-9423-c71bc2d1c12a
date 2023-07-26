@@ -18,7 +18,7 @@ import { UserNavComponent } from './user-nav/user-nav.component';
 const routes: Routes = [
   
   // {path:'',pathMatch:'full',redirectTo:'/login'},
-  {path:'', component: HomeComponentComponent},
+  {path:'', component: LoginComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'',pathMatch:'full',redirectTo:'/login'},

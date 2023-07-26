@@ -15,16 +15,16 @@ export class MovieService{
     error = new Subject<string>();
 
     //Somnath Mandal
-    private getUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
-    private postUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
-    private searchUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
-    private putUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+    // private getUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+    // private postUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    // private searchUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    // private putUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
     
     //Aishwarya Ghosh
-    // private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
-    // private postUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
-    // private searchUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
-    // private putUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+    private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+    private postUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    private searchUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    private putUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
 
     //jyothsna
     // private getUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
@@ -44,7 +44,7 @@ export class MovieService{
     //  private searchUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
     //  private putUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
  
-
+    userId:number=0;
     id?:number;
     constructor(private http:HttpClient) { }
 

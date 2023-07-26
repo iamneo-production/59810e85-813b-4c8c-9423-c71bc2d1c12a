@@ -39,4 +39,8 @@ export class MovieDetailsComponent {
     this.router.navigate(['ReviewList',movId]);
     this.RevListservice.getMovieId(movId);
   }
+
+  fetchAllMovies(){
+    this.router.navigateByUrl('movies');
+  }
 }
