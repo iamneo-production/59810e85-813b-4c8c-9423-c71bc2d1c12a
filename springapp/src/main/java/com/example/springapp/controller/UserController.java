@@ -29,8 +29,8 @@ import com.example.springapp.service.UserService;
 
 @RestController
 @RequestMapping
-//   @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")   //Somnath 
-@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
+   @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")   //Somnath 
+//@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
 // @CrossOrigin(origins = "")     //Sakthivel
 //  @CrossOrigin(origins = "https://8081-edcacfccfabeecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Ragavi
 //@CrossOrigin(origins = "https://8081-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Aishwarya R
@@ -62,7 +62,7 @@ public class UserController {
         return  userService.login(user.getEmail(), user.getPassword());  
 
 }
-
+}
 
 
 

@@ -16,7 +16,7 @@ import com.example.springapp.repository.UserRepository;
 @Service
 public class UserService {
 
-    private static final String DEFAULT = "USER";
+    private static final String DEFAULT = "ADMIN";
     @Autowired
     private UserRepository userRepository;
 
