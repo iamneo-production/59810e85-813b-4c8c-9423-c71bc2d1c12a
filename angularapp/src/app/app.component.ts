@@ -35,4 +35,12 @@ export class AppComponent {
     this.revService.getId(revId);
   }
 
+  signUpPage(){
+    this.router.navigate(['signup'])
+  }
+
+  loginPage(){
+    this.router.navigate(['login'])
+  }
+
 }

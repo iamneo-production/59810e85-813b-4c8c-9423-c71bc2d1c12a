@@ -13,6 +13,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { LoginComponent } from './login/login.component';
 import { NewmovieComponent } from './newmovie/newmovie.component';
+import { UserNavComponent } from './user-nav/user-nav.component';
 
 const routes: Routes = [
   
@@ -41,6 +42,7 @@ const routes: Routes = [
 { path:'all-movies/movie-detail', component: MovieDetailComponent},
 { path:'all-movies/movie-detail/edit-movie/:id', component: EditMovieComponent},
 { path:'new-movie', component: NewmovieComponent},
+{path:'navbar',component:UserNavComponent}
 
 
  

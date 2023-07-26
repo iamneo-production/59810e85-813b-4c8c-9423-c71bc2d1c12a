@@ -46,13 +46,14 @@ export class LoginComponent implements OnInit {
    
   
 
-    this.http.post<any>('https://8080-edcacfccfabeecacdccdbbeeaeaadbdbabf.project.examly.io/login', this.loginData).subscribe(
+    this.http.post<any>('https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/login', this.loginData).subscribe(
       response => {
-        if (response.message === 'Login successful') {
-          if (this.selectedRole === 'USER') {
-            this.router.navigate(['/home']); // Redirect to home page for USER role
-          } else if (this.selectedRole === 'ADMIN') {
-            this.router.navigate(['/adminpanel']); // Redirect to admin panel for ADMIN role
+        console.log(response);
+        if (response != 'Null') {
+          if (response.role === 'USER') {
+            this.router.navigate(['/movies']); // Redirect to home page for USER role
+          } else if (response.role === 'ADMIN') {
+            this.router.navigate(['/all-movies']); // Redirect to admin panel for ADMIN role
           }
           alert('Login successful!');
         } else {
