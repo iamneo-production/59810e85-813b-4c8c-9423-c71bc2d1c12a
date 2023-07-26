@@ -1,3 +1,6 @@
+<!-- jyothsna -->
+<app-user-nav></app-user-nav>
+
 <div class="tab" ><h2>Movie Reviews</h2>
 
 <div class="left-side">
@@ -17,15 +20,14 @@
   </div>
 </div>
 
-
 <div class="right-side">
   <h3 style="color: rgb(200, 122, 6);">Your Review</h3>
   <h3>
     Give Your review</h3>
-    <!-- <button (click)="gotoReviewForm(movieId,6)">Give Your Review</button> -->
+    <button (click)="gotoReviewForm(movieId,userId)">Give Your Review</button> 
   <div *ngFor="let review of reviews" class="review-item">
-    <button (click)="gotoReviewForm(review.movie.id,6)">Give Your Review</button>
-    <div *ngIf="(review.userId==6);">
+    <button (click)="gotoReviewForm(review.movie.id, userId)">Give Your Review</button>
+    <div *ngIf="(review.userId == userId);">
     <div class="review-header"> 
       <h4>Review ID: {{ review.id }}</h4>
       <p>User ID: {{ review.userId }}</p>
@@ -37,7 +39,7 @@
       <p>Source: {{review.source }}</p>
       <p>Movie ID: {{ review.movie.id}}</p>  
     </div>
-  <!-- <button (click)="gotoReviewForm(review.movie.id,6)">Review</button>  -->
+  <!-- <button (click)="gotoReviewForm(review.movie.id,user)">Review</button>   -->
   <button (click)="gotoUpdateForm(review.id)">Update</button>
   <button (click)="deleteReview(review.id,review.movie.id)">Delete</button>
   
