@@ -22,6 +22,11 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'',pathMatch:'full',redirectTo:'/login'},
+  {path:"",component:HomeComponentComponent},
+
+
+
+  {path:'',pathMatch:'full',redirectTo:'/login'},
   {path:"searchmovie",
   component:MovieListComponent,
   pathMatch:"full"
@@ -37,26 +42,18 @@ const routes: Routes = [
 { path:'all-movies/movie-detail', component: MovieDetailComponent},
 { path:'all-movies/movie-detail/edit-movie/:id', component: EditMovieComponent},
 { path:'new-movie', component: NewmovieComponent},
-{path:'navbar',component:UserNavComponent}
+{path:'navbar',component:UserNavComponent},
 
-];
 
  
-  // {path:'signup',component:SignupComponent},
-  // {path:'login',component:LoginComponent},
-  // {path:'login',pathMatch:'full',redirectTo:'/login'},
-  // {path:"",component:HomeComponentComponent},
-//   {
-//     path:"searchmovie",
-//     component:MovieListComponent,
-//     pathMatch:"full"
-//   },
-//   {path:"movies/:id", component:MovieDetailsComponent},
-//   {path:"movies", component:MovieListComponent,pathMatch:"full"},
-//   {path:"ReviewList/:id",component:ReviewListComponent},
-//   {path:'ReviewForm', component:ReviewFormComponent},
-//   {path:'ReviewUpdate/:id',component:ReviewUpdateFormComponent}
-// ];
+  {path:"",component:HomeComponentComponent},
+  
+  {path:"movies/:id", component:MovieDetailsComponent},
+  {path:"movies", component:MovieListComponent,pathMatch:"full"},
+  {path:"ReviewList/:id",component:ReviewListComponent},
+  {path:'ReviewForm', component:ReviewFormComponent},
+  {path:'ReviewUpdate/:id',component:ReviewUpdateFormComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
