@@ -80,6 +80,7 @@ export class MovieService{
     updateMovie(id:number,movie:Movie): Observable<Object>{
         return this.http.put(`${this.putUrl}/${id}`, movie);
     }
+    
 }    
 
 

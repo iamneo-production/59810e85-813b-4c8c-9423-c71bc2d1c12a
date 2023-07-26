@@ -18,6 +18,7 @@ export class ReviewListserviceService {
  private baseUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
  private deleteUrl= "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
   movieId: number = 1;
+  
   constructor(private http: HttpClient) { }
   
   getMovieId(movId:number){

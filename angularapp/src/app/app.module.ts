@@ -26,6 +26,7 @@ import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/e
 
 
 @NgModule({
+  
   declarations: [
     AppComponent,
     ReviewFormComponent,
@@ -41,10 +42,8 @@ import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/e
     AllMoviesComponent,
     MovieDetailComponent,
     EditMovieComponent
-
-
- 
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

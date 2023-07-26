@@ -30,7 +30,6 @@ export class AllMoviesComponent {
   fetchAllMovies(){
     this.service.getMovies().subscribe(data=>{
       this.movie=data;
-    })
-     
+    })    
   }
 }
