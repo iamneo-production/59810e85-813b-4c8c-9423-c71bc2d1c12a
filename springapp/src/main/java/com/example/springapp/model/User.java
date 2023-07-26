@@ -65,23 +65,7 @@ public class User {
 		public String getRole() {
 			return role;
 		}
-		public static Object withEmail(String email) {
 		
-			return withEmail(email);
-		}
-		public static Object password(String password) {
-			
-			return password(password);
-		}
-        public static Object role(String role) {
-			
-			return role(role);
-        }
-		public User(String password, String role) {
-			super();
-			this.password = password;
-			this.role = role;
-		}
 	}
 // Aishwarya R
 
