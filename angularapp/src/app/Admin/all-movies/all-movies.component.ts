@@ -33,4 +33,20 @@ export class AllMoviesComponent {
     })
      
   }
+
+  deleteMovie(id: number): void {
+    this.service.deleteMovie(id).subscribe(() => {
+      this.movie = this.movie.filter(movie => movie.id !== id);
+      alert("Deleted Successfully");
+    }, error => {
+      console.log('Error deleting movie:', error);
+    });
+  }
+  // deleteMovieDetail(id: number): void {
+  //   this.service.deleteMovieDetail(id).subscribe(() => {
+  //     this.movie = this.movie.filter(movie => movie.id !== id);
+  //   }, error => {
+  //     console.log('Error deleting movie:', error);
+  //   });
+  // }
 }
