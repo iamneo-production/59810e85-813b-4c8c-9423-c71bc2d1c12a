@@ -59,14 +59,11 @@ public class UserController {
      
     @PostMapping("/login")
     public User user(@RequestBody User user) {
-        return  userService.login(user.getEmail(), user.getPassword());
-        // HttpStatus status = result.equals("Login successful") ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
-        // Map<String, String> response = new HashMap<>();
-        // response.put("message", result);
-        //return ResponseEntity.status(status).body(response);
-        
-    }
-    
+        return  userService.login(user.getEmail(), user.getPassword());  
 
 }
-// Aishwarya R
+
+
+
+
+// Aishwarya R 
