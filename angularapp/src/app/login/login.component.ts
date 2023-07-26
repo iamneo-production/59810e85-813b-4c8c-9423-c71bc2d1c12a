@@ -54,6 +54,7 @@ export class LoginComponent implements OnInit {
           if (response.role === 'USER') {
             this.router.navigate(['/movies']); // Redirect to home page for USER role
             this.movielist.userId=response.id;
+            console.log(response.id);
           } else if (response.role === 'ADMIN') {
             this.router.navigate(['/all-movies']); // Redirect to admin panel for ADMIN role
           }
