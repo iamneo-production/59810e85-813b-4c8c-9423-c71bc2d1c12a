@@ -4,9 +4,11 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import com.example.springapp.model.User;
 import com.example.springapp.repository.UserRepository;
+
 
 
 
@@ -25,15 +27,15 @@ public class UserService {
      
         
     }
-    public String login(String email, String password) {
+    public User login(String email, String password) {
         User existingLogin = userRepository.findByEmail(email);
 
         if (existingLogin != null && existingLogin.getPassword().equals(password)) {
             // Credentials matched, redirect to the Home component
-            return "Login successful";
+            return existingLogin;
         } else {
             // Invalid credentials, show an alert
-            return "Invalid credentials. Please try again.";
+            return null;
         }
     }
 

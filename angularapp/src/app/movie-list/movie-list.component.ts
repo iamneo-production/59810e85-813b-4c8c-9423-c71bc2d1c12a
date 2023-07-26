@@ -19,7 +19,7 @@ export class MovieListComponent {
   searchTerm:string="";
   movie: Movie =new Movie();
   allMovies:Movie[]=[];
-
+  userId:number=0;
   //@Output() searchEvent = new EventEmitter<string>();
 
 
@@ -38,6 +38,8 @@ export class MovieListComponent {
    // this.addNewMovie();
     //this.getMovieById();
     this.getMovies();
+    this.userId=this.movieService.userId;
+
   }
   addNewMovie(){
     console.log(this.movie);

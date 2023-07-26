@@ -29,13 +29,13 @@ import com.example.springapp.service.UserService;
 
 @RestController
 @RequestMapping
-//  @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/")   //Somnath 
-// @CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
+   @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")   //Somnath 
+//@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
 // @CrossOrigin(origins = "")     //Sakthivel
 //  @CrossOrigin(origins = "https://8081-edcacfccfabeecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Ragavi
-//@CrossOrigin(origins = "https://8081-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Aishwarya R
+@CrossOrigin(origins = "https://8081-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Aishwarya R
 // @CrossOrigin(origins = "https://8081-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/")     //GOKULNATHAN 
- @CrossOrigin(origins = "https://8081-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Jyothsna
+////  @CrossOrigin(origins = "https://8081-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Jyothsna
 // @CrossOrigin(origins = "")     //Nandhini
 
 public class UserController {
@@ -58,14 +58,17 @@ public class UserController {
     
      
     @PostMapping("/login")
-    public ResponseEntity<Map<String, String>> user(@RequestBody User user) {
-        String result = userService.login(user.getEmail(), user.getPassword());
-        HttpStatus status = result.equals("Login successful") ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
-        Map<String, String> response = new HashMap<>();
-        response.put("message", result);
-        return ResponseEntity.status(status).body(response);
+    public User user(@RequestBody User user) {
+        return  userService.login(user.getEmail(), user.getPassword());
+        
+}
+        
     }
     
 
 }
-// Aishwarya R
+
+
+
+
+// Aishwarya R 

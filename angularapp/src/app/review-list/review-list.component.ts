@@ -3,6 +3,7 @@ import { Review } from '../Model/Review';
 import { ReviewListserviceService } from '../Services/review-listservice.service';
 import { Router } from '@angular/router';
 import { ReviewServiceService } from '../Services/review-service.service';
+import { MovieService } from '../Services/movie-service.service';
 
 
 @Component({
@@ -14,13 +15,15 @@ export class ReviewListComponent implements OnInit {
   movieId: number = 3; //Example movie ID
   review: Review = new Review() ;
   reviews: Review[]=[];
+  userId:number=0;
 
-  constructor(private reviewService: ReviewListserviceService, private reviewform: ReviewServiceService,private router:Router) { 
+  constructor(private reviewService: ReviewListserviceService,private movie:MovieService, private reviewform: ReviewServiceService,private router:Router) { 
   }
 
   ngOnInit(): void {
     this.getReviews();
     this.reviewService.movieId=this.movieId;
+    this.userId=this.movie.userId;
   }
 
   getReviews(): void {
