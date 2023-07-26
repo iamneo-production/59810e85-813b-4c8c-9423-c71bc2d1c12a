@@ -42,7 +42,7 @@ const routes: Routes = [
 { path:'all-movies/movie-detail', component: MovieDetailComponent},
 { path:'all-movies/movie-detail/edit-movie/:id', component: EditMovieComponent},
 { path:'new-movie', component: NewmovieComponent},
-{path:'navbar',component:UserNavComponent}
+{path:'navbar',component:UserNavComponent},
 
 
  
