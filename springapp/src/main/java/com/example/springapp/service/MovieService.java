@@ -90,6 +90,16 @@ public class MovieService {
         }
     }
 
+	//DELETE Movie
+	public boolean deleteMovie(long id) {
+        // Check if the movie exists in the database
+        if (movieRepository.existsById(id)) {
+            movieRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+
 }
 
 //Somnath mandal

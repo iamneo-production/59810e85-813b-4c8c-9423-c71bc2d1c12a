@@ -13,7 +13,8 @@
           <strong>Average Rating: </strong>{{ movies.rating }}
           <div class="button">
             <button class="btn btn-primary" (click)="navigatetoMoviedetail(movies.id)">Details</button>
-            <button class="btn btn-danger">Delete</button>
+
+            <button class="btn btn-danger" (click)="deleteMovie(movies.id)">Delete</button>
           </div>
         </div>
       </div>
