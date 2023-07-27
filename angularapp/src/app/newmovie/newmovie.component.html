@@ -2,10 +2,10 @@
 
 <h1>Add New Movie</h1>
   <form id="movie-form" (ngSubmit)="addMovie()" [formGroup]="fg">
-    <div class="card mt-5" style="padding: 20px;"></div>
+    <div class="card mt-5" style="padding: 20px;">
     <div class="form-group">
         <label for="movie-id">Movie Id:</label>
-        <input type="text" id="movie-id" formControlName="id" required ngModel>
+        <input type="number" id="movie-id" formControlName="id" required ngModel>
   </div>
     <div class="form-group">
       <label for="movie-title">Movie Title:</label>
@@ -27,6 +27,10 @@
       <input type="text" id="starcast" name="starcast" formControlName="starcast">
     </div>
     <div class="form-group">
+      <label for="rating">Rating:</label>
+      <input type="string" id="rating" name="rating" formControlName="rating">/5
+    </div>
+    <div class="form-group">
       <label for="release-date">Release Date:</label>
       <input type="date" id="release-date" name="release-date" formControlName="releasedate">
     </div>
@@ -35,6 +39,7 @@
       <textarea id="plot-summary" name="plot-summary" rows="5" formControlName="plotsummary"></textarea>
     </div>
     <button type="submit">Add Movie</button>
+    </div>
   </form>
 
  

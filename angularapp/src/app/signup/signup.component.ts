@@ -1,3 +1,4 @@
+// Aishwarya R 
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -17,7 +18,7 @@ export class SignupComponent {
   constructor(private router: Router, private http: HttpClient) { }
   navigateToLogin()
   {
-    this.router.navigate(['']);
+    this.router.navigate(['/login']);
   }
 
   signup() {
@@ -26,17 +27,16 @@ export class SignupComponent {
       return;
     }
     else{
-      this.http.post<any>('https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/user/register', this.signupData).subscribe(
+      this.http.post<any>('https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/user/register', this.signupData).subscribe(
       response => {
-        console.log(this.signupData);
         alert('Signup successful. Please login with your new account.');
-        this.router.navigate(['']);
+        this.navigateToLogin();
+       
       },
       error => {
         alert('invalid credentials. Please try again later.');
       }
     );
-    }
   }
 }
-// Aishwarya R 
+}

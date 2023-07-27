@@ -14,12 +14,13 @@ export class MovieDetailsComponent {
 
   movie: Movie =new Movie();
   allMovies:Movie[]=[];
-  
+  userId:number=0;
 
   constructor(private movieService : MovieService,private RevListservice: ReviewListserviceService , private reviewform: ReviewServiceService, private router:Router) { }
 
   ngOnInit(): void {
     this.getMovie();
+    this.userId=this.movieService.userId;
   }
 
   private getMovie(){
@@ -38,5 +39,9 @@ export class MovieDetailsComponent {
   goToReviewList(movId:number){
     this.router.navigate(['ReviewList',movId]);
     this.RevListservice.getMovieId(movId);
+  }
+
+  fetchAllMovies(){
+    this.router.navigateByUrl('movies');
   }
 }

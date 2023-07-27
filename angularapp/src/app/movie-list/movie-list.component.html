@@ -1,3 +1,7 @@
+
+<app-user-nav></app-user-nav>
+<router-outlet></router-outlet>
+
 <div class="bg">
    <!-- <nav>
      <div class="text">
@@ -10,6 +14,7 @@
           <li><button routerLink="/account">Account</button></li>
         </ul> 
       </nav>  -->
+      
     <div class="search-box">
         <input type="text" [(ngModel)]="searchTerm" placeholder="Search by title or genre..." />
       </div>
@@ -26,7 +31,7 @@
               <strong>Average Rating:</strong> {{ movies.rating }}
 
               <button class="show_btn" (click)="navShowDetails(movies.id)">Show Details</button>
-              <button class="review_btn" (click)="gotoReviewForm(movies.id,5)">Give Review</button>
+              <button class="review_btn" (click)="gotoReviewForm(movies.id,userId)">Give Review</button>
             </li>  
             
 

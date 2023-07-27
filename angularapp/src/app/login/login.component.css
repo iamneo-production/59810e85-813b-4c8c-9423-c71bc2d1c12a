@@ -12,17 +12,17 @@ body {
     justify-content: center;
     align-items: center;
     background: #fff;
-    margin-top: 0px;
+    margin-top: 0;
 }
 .container img{
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 70px;
-  width: 100%;
-  margin-left: 22px;
-  height:fit-content;
-  display:flex;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+    width: 100%;
+    margin-left: 22px;
+    height:fit-content;
+    display:flex;
 }
 .container {
     width: 50vw;
@@ -39,7 +39,7 @@ body {
 
 
 
-.signup {
+.login {
     grid-area: login;
     display: flex;
     flex-direction: column;
@@ -49,10 +49,10 @@ body {
     background: white;
 }
 
-.signup h1.title {
+.login h1.title {
     margin-bottom:35px;
     margin-right: 35px;
-    margin-top:50px;
+    margin-top:10px;
 
 }
 
@@ -81,13 +81,35 @@ body {
     margin-bottom: 10px;
 
 }
-
+.text-input {
+    position: relative;
+  }
+  
+  .text-input select {
+    width: calc(100% - 30px); /* Adjust the value as per your preference */
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 0;
+    left: 30px;
+  }
+ 
+  
 
 .text-input i {
     color: black;
 
 }
-
+.text-input .fa-envelope {
+  position: absolute;
+  left: 15px; /* Adjust the value as needed */
+  top: 45%;
+  transform: translateY(-50%);
+  color: red;
+}
 .text-input .fa-lock {
   position: absolute;
   left: 15px; /* Adjust the value as needed */
@@ -95,14 +117,14 @@ body {
   transform: translateY(-50%);
   color: red;
 }
-
-.text-input .fa-envelope{
-  position: absolute;
-  left: 15px; /* Adjust the value as needed */
-  top: 45%;
-  transform: translateY(-50%);
-  color: red;
-}
+.text-input .fa-user{
+    position: absolute;
+    left: 15px; /* Adjust the value as needed */
+    top: 45%;
+    transform: translateY(-50%);
+    color: red;
+  
+  }
 
 .text-input input[type="text"]::placeholder {
   position: relative;
@@ -118,7 +140,7 @@ body {
     color:black;
 }
 
-.signup-btn {
+.login-btn {
     width: 50%;
     height: 5vh;
     padding: 10px;
@@ -129,7 +151,7 @@ body {
     cursor: pointer;
     margin-top: 60px;
     display: block;
-    margin-bottom: 250px;
+    margin-bottom: 10px;
     margin-left:50px;
 }
 
@@ -141,6 +163,12 @@ a {
     text-decoration: none;
 }
 
+a.forgot {
+    bottom: 10px;
+    margin-left:40px;
+    position: relative;
+
+}
 
 .create {
     display: flex;
@@ -153,7 +181,7 @@ a {
     color: black;
     margin-right:50px;
     margin-left: 30px;
-    margin-bottom:180px;
+    margin-bottom:40px;
 
 }
 
@@ -178,5 +206,5 @@ a {
   left: 0;
   top: 100%;
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 14px;
 }
