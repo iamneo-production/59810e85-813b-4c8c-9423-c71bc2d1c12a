@@ -5,6 +5,10 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/SpringappApplication.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/UserRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/ReviewService.java
+<<<<<<< HEAD
+=======
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/ReviewController.java
+>>>>>>> b5ed00bef940f0daa59cc706ab800addc76fcbbe
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/security/demo.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/ReviewRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/MovieController.java
