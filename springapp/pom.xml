@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.10</version>
-		<relativePath /> <!-- lookup parent from repository -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		
-		
->>>>>>> 5338870720b375bed1a2a1770d3ebecb5410cc98
-=======
->>>>>>> 352d35bc5eec6e93c1f743f0df6b86351068e61a
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>springapp</artifactId>
@@ -64,15 +55,28 @@
 			<artifactId>mockito-core</artifactId>
 		</dependency>
 
-		<!-- <dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 			<version>2.5.5</version>
 		</dependency> -->
 
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+</dependency>
+
+
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
 		</dependency>
 
 		<dependency>
@@ -82,7 +86,11 @@
 			<optional>true</optional>
 		</dependency>
 
-
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			</dependency>
+				
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -90,13 +98,10 @@
 			<version>1.18.24</version>
 			<scope>provided</scope>
 		</dependency>
-<<<<<<< HEAD
 		<dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-core</artifactId>
-</dependency>
-=======
->>>>>>> 352d35bc5eec6e93c1f743f0df6b86351068e61a
+</dependency>	
 	</dependencies>
 
 	<build>
