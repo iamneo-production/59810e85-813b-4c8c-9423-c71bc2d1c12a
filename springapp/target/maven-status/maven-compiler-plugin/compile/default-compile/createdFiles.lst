@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 com/example/springapp/SpringappApplication.class
 com/example/springapp/repository/MovieRepository.class
 com/example/springapp/model/Review.class
+=======
+com/example/springapp/repository/MovieRepository.class
+com/example/springapp/repository/ReviewRepository.class
+com/example/springapp/controller/ReviewController.class
+com/example/springapp/service/MovieService.class
+com/example/springapp/SpringappApplication.class
+>>>>>>> 352d35bc5eec6e93c1f743f0df6b86351068e61a
 demo.class
+com/example/springapp/model/Review.class
 com/example/springapp/controller/MovieController.class
 com/example/springapp/model/Movie.class
+<<<<<<< HEAD
 <<<<<<< HEAD
 com/example/springapp/service/MovieService.class
 com/example/springapp/controller/ReviewController.class
@@ -14,4 +24,6 @@ com/example/springapp/repository/ReviewRepository.class
 com/example/springapp/service/MovieService.class
 com/example/springapp/controller/ReviewController.class
 >>>>>>> 5338870720b375bed1a2a1770d3ebecb5410cc98
+=======
+>>>>>>> 352d35bc5eec6e93c1f743f0df6b86351068e61a
 com/example/springapp/service/ReviewService.class
