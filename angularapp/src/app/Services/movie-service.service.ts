@@ -15,20 +15,52 @@ export class MovieService{
     error = new Subject<string>();
 
     //Somnath Mandal
+<<<<<<< HEAD
     private getUrl = "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/movie";
     private postUrl = "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/POST/movie";
     private searchUrl = "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/GET/movie/search";
     private putUrl = "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/PUT/movie";
+=======
+    private getUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+    private postUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    private searchUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    private putUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+>>>>>>> d608be58699e5497dc634831a671abf3729a7db6
     
     //Aishwarya Ghosh
-   // private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
-    //private postUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
-    //private searchUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    // private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+    // private postUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    // private searchUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    // private putUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+
+    //jyothsna
+    // private getUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+    // private postUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    // private searchUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    // private putUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
     
      //GOKULNATHAN
     // private getUrl = "https://8080-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
     // private postUrl = "https://8080-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
-     //private searchUrl = "https://8080-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    //private searchUrl = "https://8080-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    //private putUrl = "https://8080-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+
+    //Sakthivel
+    //  private getUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io//movie";
+    //  private postUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    //  private searchUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    //  private putUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+
+
+    //Aishwarya
+    private getUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+    private postUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    private searchUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    private putUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+    private deleteUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/movie";
+ 
+    userId:number=0;
+
 
     id?:number;
     constructor(private http:HttpClient) { }
@@ -65,6 +97,13 @@ export class MovieService{
     updateMovie(id:number,movie:Movie): Observable<Object>{
         return this.http.put(`${this.putUrl}/${id}`, movie);
     }
+
+
+    //DELETE movie by id
+    deleteMovie(id: number): Observable<void> {
+        return this.http.delete<void>(`${this.deleteUrl}/${id}`);
+      }
+
 }    
 
 
