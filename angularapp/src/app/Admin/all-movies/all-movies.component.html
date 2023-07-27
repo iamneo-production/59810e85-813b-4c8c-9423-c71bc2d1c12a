@@ -1,0 +1,26 @@
+<app-admin></app-admin>
+<router-outlet></router-outlet>
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-mb-4 col-4 " *ngFor="let movies of movie">
+      <div class="card"> 
+        <div class="card-body">
+          <strong>Id: </strong>{{ movies.id }}<br>
+          <strong>Title: </strong>{{ movies.title }}<br>
+          <strong>Release Date: </strong>{{ movies.releaseDate }}<br>
+          <strong>Average Rating: </strong>{{ movies.rating }}
+          <div class="button">
+            <button class="btn btn-primary" (click)="navigatetoMoviedetail(movies.id)">Details</button>
+
+            <button class="btn btn-danger" (click)="deleteMovie(movies.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    

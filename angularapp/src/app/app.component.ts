@@ -23,7 +23,6 @@ export class AppComponent {
 
 
 
-
   goToReviewList(movId: number) {
     this.router.navigate(['ReviewList', movId]);
     this.service.getMovieId(movId);
@@ -34,6 +33,14 @@ export class AppComponent {
   gotoReviewUpdate(revId: number) {
     this.router.navigate(['ReviewUpdate', revId]);
     this.revService.getId(revId);
+  }
+
+  signUpPage(){
+    this.router.navigate(['signup'])
+  }
+
+  loginPage(){
+    this.router.navigate(['login'])
   }
 
 }
