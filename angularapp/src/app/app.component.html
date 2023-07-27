@@ -1,5 +1,17 @@
-<!--<button (click)="goToReviewList(3)">Review-list </button> -->
-<!-- <button (click)="gotoReviewUpdate(7)">Update</button>
-<router-outlet></router-outlet> -->
 
- <app-movie-list></app-movie-list> 
+ <!-- <app-user-nav></app-user-nav>
+<router-outlet></router-outlet> --> 
+
+<!-- <app-signup></app-signup> -->
+
+<!-- <app-login></app-login>  -->
+
+<!-- <router-outlet></router-outlet>  -->
+
+ <!--<app-admin></app-admin> -->
+
+<ul>
+    <li routerLink="/signup" (click)="signUpPage()" hidden></li>
+    <li routerLink="/login" (click)="loginPage()" hidden></li>
+</ul>
+<router-outlet></router-outlet> 
