@@ -10,9 +10,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatus;
 
 import com.example.springapp.model.Movie;
@@ -22,12 +25,18 @@ import com.example.springapp.service.MovieService;
 @RestController
   @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")   //Somnath Mandal
 // @CrossOrigin(origins = "https://8081-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/")       //jyothsna
+//@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
+// @CrossOrigin(origins = "https://8081-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/")     //GOKULNATHAN
+// @CrossOrigin(origins = "https://8081-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Sakthivel
+//@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
+// @CrossOrigin(origins = "https://8081-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/")     //GOKULNATHAN 
 // //@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
 // @CrossOrigin(origins = "https://8081-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/")     //GOKULNATHAN
 // @CrossOrigin(origins = "https://8081-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Sakthivel
 //@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
 //@CrossOrigin(origins = "https://8081-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/")     //GOKULNATHAN 
-@CrossOrigin(origins = "https://8081-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/")    //Aishwarya R
+// @CrossOrigin(origins = "https://8081-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/")    //Aishwarya R
+
 @RequestMapping
 public class MovieController {
 
