@@ -15,6 +15,7 @@
           <p>Review Note: {{ review.reviewNote }}</p>
           <p>Source: {{review.source }}</p>
           <p>Movie ID: {{ review.movie.id}}</p>  
+        <button (click)="deleteReview(review.id,review.movie.id)">Delete Review</button>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Review } from 'src/app/Model/Review';
 import { MovieService } from 'src/app/Services/movie-service.service';
 import { ReviewListserviceService } from 'src/app/Services/review-listservice.service';
@@ -15,7 +16,7 @@ export class AdminReviewListComponent implements OnInit {
   userId:number=0;
 
   
-  constructor(private reviewService: ReviewListserviceService,private movie:MovieService){}
+  constructor(private reviewService: ReviewListserviceService,private movie:MovieService,private router:Router){}
 
 
   ngOnInit(): void {
@@ -31,4 +32,13 @@ export class AdminReviewListComponent implements OnInit {
       this.reviewService.movieId=this.movieId;
       console.log(this.reviewService.movieId);
   }
+
+  deleteReview(reviewId: number,movieId:number) {
+    const confirmed=window.confirm('Are you sure you ant to delete this review?');
+    if(confirmed){
+      this.reviewService.deleteReview(reviewId).subscribe();
+      this.router.getCurrentNavigation();
+      this.reviewService.getMovieId(movieId);
+      };
+    }
 }
