@@ -2,6 +2,7 @@ package com.example.springapp.service;
 
 import java.util.ArrayList;
 import java.util.*;
+import java.sql.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -61,6 +62,39 @@ public class MovieService {
 		Collections.reverse(search);
 		return search;
 		}
+
+
+	//PUT Update movie by Id
+
+	public Movie updateMovie(Long id, Movie updatedMovie) {
+        Optional<Movie> optionalMovie = movieRepository.findById(id);
+        if (optionalMovie.isPresent()) {
+            Movie movie = optionalMovie.get();
+            
+            movie.setTitle(updatedMovie.getTitle());
+            movie.setRating(updatedMovie.getRating());
+            movie.setCast(updatedMovie.getCast());
+            movie.setPlotSummary(updatedMovie.getPlotSummary());
+            movie.setGenre(updatedMovie.getGenre());
+            movie.setReleaseDate(updatedMovie.getReleaseDate());
+            // movie.setReviews(updatedMovie.getReviews());
+            movieRepository.save(movie);
+            return movie;
+
+        } else {
+            return null;
+        }
+    }
+
+	//DELETE Movie
+	public boolean deleteMovie(long id) {
+        // Check if the movie exists in the database
+        if (movieRepository.existsById(id)) {
+            movieRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 
 }
 

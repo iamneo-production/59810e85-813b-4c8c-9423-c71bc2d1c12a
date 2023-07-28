@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { Movie } from '../Model/Movie';
 import { MovieService } from '../Services/movie-service.service';
 import { Router } from '@angular/router';
+import { ReviewServiceService } from '../Services/review-service.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -12,13 +13,13 @@ export class MovieListComponent {
 
  
 
-  constructor(private movieService:MovieService, private router:Router){}
+  constructor(private movieService:MovieService, private reviewform: ReviewServiceService, private router:Router){}
 
 
   searchTerm:string="";
   movie: Movie =new Movie();
   allMovies:Movie[]=[];
-
+  userId:number=0;
   //@Output() searchEvent = new EventEmitter<string>();
 
 
@@ -36,7 +37,9 @@ export class MovieListComponent {
   ngOnInit(): void {
    // this.addNewMovie();
     //this.getMovieById();
-    //this.getMovies();
+    this.getMovies();
+    this.userId=this.movieService.userId;
+
   }
   addNewMovie(){
     console.log(this.movie);
@@ -76,4 +79,18 @@ export class MovieListComponent {
     {movie_id: 4,movie_title: 'Spyder',release_date: '19/04/2014', avg_rating: 4}
   ];*/
 
+  //Button For Review
+  gotoReviewForm(movieid:number,userid:number) {
+    this.router.navigateByUrl('ReviewForm');
+    this.reviewform.getUserMovieId(movieid,userid)
+  }
+
+  //Button For Show details
+  navShowDetails(id:any){
+    localStorage.setItem('movieId',id);
+    this.router.navigateByUrl('movies/:id');
+  }
 }
+
+
+//Somnath Mandal

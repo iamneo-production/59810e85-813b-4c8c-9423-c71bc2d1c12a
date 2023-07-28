@@ -1,5 +1,4 @@
 com/example/springapp/SpringappApplication.class
-com/example/springapp/model/Review.class
 com/example/springapp/repository/MovieRepository.class
 com/example/springapp/controller/MovieController.class
 demo.class

@@ -10,8 +10,9 @@ import javax.persistence.CascadeType;
 import javax.persistence.*;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
+
 import com.example.springapp.model.Review;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -152,4 +153,3 @@ public class Movie implements Serializable {
 
 
 //Somnath mandal
-
