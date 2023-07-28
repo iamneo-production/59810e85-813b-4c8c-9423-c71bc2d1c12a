@@ -6,6 +6,7 @@ import { Review } from '../Model/Review';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ReviewListserviceService {
   // private baseUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
   // private deleteUrl= "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
@@ -13,23 +14,24 @@ export class ReviewListserviceService {
   // //Somnath mandal
   // private baseUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
   // private deleteUrl= "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
-   
-  //Sakthivel
-  private baseUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
-  private deleteUrl= "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
-   
-  //Aishwarya Ghosh
-//  private baseUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
-//  private deleteUrl= "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
-  movieId: number = 1;
-  
-  constructor(private http: HttpClient) { }
-  
-  getMovieId(movId:number){
-    this.movieId=movId;
-   }
 
-  getReviews( ): Observable<Review[]> {
+  //Sakthivel
+  // private baseUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
+  // private deleteUrl= "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
+
+  //Aishwarya Ghosh
+  private baseUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
+  private deleteUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
+
+  movieId: number = 1;
+
+  constructor(private http: HttpClient) { }
+
+  getMovieId(movId: number) {
+    this.movieId = movId;
+  }
+
+  getReviews(): Observable<Review[]> {
     //const url = '${this.baseUrl}/${movieId}/reviews';
     return this.http.get<Review[]>(`${this.baseUrl}/${this.movieId}`);
   }

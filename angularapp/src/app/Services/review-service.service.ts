@@ -9,20 +9,20 @@ import { Movie } from '../Model/Movie';
 })
 
 export class ReviewServiceService {
-  
-  error = new Subject<string>();
-  
-  //Aishwarya Ghosh
-  // private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/review";
-  // private postUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/review";
-  // private putUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/review";
-  // private getMovieUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
 
-    //jyothsna
-    // private getUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/review";
-    // private postUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/POST/review";
-    // private putUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/review";
-    // private getMovieUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+  error = new Subject<string>();
+
+  //Aishwarya Ghosh
+  private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/review";
+  private postUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/review";
+  private putUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/review";
+  private getMovieUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+
+  //jyothsna
+  // private getUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/review";
+  // private postUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/POST/review";
+  // private putUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/review";
+  // private getMovieUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
 
   //GOKULNATHAN
   // private getUrl = "https://8080-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/review";
@@ -37,14 +37,14 @@ export class ReviewServiceService {
   // private getMovieUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
 
   //Sakthivel
-  private getUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/review";
-  private postUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/POST/review";
-  private putUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/review";
-  private getMovieUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+  // private getUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/review";
+  // private postUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/POST/review";
+  // private putUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/review";
+  // private getMovieUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
 
   id?: number;
-  movieId:number=1;
-  UserId:number=7;
+  movieId: number = 1;
+  UserId: number = 7;
 
   constructor(private http: HttpClient) { }
 
@@ -57,12 +57,12 @@ export class ReviewServiceService {
 
   //POST A NEW REVIEW***********************************************
 
-  getUserMovieId(movieid:number,userid:number){
-    this.movieId=movieid;
-    this.UserId=userid;
+  getUserMovieId(movieid: number, userid: number) {
+    this.movieId = movieid;
+    this.UserId = userid;
   }
 
-  getTheMovie(): Observable<Movie>{
+  getTheMovie(): Observable<Movie> {
     return this.http.get<Movie>(`${this.getMovieUrl}/${this.movieId}`);
   }
 

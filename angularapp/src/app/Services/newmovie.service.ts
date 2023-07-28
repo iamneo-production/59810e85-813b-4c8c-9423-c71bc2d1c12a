@@ -8,24 +8,24 @@ import { Observable } from 'rxjs';
 })
 export class NewmovieService {
 
-  constructor(protected http:HttpClient) { }
-  addMovieByService(moviedetail : any) {
-    let newmovie : Movie = new Movie();
+  constructor(protected http: HttpClient) { }
+  addMovieByService(moviedetail: any) {
+    let newmovie: Movie = new Movie();
     newmovie.id = moviedetail.id;
     newmovie.title = moviedetail.title;
     newmovie.genre = moviedetail.genre;
     newmovie.rating = moviedetail.rating;
     newmovie.cast = moviedetail.starcast;
-    newmovie.releaseDate  = moviedetail.releasedate;
+    newmovie.releaseDate = moviedetail.releasedate;
     newmovie.plotSummary = moviedetail.plotsummary;
-    
-    let headers = new HttpHeaders().set('Content-Type' , 'application/json')
-      let finaldata = JSON.stringify(newmovie)
-      console.log(finaldata);
+
+    let headers = new HttpHeaders().set('Content-Type', 'application/json')
+    let finaldata = JSON.stringify(newmovie)
+    console.log(finaldata);
     console.log(newmovie);
 
 
-    this.http.post<Observable<Object>>("https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie",finaldata, { headers : headers}).subscribe(
+    this.http.post<Observable<Object>>("https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie", finaldata, { headers: headers }).subscribe(
       (response) => {
         console.log(response);
         return response;
