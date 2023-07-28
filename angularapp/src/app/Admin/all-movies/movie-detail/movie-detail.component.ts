@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Movie } from 'src/app/Model/Movie';
 import { MovieService } from 'src/app/Services/movie-service.service';
+import { ReviewListserviceService } from 'src/app/Services/review-listservice.service';
 
 @Component({
   selector: 'app-movie-detail',
@@ -14,7 +15,7 @@ export class MovieDetailComponent {
   allMovies:Movie[]=[];
   
 
-  constructor(private movieService : MovieService,private router:Router) { }
+  constructor(private movieService : MovieService,private RevListservice: ReviewListserviceService,private router:Router) { }
 
   ngOnInit(): void {
     this.getMovie();
@@ -31,8 +32,9 @@ export class MovieDetailComponent {
    this.router.navigate(["/all-movies/movie-detail/edit-movie",id]);
   }
   
-  navigatetoAllreview(){
-    this.router.navigate(["ReviewList/:id"]);
+  navigatetoAdminReviewList(id:number){
+    this.router.navigate(["all-movies/movie-detail/admin-review-list"]);
+    this.RevListservice.getMovieId(id);
   }
 }
 

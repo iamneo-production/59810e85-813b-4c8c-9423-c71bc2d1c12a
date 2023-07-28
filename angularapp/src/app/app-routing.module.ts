@@ -14,6 +14,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { LoginComponent } from './login/login.component';
 import { NewmovieComponent } from './newmovie/newmovie.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
+import { AdminReviewListComponent } from './Admin/all-movies/movie-detail/admin-review-list/admin-review-list.component';
 
 const routes: Routes = [
   
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path:'all-movies', component: AllMoviesComponent},
   { path:'all-movies/movie-detail', component: MovieDetailComponent},
   { path:'all-movies/movie-detail/edit-movie/:id', component: EditMovieComponent},
+  { path:'all-movies/movie-detail/admin-review-list',component: AdminReviewListComponent},
   { path:'new-movie', component: NewmovieComponent},
   {path:'navbar',component:UserNavComponent},
 ];
