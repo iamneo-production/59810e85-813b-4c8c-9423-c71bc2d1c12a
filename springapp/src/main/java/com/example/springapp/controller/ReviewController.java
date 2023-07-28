@@ -18,9 +18,10 @@ import com.example.springapp.model.Review;
 import com.example.springapp.service.ReviewService;
 
 @RestController
-  @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")   //Somnath 
+
+//@CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")   //Somnath 
 //@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
-// @CrossOrigin(origins = "")     //Sakthivel
+@CrossOrigin(origins = "https://8081-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Sakthivel
 // @CrossOrigin(origins = "")     //Ragavi
 // @CrossOrigin(origins = "")     //Aishwarya R
 // @CrossOrigin(origins = "https://8081-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/")     //GOKULNATHAN 

@@ -8,11 +8,11 @@
         <p class="mt-2 mb-2"><strong>Plot Summary :</strong></p>
         <p class="mt-3 mb-3">{{movie.plotSummary}}</p>
         <hr>
-        <p class="release mt-3 mb-3"><strong>Release date :</strong>  {{movie.releaseDate}}</p>
+        <p class="mt-3 mb-3"><strong>Release date :</strong>  {{movie.releaseDate}}</p>
         <hr>
-        <p class="rating mt-3 mb-3"><strong>Movie rating :</strong> {{movie.rating}} <strong>/</strong> 10</p>
+        <p class="mt-3 mb-3"><strong>Movie rating :</strong> {{movie.rating}} <strong>/</strong> 5</p>
         <hr>
-        <p class="rating mt-3 mb-3"><strong>Movie genre :</strong> {{movie.genre}} </p>
+        <p class="mt-3 mb-3"><strong>Movie genre :</strong> {{movie.genre}} </p>
         <hr>
         <p class="mt-2 mb-2"><strong>Top Cast :</strong></p>
         <p class="mt-3 mb-3">{{movie.cast}}</p>
@@ -22,7 +22,7 @@
             <div class="row mt-2 mb-2">
               <div class="button col-lg-10" >
                 <button  type="submit" class="btn btn-primary" (click)="navigatetoEditmovie(movie.id)">Edit Details</button>
-                <button  type="submit" class="btn btn-primary"  >All Reviews</button>
+                <button  type="submit" class="btn btn-primary" (click)="navigatetoAdminReviewList(movie.id)">All Reviews</button>
               </div>
             </div>
           </div>

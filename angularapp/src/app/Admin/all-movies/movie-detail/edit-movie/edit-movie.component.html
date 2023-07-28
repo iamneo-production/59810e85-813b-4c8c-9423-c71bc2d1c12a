@@ -3,10 +3,6 @@
 <form id="movie-form">
   <div class="card mt-5" style="padding: 20px;">
   <div class="form-group">
-      <label>Movie Id:</label>
-      <input [(ngModel)]="movie.id" [ngModelOptions]="{standalone: true}">
-</div>
-  <div class="form-group">
     <label>Movie Title:</label>
     <input [(ngModel)]="movie.title" [ngModelOptions]="{standalone: true}">
 </div>
@@ -25,12 +21,16 @@
     <input type="date" [(ngModel)]="movie.releaseDate" [ngModelOptions]="{standalone: true}">
   </div>
   <div class="form-group">
+    <label >Movie Rating:</label>
+    <input type="rating" [(ngModel)]="movie.rating" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
     <label>Plot Summary:</label>
     <textarea [(ngModel)]="movie.plotSummary" [ngModelOptions]="{standalone: true}"></textarea>
   </div>
   <div class="button col-lg-10">
   <button type="submit" class="btn btn-primary" (click)="onSubmit()">Update</button>
-  <button type="submit" class="btn btn-primary" (click)="navigatetoMoviedetail()">Close</button>
+  <button type="submit" class="btn btn-danger" (click)="navigatetoMoviedetail()">Close</button>
   </div>
   </div>
 </form>
