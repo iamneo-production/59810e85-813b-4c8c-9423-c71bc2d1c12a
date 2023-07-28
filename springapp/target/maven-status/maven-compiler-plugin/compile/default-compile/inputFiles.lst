@@ -11,7 +11,4 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/UserController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/MovieService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Movie.java
-/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/ReviewService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/ReviewController.java
-/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/security/demo.java
-/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/ReviewRepository.java
