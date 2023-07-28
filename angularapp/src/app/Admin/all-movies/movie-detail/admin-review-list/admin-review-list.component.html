@@ -1,0 +1,21 @@
+<app-admin></app-admin>
+
+<div class="tab" ><h2>Movie Reviews</h2>
+
+    <div class="left-side">
+      <h3 style="color: rgb(200, 122, 6);">All Reviews</h3>
+      <div *ngFor="let review of reviews" class="review-item">
+        <div class="review-header"> 
+          <h4>Review ID: {{ review.id }}</h4>
+          <p>User ID: {{ review.userId }}</p>
+          <p>Date: {{ review.date | date }}</p>
+        </div>
+        <div class="review-details">
+          <p>Rating: {{ review.rating }}</p>
+          <p>Review Note: {{ review.reviewNote }}</p>
+          <p>Source: {{review.source }}</p>
+          <p>Movie ID: {{ review.movie.id}}</p>  
+        </div>
+      </div>
+    </div>
+    
