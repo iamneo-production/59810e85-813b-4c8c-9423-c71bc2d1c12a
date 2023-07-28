@@ -15,10 +15,23 @@ export class MovieService{
     error = new Subject<string>();
 
     //Somnath Mandal
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    private getUrl = "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/movie";
+    private postUrl = "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/POST/movie";
+    private searchUrl = "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/GET/movie/search";
+    private putUrl = "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/PUT/movie";
+=======
+>>>>>>> e630aeca5d1dea40fcd2fb576a13b190e7081d07
     private getUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
     private postUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
     private searchUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
     private putUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+<<<<<<< HEAD
+=======
+>>>>>>> d608be58699e5497dc634831a671abf3729a7db6
+>>>>>>> e630aeca5d1dea40fcd2fb576a13b190e7081d07
     
     //Aishwarya Ghosh
     // private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
