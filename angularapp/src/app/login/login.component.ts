@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient, } from '@angular/common/http';
+import { MovieService } from '../Services/movie-service.service';
 
 @Component({
   selector: 'app-login',
@@ -27,7 +28,7 @@ export class LoginComponent implements OnInit {
   SelectRole=['ADMIN','USER'];
   selectedRole: string = 'USER'; // Set the default role to USER
 
-  constructor(private router: Router, private http: HttpClient) { }
+  constructor(private router: Router, private http: HttpClient,private movielist:MovieService) { }
   navigateToSignup()
   {
     this.router.navigate(['/signup']);
@@ -46,13 +47,16 @@ export class LoginComponent implements OnInit {
    
   
 
-    this.http.post<any>('https://8080-edcacfccfabeecacdccdbbeeaeaadbdbabf.project.examly.io/login', this.loginData).subscribe(
+    this.http.post<any>('https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/login', this.loginData).subscribe(
       response => {
-        if (response.message === 'Login successful') {
-          if (this.selectedRole === 'USER') {
-            this.router.navigate(['/home']); // Redirect to home page for USER role
-          } else if (this.selectedRole === 'ADMIN') {
-            this.router.navigate(['/adminpanel']); // Redirect to admin panel for ADMIN role
+        console.log(response);
+        if (response != 'Null') {
+          if (response.role === 'USER') {
+            this.router.navigate(['/movies']); // Redirect to home page for USER role
+            this.movielist.userId=response.id;
+            console.log(response.id);
+          } else if (response.role === 'ADMIN') {
+            this.router.navigate(['/all-movies']); // Redirect to admin panel for ADMIN role
           }
           alert('Login successful!');
         } else {

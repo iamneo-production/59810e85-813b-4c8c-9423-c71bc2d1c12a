@@ -1,3 +1,16 @@
+<nav>
+  <div class="text">
+    <span>Movie Review Aggregator</span>
+  </div>
+     <ul>
+       <li><button routerLink="/movies" (click)="fetchAllMovies()">All Movies</button></li>              
+       <li><a class="nav-link text-white" routerLink="/login" routerLinkActive="active" aria-current="page"> 
+      <button>Logout</button>  </a>  </li>    
+     
+       
+   </ul>
+   </nav>
+
 <div class="row">
   <h2 class="mt-5">{{movie.title}}</h2>
   <div class="p-5">
@@ -19,7 +32,7 @@
         <div class="col-lg-4">
           <div class="row mt-2 mb-2">
             <div class="button col-lg-10" >
-              <button type="button" class="btn btn-primary" (click)="gotoReviewForm(movie.id,5)">Give Review</button>
+              <button type="button" class="btn btn-primary" (click)="gotoReviewForm(movie.id,userId)">Give Review</button>
               <button type="button" class="btn btn-primary" (click)="goToReviewList(movie.id)">See All Review</button>
             </div>
           </div>

@@ -2,6 +2,7 @@ package com.example.springapp.service;
 
 import java.util.ArrayList;
 import java.util.*;
+import java.sql.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -76,13 +77,22 @@ public class MovieService {
             movie.setPlotSummary(updatedMovie.getPlotSummary());
             movie.setGenre(updatedMovie.getGenre());
             movie.setReleaseDate(updatedMovie.getReleaseDate());
-            // movie.setReviews(updatedMovie.getReviews());
             movieRepository.save(movie);
             return movie;
 
         } else {
             return null;
         }
+    }
+
+	//DELETE Movie
+	public boolean deleteMovie(long id) {
+        // Check if the movie exists in the database
+        if (movieRepository.existsById(id)) {
+            movieRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 
 }
