@@ -19,13 +19,13 @@ import com.example.springapp.service.ReviewService;
 
 @RestController
 
-//@CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")   //Somnath 
-//@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/")         //Aishwarya Ghosh
-@CrossOrigin(origins = "https://8081-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Sakthivel
+// @CrossOrigin(origins="https://8081-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/")   //Somnath 
+@CrossOrigin(origins = "https://8081-cdcafaaaeecacdccdbbedbeeabbebbdd.project.examly.io/")         //Aishwarya Ghosh
+// @CrossOrigin(origins = "https://8081-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Sakthivel
 // @CrossOrigin(origins = "")     //Ragavi
 // @CrossOrigin(origins = "")     //Aishwarya R
 // @CrossOrigin(origins = "https://8081-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/")     //GOKULNATHAN 
-//  @CrossOrigin(origins = "https://8081-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Jyothsna
+// @CrossOrigin(origins = "https://8081-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/")     //Jyothsna
 // @CrossOrigin(origins = "")     //Nandhini
 @RequestMapping
 public class ReviewController {

@@ -16,27 +16,26 @@ export class SignupComponent {
   };
 
   constructor(private router: Router, private http: HttpClient) { }
-  navigateToLogin()
-  {
+  navigateToLogin() {
     this.router.navigate(['/login']);
   }
 
   signup() {
-    if (!this.signupData.email || !this.signupData.password ) {
+    if (!this.signupData.email || !this.signupData.password) {
       alert('Please enter all required information.'); // Display an alert for missing data
       return;
     }
-    else{
-      this.http.post<any>('https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/user/register', this.signupData).subscribe(
-      response => {
-        alert('Signup successful. Please login with your new account.');
-        this.navigateToLogin();
-       
-      },
-      error => {
-        alert('invalid credentials. Please try again later.');
-      }
-    );
+    else {
+      this.http.post<any>('https://8080-cdcafaaaeecacdccdbbedbeeabbebbdd.project.examly.io/user/register', this.signupData).subscribe(
+        response => {
+          alert('Signup successful. Please login with your new account.');
+          this.navigateToLogin();
+
+        },
+        error => {
+          alert('invalid credentials. Please try again later.');
+        }
+      );
+    }
   }
-}
 }
