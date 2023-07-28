@@ -67,8 +67,4 @@ public class UserController {
     
 
 
-
-}
-
-
 // Aishwarya R 
