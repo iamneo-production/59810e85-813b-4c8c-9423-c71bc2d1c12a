@@ -81,7 +81,6 @@ public class MovieService {
             movie.setPlotSummary(updatedMovie.getPlotSummary());
             movie.setGenre(updatedMovie.getGenre());
             movie.setReleaseDate(updatedMovie.getReleaseDate());
-            // movie.setReviews(updatedMovie.getReviews());
             movieRepository.save(movie);
             return movie;
 
