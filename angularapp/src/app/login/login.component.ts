@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
    
   
 
-    this.http.post<any>('https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/login', this.loginData).subscribe(
+    this.http.post<any>('https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/login', this.loginData).subscribe(
       response => {
         console.log(response);
         if (response != 'Null') {
