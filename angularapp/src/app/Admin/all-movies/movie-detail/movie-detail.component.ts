@@ -36,5 +36,9 @@ export class MovieDetailComponent {
     this.router.navigate(["all-movies/movie-detail/admin-review-list"]);
     this.RevListservice.getMovieId(id);
   }
+
+  navigatetoAllMovies(){
+    this.router.navigate(["all-movies"]);
+  }
 }
 
