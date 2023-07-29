@@ -1,0 +1,12 @@
+h3
+{
+margin-top: 30px;
+text-align: center;
+color: #000000;
+font-weight: bold;
+}
+
+.button{
+display: flex; 
+gap: 10px;
+}

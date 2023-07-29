@@ -24,7 +24,7 @@
   <h3 style="color: rgb(200, 122, 6);">Your Review</h3>
   <h3>
     Give Your review</h3>
-    <button (click)="gotoReviewForm(movieId,userId)">Give Your Review</button> 
+    <!-- <button (click)="gotoReviewForm(movieId,userId)">Give Your Review</button>  -->
   <div *ngFor="let review of reviews" class="review-item">
     <button (click)="gotoReviewForm(review.movie.id, userId)">Give Your Review</button>
     <div *ngIf="(review.userId == userId);">

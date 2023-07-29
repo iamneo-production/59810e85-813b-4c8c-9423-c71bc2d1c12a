@@ -23,9 +23,11 @@ import { AdminComponent } from './Admin/admin.component';
 import { AllMoviesComponent } from './Admin/all-movies/all-movies.component';
 import { MovieDetailComponent } from './Admin/all-movies/movie-detail/movie-detail.component';
 import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/edit-movie.component';
+import { AdminReviewListComponent } from './Admin/all-movies/movie-detail/admin-review-list/admin-review-list.component';
 
 
 @NgModule({
+  
   declarations: [
     AppComponent,
     ReviewFormComponent,
@@ -40,11 +42,10 @@ import { EditMovieComponent } from './Admin/all-movies/movie-detail/edit-movie/e
     LoginComponent,
     AllMoviesComponent,
     MovieDetailComponent,
-    EditMovieComponent
-
-
- 
+    EditMovieComponent,
+    AdminReviewListComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
