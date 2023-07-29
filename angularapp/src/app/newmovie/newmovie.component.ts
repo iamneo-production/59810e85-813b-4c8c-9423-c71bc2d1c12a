@@ -48,6 +48,7 @@ export class NewmovieComponent {
     };
    
     this.handler.addMovieByService(moviedetail)
+    alert("Successfully added");
     console.log(id,title,genre,rating,starcast,releasedate,plotsummary);
   }
 
