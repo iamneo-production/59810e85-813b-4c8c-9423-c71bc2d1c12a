@@ -19,6 +19,8 @@ export class MovieService{
     private postUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
     private searchUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
     private putUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+    private deleteUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/movie";
+
     
     //Aishwarya Ghosh
     // private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
@@ -46,11 +48,11 @@ export class MovieService{
 
 
     //Aishwarya
-    private getUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
-    private postUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
-    private searchUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
-    private putUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
-    private deleteUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/movie";
+    // private getUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+    // private postUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    // private searchUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    // private putUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+    // private deleteUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/movie";
  
     userId:number=0;
 
