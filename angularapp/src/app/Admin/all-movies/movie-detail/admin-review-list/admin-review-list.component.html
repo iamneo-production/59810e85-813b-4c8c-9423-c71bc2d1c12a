@@ -1,0 +1,26 @@
+<app-admin></app-admin>
+
+<div class="row mt-4">
+  <h3 class="mt-5">All Reviews</h3>
+  <div class="mt-2 p-5" >
+    <div *ngFor="let review of reviews" class="review-item">
+      <p class="mt-2 mb-2"><strong>Review ID:</strong> {{ review.id }}</p>
+      <hr>
+      <p class="mt-2 mb-2"><strong>User ID:</strong> {{ review.userId }}</p>
+      <hr>
+      <p class="mt-2 mb-2"><strong>Date:</strong> {{ review.date | date }}</p>
+      <hr>
+      <p class="mt-2 mb-2"><strong>Rating:</strong> {{ review.rating }}</p>
+      <hr>
+      <p class="mt-2 mb-2"><strong>Review Note:</strong> {{ review.reviewNote }}</p>
+      <hr>
+      <p class="mt-2 mb-2"><strong>Source:</strong> {{review.source }}</p>
+      <hr>
+      <p class="mt-2 mb-2"><strong>Movie ID:</strong> {{ review.movie.id}}</p> 
+      <br>
+      <div class="button col-lg-10" >
+        <button type="submit" class="btn btn-danger" (click)="deleteReview(review.id,review.movie.id)">Delete Review</button>
+      </div>
+    </div>
+  </div>
+</div>

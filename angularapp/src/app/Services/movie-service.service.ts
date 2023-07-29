@@ -19,12 +19,15 @@ export class MovieService{
     private postUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
     private searchUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
     private putUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+    private deleteUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/movie";
+
     
     //Aishwarya Ghosh
     // private getUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
     // private postUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
     // private searchUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
     // private putUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+    // private deleteUrl ="https://8080-cdcafaaaeecacdccdbbedbeeabbebbdd.project.examly.io/DELETE/movie";
 
     //jyothsna
     // private getUrl = "https://8080-ccbcfbaefbedecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
@@ -46,11 +49,11 @@ export class MovieService{
 
 
     //Aishwarya
-    private getUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
-    private postUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
-    private searchUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
-    private putUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
-    private deleteUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/movie";
+    // private getUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+    // private postUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    // private searchUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    // private putUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+    // private deleteUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/movie";
  
     userId:number=0;
 
@@ -90,6 +93,7 @@ export class MovieService{
     updateMovie(id:number,movie:Movie): Observable<Object>{
         return this.http.put(`${this.putUrl}/${id}`, movie);
     }
+    
 
 
     //DELETE movie by id
