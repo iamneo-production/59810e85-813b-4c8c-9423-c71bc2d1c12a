@@ -15,6 +15,11 @@ export class MovieService {
     error = new Subject<string>();
 
     //Somnath Mandal
+    // private getUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+    // private postUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    // private searchUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    // private putUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+    // private deleteUrl = "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/movie";
 
     // private getUrl = "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/movie";
     // private postUrl = "https://8080-fecfecbdcfcdafbecacdccdbbedbeeabbebbdd.project.examly.io/POST/movie";
