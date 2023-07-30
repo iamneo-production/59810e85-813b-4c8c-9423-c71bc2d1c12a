@@ -27,7 +27,7 @@ export class SignupComponent {
       return;
     }
     else{
-      this.http.post<any>('https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/user/register', this.signupData).subscribe(
+      this.http.post<any>('https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/user/register', this.signupData).subscribe(
       response => {
         alert('Signup successful. Please login with your new account.');
         this.navigateToLogin();
