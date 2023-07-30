@@ -15,12 +15,17 @@ export class ReviewListserviceService {
   // private deleteUrl= "https://8080-fecfecbdcfcdafbecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
    
   //Sakthivel
-  private baseUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
-  private deleteUrl= "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
+  // private baseUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
+  // private deleteUrl= "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
    
   //Aishwarya Ghosh
 //  private baseUrl = "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
 //  private deleteUrl= "https://8080-cdcafaaaeecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
+
+//Ragavi k
+  private baseUrl = "https://8080-edcacfccfabeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/review/movie";
+  private deleteUrl= "https://8080-edcacfccfabeecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/review";
+   
   movieId: number = 1;
   
   constructor(private http: HttpClient) { }

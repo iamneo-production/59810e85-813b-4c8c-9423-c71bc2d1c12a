@@ -41,11 +41,11 @@ export class MovieService{
     //private putUrl = "https://8080-aaffdaaaacdbfdecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
 
     //Sakthivel
-     private getUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io//movie";
-     private postUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
-     private searchUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
-     private putUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
-     private deleteUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/movie";
+    //  private getUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io//movie";
+    //  private postUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    //  private searchUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    //  private putUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+    //  private deleteUrl = "https://8080-cbbeaacfddecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/movie";
 
     //Aishwarya
     // private getUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
@@ -53,6 +53,14 @@ export class MovieService{
     // private searchUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
     // private putUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
     // private deleteUrl = "https://8080-bcfbabdfbcebecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/movie";
+
+    //Ragavi K
+    private getUrl = "https://8080-edcacfccfabeecacdccdbbeeaeaadbdbabf.project.examly.io/movie";
+    private postUrl = "https://8080-edcacfccfabeecacdccdbbeeaeaadbdbabf.project.examly.io/POST/movie";
+    private searchUrl = "https://8080-edcacfccfabeecacdccdbbeeaeaadbdbabf.project.examly.io/GET/movie/search";
+    private putUrl = "https://8080-edcacfccfabeecacdccdbbeeaeaadbdbabf.project.examly.io/PUT/movie";
+    private deleteUrl = "https://8080-edcacfccfabeecacdccdbbeeaeaadbdbabf.project.examly.io/DELETE/movie";
+ 
  
     userId:number=0;
 
